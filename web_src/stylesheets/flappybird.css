@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAD9D9 !important;
+    overflow: hidden;
+}
+
+
+#logo {
+    height: 80px;
+    width: 150px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #87CEEB;
+    border: 2px solid black;
+    margin: auto;
+    
+}
+
+#bird {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 50%;
+    left: 50px;
+}
+
+.pipe {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: #008000;
+}
+
+#pipeTop1 {
+    top: 0;
+}
+
+#pipeBottom1 {
+    bottom: 0;
+}
+
+#pipeTop2 {
+    top: 0;
+    left: 200px;
+}
+
+#pipeBottom2 {
+    bottom: 0;
+    left: 200px;
+}
+
+#score-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#score-text {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}

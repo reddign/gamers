@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAD9D9 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+#logo {
+    height: 80px;
+    width: 150px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#ourVision {
+    padding-top: 10px;
+    text-align: center;
+    background-color: #64c2e8;
+}
+
+.ourVision-textContainer {
+    margin: 0 auto;
+    text-align: center;
+    padding: none;
+    /* max-height: 300px; */
+    max-width: 1000px;
+    border: 1px solid black;
+    background-color: #C8C8C8; 
+    
+}
+
+#foundingTeam {
+    padding-top: 10px;
+    text-align: center;
+    background-color: #296199;
+}
+
+.foundingTeam-textContainer {
+    margin: 0 auto;
+    text-align: center;
+    padding: none;
+    /* max-height: 300px; */
+    max-width: 1000px;
+    border: 1px solid black;
+    background-color: #C8C8C8;
+}
+
+#etownECS {
+    padding-top: 10x;
+    text-align: center;
+    background-color: #172a41;
+}
+
+.etownECS-textContainer {
+    margin: 0 auto;
+    text-align: center;
+    padding: none;
+    /* max-height: 300px; */
+    max-width: 1000px;
+    border: 1px solid black;
+    background-color: #C8C8C8; 
+}
+
+#break {
+    background-color: black;
+    /* border: 1px solid white; */
+}
+
+#welcome-text {
+    font-size: 36px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#welcome-subtext {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 24px;
+}
+
+#welcome+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#welcome-text-2 {
+    font-size: 30px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#welcome-subtext-2 {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 20px;
+}
+
+#seTitle {
+    text-align: center;
+    color: #004B98; 
+    font-size: 25px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: #004B98;
+    text-align: center;
+    color: white;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.team-section {
+    overflow: hidden;
+    text-align: center;
+    padding: 60px;
+    padding-bottom: 100px;
+}
+  
+.team-section h1 {
+    margin-bottom: 60px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+.section {
+    width: 600px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    text-align: justify;
+  }
+ 
+.section a{
+    text-decoration: none;
+    color: #3DB5E6;
+}
+
+.section:target {
+    height: auto;
+}
+
+.pfp a {
+    display: inline-block;
+    margin: 0 30px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    
+  }
+  
+.pfp a img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+  } 
+  
+.pfp a:hover > img{
+    filter:none;
+  }
+
+.name {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+.hidden {
+    display: none;
+  }
+  
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    position: relative;
+    padding: 15px 40px;
+    background: #fff;
+    color: #0A2240;
+    text-transform: uppercase;
+    font-weight: 500; 
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+
+.button2:hover {
+    background: #0A2240; 
+    color: #fff;
+    letter-spacing: 4px;
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 100%, 0% 50%, 10% 0);
+}
+
+/* .backButton {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #3DB5E6;
+}
+  
+.backButton:hover {
+    background-color: #3DB5E6;
+    color: white;
+  }
+*/
+
+.bio-title {
+    font-size: 36px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+  }
+
+#bio {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}

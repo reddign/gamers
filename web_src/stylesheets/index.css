@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAD9D9 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+#logo {
+    height: 80px;
+    width: 150px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#welcome {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#welcome-text {
+    font-size: 36px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#welcome-subtext {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 24px;
+}
+
+#welcome+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#welcome-text-2 {
+    font-size: 30px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#welcome-subtext-2 {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: #004B98;
+    text-align: center;
+    color: white;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/* Sub navbar stylesheet Info */
+
+  
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none; 
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+  padding: 10px 12px;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #004B98;
+  width: 100%;
+  padding: 20px 22px;
+}
+
+.subnav-content a {
+  float: right;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #3DB5E6;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
+/* submission form style */
+
+
+#basicContainer {
+  text-align: center;
+  /*color: white; */
+  font-size: 16px;
+  margin: 20px auto; /* Center horizontally with auto margin */
+  width: 600px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #78c9e9;
+  transition: background-color 0.3s; 
+}
+
+input[type=text], select {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+input[type=submit] {
+width: 100%;
+background-color: #135496;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #004B98;
+}
+
+input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+
+

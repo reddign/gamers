@@ -1,0 +1,195 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    background-color: #DAD9D9 !important;
+}
+
+#welcome-message-trivia {
+    font-size: 32px;
+    margin-top: 20px;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+    
+}
+
+#trivia-subtext {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+#logo {
+    max-width: 100px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#game-select {
+    margin-top: 20px;
+    text-align: center;
+}
+
+select {
+    font-size: 18px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #0A2240;
+}
+
+/* Container that holds parts of trivia */
+#basicContainer {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin: 20px auto; /* Center horizontally with auto margin */
+    width: 600px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #78c9e9;
+    transition: background-color 0.3s; 
+}
+
+/* Put some style on those questions */
+#question-container {
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    margin: 20px auto; /* Center horizontally with auto margin */
+    width: 500px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #004B98;
+    transition: background-color 0.3s;
+}
+
+/* Add blinking animations for correct and incorrect answers */
+@keyframes blink-green {
+    0%, 100% {
+        background-color: #4CAF50;
+    }
+    50% {
+        background-color: #DAD9D9;
+    }
+}
+
+@keyframes blink-red {
+    0%, 100% {
+        background-color: #FF5733;
+    }
+    50% {
+        background-color: #DAD9D9;
+    }
+}
+
+.green-blink {
+    animation: blink-green 1s ease-in-out;
+}
+
+.red-blink {
+    animation: blink-red 1s ease-in-out;
+}
+
+#question-container.green-blink {
+    background-color: #4CAF50;
+}
+
+#question-container.red-blink {
+    background-color: #FF5733;
+}
+/* Answer options styles */
+#answer-options {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#answer-options button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #004B98;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #004B98;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#answer-options button:hover {
+    background-color: #004B98;
+    color: #fff;
+}
+
+#answer-options .correct {
+    background-color: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+#answer-options .incorrect {
+    background-color: #FF5733;
+    color: #fff;
+    border-color: #FF5733;
+}
+
+#answer-options button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* a circle (idk) */
+#circle1,
+#circle2,
+#circle3 {
+    width: 50px;
+    height: 50px;
+    background: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-block;  
+    margin-right: 10px;     
+}
+
+/* Color-coded backgrounds for correct and incorrect answers */
+.green-background {
+    background-color: green;
+    max-width: 500px;
+}
+
+.red-background {
+    background-color: red;
+    max-width: 500px;
+}
+
+.hidden {
+    display: none;
+}
