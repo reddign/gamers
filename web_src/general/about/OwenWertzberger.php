@@ -18,7 +18,7 @@ require "../../includes/head.php";
         <section id="Owen Wertzberger's Bio">
             <div class="bio-title">Owen Wertzberger</div>
             <br>
-            <div id="bio"> Owen Wertzberger is majoring in Computer Engineering and plans to graduate by 2026.
+            <div id="bio"> Owen Wertzberger is majoring in Computer Engineering and plans to graduate by 2026.</div>
         </section>
     </main>
 </body>
