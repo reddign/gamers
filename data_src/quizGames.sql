@@ -1,4 +1,4 @@
-use u413142534_quizgames;
+
 
 CREATE TABLE IF NOT EXISTS user (
     userID INT AUTO_INCREMENT,
