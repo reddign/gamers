@@ -1,4 +1,6 @@
+create database triviagames;
 
+use triviagames;
 
 CREATE TABLE IF NOT EXISTS user (
     userID INT AUTO_INCREMENT,
