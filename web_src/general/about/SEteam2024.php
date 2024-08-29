@@ -28,7 +28,7 @@ require "../../includes/head.php";
             <span class="name">
                 Kevin Barbieri, Joseph Culkin, Brian Duva, Parker Engle,
                 Leif Hoffman, Cameron Hollabaugh, Laney Humble, James Hutchins,
-                Muzahidul Islam, <a href='vincent_liu'>Vincent Liu</a>, John McGovern, Jackson Miller,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
                 Tyler Souders, Joshua Stoner, Camila Torres, Joey Wagner,
