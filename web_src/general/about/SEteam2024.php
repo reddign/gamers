@@ -20,7 +20,10 @@ require "../../includes/head.php";
         <div class="section"> This project was taken on and continued by the Fall 2024 Software Engineering class. <BR></div>
         <br>
         <div class="pfp">
-            <img id="Team2024Pic" src="../teampics/SEteam2024.png" alt="2024 Team to Come picture." width=1000>
+            <img id="Team2024Pic" src="../teampics/SEteam2024.png" alt="2024 Team to Come picture." width=1000 usemap="#classmap">
+            <map id="classmap">
+                <area shape="circle" coords="258,148,20" href="student_template.php">
+            </map>    
         </div>
 
         <div class="section" id="team-names">
