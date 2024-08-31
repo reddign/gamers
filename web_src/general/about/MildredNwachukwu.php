@@ -14,8 +14,8 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Jane Doe's Bio">
-            <div class="bio-title">Jane Doe</div>
+        <section id="Mildred's Bio">
+            <div class="bio-title">Mildred</div>
             <br>
             <div id="bio"> Mildred is a Computer Science Major with a concentration in Data Science and minors in Data Analytics.
                  Mildred intends to graduate in 2026.
