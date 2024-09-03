@@ -20,7 +20,10 @@ require "../../includes/head.php";
         <div class="section"> This project was taken on and continued by the Fall 2024 Software Engineering class. <BR></div>
         <br>
         <div class="pfp">
-            <img id="Team2024Pic" src="../teampics/SEteam2024.png" alt="2024 Team to Come picture." width=1000>
+            <img id="Team2024Pic" src="../teampics/SEteam2024.png" alt="2024 Team to Come picture." width=1000 usemap="#classmap">
+            <map id="classmap">
+                <area shape="circle" coords="258,148,20" href="student_template.php">
+            </map>    
         </div>
 
         <div class="section" id="team-names">
@@ -28,11 +31,11 @@ require "../../includes/head.php";
             <span class="name">
                 Kevin Barbieri, Joseph Culkin, Brian Duva, Parker Engle,
                 Leif Hoffman, Cameron Hollabaugh, Laney Humble, James Hutchins,
-                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu'>Vincent Liu</a>, John McGovern, Jackson Miller,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
                 Tyler Souders, Joshua Stoner, Camila Torres, Joey Wagner,
-                Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, Owen Yang, and <a href='student_template.php'>Jane Doe</a>
+                Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
         </div>
     </div>
