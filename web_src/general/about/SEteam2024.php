@@ -24,13 +24,14 @@ require "../../includes/head.php";
             <map id="classmap">
                 <area shape="circle" coords="225,83,20" href="student_template.php">
                 <area shape="circle" coords="573,140,10" href="muzahidul_islam.php">
+                <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
             </map>    
         </div>
 
         <div class="section" id="team-names">
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
-                Kevin Barbieri, Joseph Culkin, Brian Duva, Parker Engle,
+                <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, Brian Duva, Parker Engle,
                 Leif Hoffman, Cameron Hollabaugh, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
