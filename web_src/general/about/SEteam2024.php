@@ -24,6 +24,7 @@ require "../../includes/head.php";
             <map id="classmap">
                 <area shape="circle" coords="225,83,20" href="student_template.php">
                 <area shape="circle" coords="573,140,10" href="muzahidul_islam.php">
+                <area shape="circle" coords="515,145,10" href="OwenWertzberger.php">
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
             </map>    
         </div>
