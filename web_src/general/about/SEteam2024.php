@@ -23,6 +23,7 @@ require "../../includes/head.php";
             <img id="Team2024Pic" src="../teampics/SEteam2024_A.png" alt="2024 Team to Come picture." width=1000 usemap="#classmap">
             <map id="classmap">
                 <area shape="circle" coords="225,83,20" href="student_template.php">
+                <area shape="circle" coords="573,140,10" href="muzahidul_islam.php">
             </map>    
         </div>
 
