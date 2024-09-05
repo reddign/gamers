@@ -18,6 +18,7 @@ require "../../includes/head.php";
             <div class="bio-title">Jackson Miller</div>
             <br>
             <div id="bio"> Jackson Miller is not a student in this class. If he was he might be majoring in Computer Science and intends to graduate in 2025.
+            Owen was here...
         </section>
     </main>
 </body>
