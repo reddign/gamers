@@ -52,10 +52,10 @@ require "../../includes/head.php";
                 Kevin Barbieri, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
                 <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
-                <a href='MildredNwachukwu.php'>Mildred Nwachukwu-Innocent</a>, Martin Ratchford, Alexander Roop, Wesley Ryan,
-                Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
-                Tyler Souders, <a href='Joshua_Stoner.php'>Joshua Stoner</a>, Camila Torres, Joey Wagner,
-                <a href="Asher_Wayde.php">Asher Wayde</a>, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
+                Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
+                Joshua Schmitt, Ian Skeete, <a href='austin_smith.php'>Austin Smith</a>, Matthew Smith,
+                Tyler Souders, Joshua Stoner, Camila Torres, Joey Wagner,
+                Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
         </div>
     </div>
