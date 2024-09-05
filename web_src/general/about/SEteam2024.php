@@ -33,7 +33,7 @@ require "../../includes/head.php";
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
                 <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, Brian Duva, Parker Engle,
-                Leif Hoffman, Cameron Hollabaugh, Laney Humble, James Hutchins,
+                <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
