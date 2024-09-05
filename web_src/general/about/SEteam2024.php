@@ -50,7 +50,7 @@ require "../../includes/head.php";
                 Kevin Barbieri, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, Parker Engle,
                 Leif Hoffman, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
-                Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
+                <a href='MildredNwachukwu.php'>Mildred Nwachukwu-Innocent</a>, Martin Ratchford, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
                 Tyler Souders, <a href='Joshua_Stoner.php'>Joshua Stoner</a>, Camila Torres, Joey Wagner,
                 <a href="Asher_Wayde.php">Asher Wayde</a>, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
