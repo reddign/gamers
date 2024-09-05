@@ -12,8 +12,8 @@
     <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
 </div>
 <main>
-    <section id="Jane Doe's Bio">
-        <div class="bio-title">Jane Doe</div>
+    <section id="John McGovern's Bio">
+        <div class="bio-title">John McGovern</div>
         <br>
         <div id="bio">John McGovern is majoring in Computer Science and has a minor in Graphic Design. He plans to graduate in 2026.</div>
     </section>

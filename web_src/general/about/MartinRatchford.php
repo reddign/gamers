@@ -1,5 +1,5 @@
 <?php
-$pageName = "Kevin Barbieri's Webpage";
+$pageName = "Martin Ratchford Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,10 +14,10 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Kevin's Bio">
-            <div class="bio-title">Kevin Barbieri</div>
+        <section id="Martin Ratchford's Bio">
+            <div class="bio-title">Jane Doe</div>
             <br>
-            <div id="bio"> Kevin Barbieri is a senior Information Systems major who intends to graduate in the spring of 2025 after a study abroad in Sweden.
+            <div id="bio"> Martin Ratchford is a computer science major at Etown and plans to graduate in 2026.
         </section>
     </main>
 </body>
