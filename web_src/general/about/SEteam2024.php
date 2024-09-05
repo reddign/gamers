@@ -44,6 +44,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="74,141,10" href='MildredNwachukwu.php'>
                 <area shape="circle" coords="325,147,20" href="ParkerEngle.php">
                 <area shape="circle" coords="214,139,20" href="austin_smith.php">
+                <area shape="circle" coords="360,165,20" href="MartinRatchford.php">
             </map>    
         </div>
 
@@ -53,7 +54,7 @@ require "../../includes/head.php";
                 Kevin Barbieri, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
                 <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
-                Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
+                Mildred Nwachukwu-Innocent, <a href='MartinRatchford.php'>Martin Ratchford</a>, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, <a href='austin_smith.php'>Austin Smith</a>, Matthew Smith,
                 Tyler Souders, Joshua Stoner, Camila Torres, Joey Wagner,
                 Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
