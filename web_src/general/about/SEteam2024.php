@@ -47,7 +47,7 @@ require "../../includes/head.php";
         <div class="section" id="team-names">
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
-                Kevin Barbieri, Joseph Culkin, Brian Duva, Parker Engle,
+                Kevin Barbieri, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, Parker Engle,
                 Leif Hoffman, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
