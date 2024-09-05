@@ -1,4 +1,6 @@
-# gamers
+# gamers | Omacron Branch
+
+This is the Omacron Branch of our repositories
 
 Gamers repository - Fall 2024
 This is a project that will create games that teach incoming Etown students about the college.
