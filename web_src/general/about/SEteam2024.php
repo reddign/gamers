@@ -48,6 +48,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="403, 135, 15" href="john_mcgovern.php">
                 <area shape="circle" coords="163,114,97" href="camila_torres.php">
                 <area shape="circle" coords="750,170,20" href='AlexRoop.php'>
+                <area shape="circle" coords="173,150,10" href="joseph_culkin.php">
 
             </map>    
         </div>
@@ -55,7 +56,7 @@ require "../../includes/head.php";
         <div class="section" id="team-names">
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
-                Kevin Barbieri, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
+                Kevin Barbieri, <a href="joseph_culkin.php">Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
                 <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, James Hutchins,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href="john_mcgovern.php">John McGovern</a>, Jackson Miller,
                 Mildred Nwachukwu-Innocent, <a href='MartinRatchford.php'>Martin Ratchford</a>, <a href='AlexRoop.php'> Alexander Roop </a>, Wesley Ryan,
