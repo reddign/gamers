@@ -26,6 +26,8 @@ require "../../includes/head.php";
                 <area shape="circle" coords="573,140,10" href="muzahidul_islam.php">
                 <area shape="circle" coords="515,145,10" href="OwenWertzberger.php">
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
+                <area shape="circle" coords="610,139,10" href="James_Hutchins.php">
+
             </map>    
         </div>
 
@@ -33,7 +35,7 @@ require "../../includes/head.php";
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
                 <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, Brian Duva, Parker Engle,
-                <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, James Hutchins,
+                <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, <a href="James_Hutchins">James Hutchins<a/> ,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, John McGovern, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
