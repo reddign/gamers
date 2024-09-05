@@ -28,7 +28,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
                 <area shape="circle" coords="610,139,10" href="James_Hutchins.php">
                 <area shape="circle" coords="157,112,10" href="leif_hoffman.php">
-                <area shape="circle" coords="157,112,10" href="cameron_hollabaugh.php">
+                <area shape="circle" coords="500,200,10" href="cameron_hollabaugh.php">
 
             </map>    
         </div>
