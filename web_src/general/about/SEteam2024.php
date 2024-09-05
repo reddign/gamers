@@ -28,6 +28,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
                 <area shape="circle" coords="610,139,10" href="James_Hutchins.php">
                 <area shape="circle" coords="157,112,10" href="leif_hoffman.php">
+                <area shape="circle" coords="665, 125, 20" href="joey_wagner.php">
 
             </map>    
         </div>
@@ -40,7 +41,7 @@ require "../../includes/head.php";
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller,
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, <a href='wesJRyan.php'>Wes J. Ryan</a>,
                 Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
-                Tyler Souders, Joshua Stoner, Camila Torres, Joey Wagner,
+                Tyler Souders, Joshua Stoner, Camila Torres, <a href='joey_wagner.php'>Joey Wagner</a>,
                 Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
         </div>
