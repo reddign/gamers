@@ -17,8 +17,7 @@ require "../../includes/head.php";
         <section id="Jackson Miller's Bio">
             <div class="bio-title">Jackson Miller</div>
             <br>
-            <div id="bio"> Jackson Miller is a Computer Science major at Elizabethtown College. He is expected to graduate in 2025.
-            Owen was here...
+            <div id="bio"> Jackson Miller is a Computer Science major at Elizabethtown College. He is expected to graduate in 2025.             
         </section>
     </main>
 </body>
