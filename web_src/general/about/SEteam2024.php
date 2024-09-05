@@ -37,9 +37,9 @@ require "../../includes/head.php";
             <span class="name">
                 <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, Brian Duva, Parker Engle,
                 <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, <a href="James_Hutchins.php">James Hutchins<a/> ,
-                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller, <a href='Joshua_Schmitt.php'>
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, <a href='wesJRyan.php'>Wes J. Ryan</a>,
-                Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
+                Joshua Schmitt </a>, Ian Skeete, Austin Smith, Matthew Smith,
                 Tyler Souders, <a href='Joshua_Stoner.php'>Joshua Stoner</a>, Camila Torres, Joey Wagner,
                 Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
