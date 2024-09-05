@@ -1,5 +1,5 @@
 <?php
-$pageName = "Mildred's Webpage";
+$pageName = "Cameron's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,11 +14,11 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Mildred's Bio">
-            <div class="bio-title">Mildred</div>
+        <section id="Cameron's Bio">
+            <div class="bio-title">Cameron</div>
             <br>
-            <div id="bio"> Mildred is a Computer Science Major with a concentration in Data Science and minors in Data Analytics.
-                 Mildred intends to graduate in 2026.
+            <div id="bio"> Cameron is n̶o̶t̶ a student in this class. He is majoring in Japanese and Information Systems,
+                plus several minors and intends to graduate in 2025.
         </section>
     </main>
 </body>

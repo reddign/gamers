@@ -1,5 +1,5 @@
 <?php
-$pageName = "Jane Doe's Webpage";
+$pageName = "Kevin Barbieri's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,7 +14,7 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Jane Doe's Bio">
+        <section id="Kevin's Bio">
             <div class="bio-title">Kevin Barbieri</div>
             <br>
             <div id="bio"> Kevin Barbieri is a senior Information Systems major who intends to graduate in the spring of 2025 after a study abroad in Sweden.
