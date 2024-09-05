@@ -33,7 +33,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="188,138,10" href="Joshua_Stoner.php">
                 <area shape="circle" coords="700,145,10" href="Brian_Duva.php">
                 <area shape="circle" coords="430,133,10" href="Joshua_Schmitt.php">
-                
+                <area shape="circle" coords="157,112,10" href="cameron_hollabaugh.php">
                 <area shape="circle" coords="490,150,10" href="cameron_hollabaugh.php">
                 <area shape="circle" coords="750,160,20" href='wesJRyan.php'>
                 <area shape="circle" coords="74,141,10" href='MildredNwachukwu.php'>
@@ -51,7 +51,8 @@ require "../../includes/head.php";
                 <area shape="circle" coords="288,138,10" href="owen_yang.php">
                 <area shape="circle" coords="950,154,10" href="Ian_Skeete.php">
                 <area shape="circle" coords="105,83,20" href="prof_reddig.php">
-                
+            
+
             </map>    
         </div>
 
