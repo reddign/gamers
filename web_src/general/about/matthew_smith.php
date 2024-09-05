@@ -18,6 +18,8 @@ require "../../includes/head.php";
             <div class="bio-title">Matt Smith</div>
             <br>
             <div id="bio"> Hello, I'm Matt a Computer Science Major and Math Minor! I intend to graduate in 2026.
+                            Matt also is a swimmer for the Etown College swim team. Check him out <a href="https://etownbluejays.com/sports/mens-swimming-and-diving/roster/matt-smith/15863">here</a>
+                            -Muz edited this
         </section>
     </main>
 </body>
