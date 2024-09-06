@@ -53,6 +53,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="115,125,21" href="Jackson_Miller.php">
                 <area shape="circle" coords="55,141,10" href="vincent_liu.php">
                 <area shape="circle" coords="828,130,10" href="Tyler_Souders.php">
+                <area shape="circle" coords="288,138,10" href="owen_yang.php">
             </map>    
         </div>
 
