@@ -17,8 +17,8 @@ require "../../includes/head.php";
         <section id="Austin Smith's Bio">
             <div class="bio-title">Austin Smith</div>
             <br>
-            <div id="bio"> Austin Smith is  a student in this class. He is a part of the Men's swim team and track and field.
-                Austin plans to graduate in the spring of 2026.
+            <div id="bio"> Austin Smith is a computer engineer student in this class. He is a part of the Men's swim team and track and field.
+                Austin plans to graduate in spring of 2026.
         </section>
     </main>
 </body>
