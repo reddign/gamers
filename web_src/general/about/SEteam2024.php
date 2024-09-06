@@ -50,7 +50,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="750,165,20" href='AlexRoop.php'>
                 <area shape="circle" coords="173,150,10" href="joseph_culkin.php">
                 <area shape="circle" coords="665,125,10" href="joey_wagner.php">
-
+                <area shape="circle" coords="115,125,21" href="Jackson_Miller.php">
             </map>    
         </div>
 
@@ -59,7 +59,7 @@ require "../../includes/head.php";
             <span class="name">
                 Kevin Barbieri, <a href="joseph_culkin.php">Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
                 <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, <a href="James_Hutchins.php">James Hutchins</a>,
-                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href="john_mcgovern.php">John McGovern</a>, Jackson Miller,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href="john_mcgovern.php">John McGovern</a>, <a href="Jackson_Miller.php">Jackson Miller</a>,
                 Mildred Nwachukwu-Innocent, <a href='MartinRatchford.php'>Martin Ratchford</a>, <a href='AlexRoop.php'> Alexander Roop </a>, Wesley Ryan,
                 Joshua Schmitt, Ian Skeete, <a href='austin_smith.php'>Austin Smith</a>, <a href='matthew_smith.php'>Matthew Smith,
                 Tyler Souders, Joshua Stoner, <a href='camila_torres.php'>Camila Torres</a>, <a href='joey_wagner.php'>Joey Wagner</a>,
