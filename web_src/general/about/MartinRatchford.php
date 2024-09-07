@@ -18,6 +18,7 @@ require "../../includes/head.php";
             <div class="bio-title">Jane Doe</div>
             <br>
             <div id="bio"> Martin Ratchford is a computer science major at Etown and plans to graduate in 2026.
+                        Alex edited this.
         </section>
     </main>
 </body>
