@@ -28,22 +28,41 @@ require "../../includes/head.php";
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
                 <area shape="circle" coords="610,139,10" href="James_Hutchins.php">
                 <area shape="circle" coords="157,112,10" href="leif_hoffman.php">
+                <area shape="circle" coords="542,155,10" href="Asher_Wayde.php">
                 <area shape="circle" coords="873,154,10" href="matthew_smith.php">
                 <area shape="circle" coords="188,138,10" href="Joshua_Stoner.php">
                 <area shape="circle" coords="700,145,10" href="Brian_Duva.php">
                 <area shape="circle" coords="430,133,10" href="Joshua_Schmitt.php">
+                
+                <area shape="circle" coords="490,150,10" href="cameron_hollabaugh.php">
+                <area shape="circle" coords="750,160,20" href='wesJRyan.php'>
+                <area shape="circle" coords="74,141,10" href='MildredNwachukwu.php'>
+                <area shape="circle" coords="325,147,20" href="ParkerEngle.php">
+                <area shape="circle" coords="214,139,20" href="austin_smith.php">
+                <area shape="circle" coords="360,165,20" href="MartinRatchford.php">
+                <area shape="circle" coords="403, 135, 15" href="john_mcgovern.php">
+                <area shape="circle" coords="163,114,97" href="camila_torres.php">
+                <area shape="circle" coords="750,150,20" href='AlexRoop.php'>
+                <area shape="circle" coords="173,150,10" href="joseph_culkin.php">
+                <area shape="circle" coords="665,125,10" href="joey_wagner.php">
+                <area shape="circle" coords="115,125,21" href="Jackson_Miller.php">
+                <area shape="circle" coords="55,141,10" href="vincent_liu.php">
+                <area shape="circle" coords="828,130,10" href="Tyler_Souders.php">
+                <area shape="circle" coords="288,138,10" href="owen_yang.php">
+                <area shape="circle" coords="950,154,10" href="Ian_Skeete.php">
+                
             </map>    
         </div>
 
         <div class="section" id="team-names">
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
-                <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, Parker Engle,
-                <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, <a href="James_Hutchins.php">James Hutchins<a/> ,
-                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller,
-                Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, <a href='wesJRyan.php'>Wes J. Ryan</a>, <a href='Joshua_Schmitt.php'>
-                Joshua Schmitt</a>, Ian Skeete, Austin Smith, Matthew Smith,
-                Tyler Souders, <a href='Joshua_Stoner.php'>Joshua Stoner</a>, Camila Torres, <a href='joey_wagner.php'>Joey Wagner</a>,
+                Kevin Barbieri, <a href="joseph_culkin.php">Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, <a href="ParkerEngle.php">Parker Engle</a>,
+                <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, <a href="James_Hutchins.php">James Hutchins</a>,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href="john_mcgovern.php">John McGovern</a>, <a href="Jackson_Miller.php">Jackson Miller</a>,
+                <a href='MildredNwachukwu.php'>Mildred Nwachukwu-Innocent</a>, <a href='MartinRatchford.php'>Martin Ratchford</a>, <a href='AlexRoop.php'> Alexander Roop </a>, Wesley Ryan,
+                Joshua Schmitt, <a href="Ian_Skeete.php">Ian Skeete</a> , <a href='austin_smith.php'>Austin Smith</a>, <a href='matthew_smith.php'>Matthew Smith,
+                <a href='Tyler_Souders.php'>Tyler Souders</a>, Joshua Stoner, <a href='camila_torres.php'>Camila Torres</a>, <a href='joey_wagner.php'>Joey Wagner</a>,
                 Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
         </div>
