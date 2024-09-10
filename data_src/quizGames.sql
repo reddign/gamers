@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS user (
 
 );
 
-INSERT INTO user (username, email, date, firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), "%Y-%m-%d"))
+INSERT INTO user (username, email, date, firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), "%Y-%m-%d"), "user");
 
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 
