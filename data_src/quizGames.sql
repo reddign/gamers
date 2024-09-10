@@ -1,40 +1,58 @@
 create database triviagames;
-
 use triviagames;
 
 CREATE TABLE IF NOT EXISTS user (
+
     userID INT AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
     date DATE,
     firstname VARCHAR(255) NOT NULL,
     PRIMARY KEY (userID)
+
 );
 
+INSERT INTO user (username, email, date, firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), "%Y-%m-%d"))
+
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
+
 	questionID INT AUTO_INCREMENT,
     question VARCHAR(255) NOT NULL,
+    genre INT,
+    times_shown INT DEFAULT 0,
+    times_right INT DEFAULT 0,
+    times_wrong INT DEFAULT 0,
+    times_skipped INT DEFAULT 0,
     PRIMARY KEY (questionID)
+
 );
+
 CREATE TABLE IF NOT EXISTS answer (
+
 	answerID INT NOT NULL AUTO_INCREMENT,
     questionID INT NOT NULL,
     triv_answer varchar(255) DEFAULT ("Google it"),
     is_Correct boolean NOT NULL,
     PRIMARY KEY (answerID),
     FOREIGN KEY (questionID) REFERENCES trivia (questionID)
+
 );
+
 CREATE TABLE IF NOT EXISTS hangman (
+
 	wordID INT NOT NULL AUTO_INCREMENT,
     word varchar(50) NOT NULL,
     PRIMARY KEY (wordID)
+
 );
 
 CREATE TABLE IF NOT EXISTS admin (
+
     adminID INT NOT NULL AUTO_INCREMENT,
     username varchar(50) NOT NULL,
     password varchar(250) NOT NULL,
     PRIMARY KEY (adminID)
+
 );
 
 INSERT INTO admin (username, password) VALUES ("jays", "ninja");
@@ -134,5 +152,3 @@ INSERT INTO hangman (word) VALUES ("ELIZABETHTOWN");
 INSERT INTO hangman (word) VALUES ("JAYNEST");
 INSERT INTO hangman (word) VALUES ("THOMPSON");
 INSERT INTO hangman (word) VALUES ("BRINSER");
-
-INSERT INTO user (username, email, date,firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'),'User');
