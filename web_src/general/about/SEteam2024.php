@@ -50,6 +50,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="828,130,10" href="Tyler_Souders.php">
                 <area shape="circle" coords="288,138,10" href="owen_yang.php">
                 <area shape="circle" coords="950,154,10" href="Ian_Skeete.php">
+                <area shape="circle" coords="105,83,20" href="prof_reddig.php">
                 
             </map>    
         </div>
@@ -64,6 +65,8 @@ require "../../includes/head.php";
                 Joshua Schmitt, <a href="Ian_Skeete.php">Ian Skeete</a> , <a href='austin_smith.php'>Austin Smith</a>, <a href='matthew_smith.php'>Matthew Smith,
                 <a href='Tyler_Souders.php'>Tyler Souders</a>, Joshua Stoner, <a href='camila_torres.php'>Camila Torres</a>, <a href='joey_wagner.php'>Joey Wagner</a>,
                 <a href='Asher_Wayde.php'>Asher Wayde</a>, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
+                Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>, 
+                and <a href='Prof_reddig.php'>Prof Reddig</a>
             </span>
         </div>
     </div>
