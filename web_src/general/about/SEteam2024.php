@@ -41,7 +41,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="214,139,20" href="austin_smith.php">
                 <area shape="circle" coords="360,165,20" href="MartinRatchford.php">
                 <area shape="circle" coords="403, 135, 15" href="john_mcgovern.php">
-                <area shape="circle" coords="163,114,97" href="camila_torres.php">
+                <area shape="circle" coords="135,170,15" href="camila_torres.php">
                 <area shape="circle" coords="750,150,20" href='AlexRoop.php'>
                 <area shape="circle" coords="173,150,10" href="joseph_culkin.php">
                 <area shape="circle" coords="665,125,10" href="joey_wagner.php">
