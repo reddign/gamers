@@ -102,7 +102,7 @@ session_start();
         </select>
     </div>
 
-    <center><a href="high_scores.php">View High Scores></a></center>
+    <center><a href="high_scores.php">View High Scores</a></center>
 
     <br><br><br><br><br><br><br>
 
