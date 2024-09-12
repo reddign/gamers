@@ -27,6 +27,5 @@ session_start();
         </tr>
         <!-- Need to take data from a database and present it on this chart -->
     </table>
-
 </body>
 </html>
