@@ -30,13 +30,13 @@ function roundover(){
 }
 
 function fly(){
-    if(jay_1_see){
+    if(jay_1_see==0){
     context.fillStyle = "blue";
     context.beginPath();
     context.arc(jay_1_x,jay_1_y,radius,0,2*Math.PI);
     context.closePath();
     context.fill();}
-    if(jay_2_see){
+    if(jay_2_see==0){
         context.fillStyle = "blue";
         context.beginPath();
         context.arc(jay_2_x,jay_2_y,radius,0,2*Math.PI);
@@ -94,7 +94,7 @@ function net(e){
 
 function capture(){
 
-    
+
 }
 
 
