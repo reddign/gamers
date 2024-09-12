@@ -11,7 +11,7 @@ body {
 
 header {
     padding: 50px 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(1, 130, 250, 0.5); /* Semi-transparent background */
 }
 
 h1 {
@@ -27,7 +27,7 @@ main {
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    background-color: rgba(1, 130, 250, 0.5); /* Dark background for contrast */
     padding: 30px;
     border-radius: 10px;
 }
@@ -35,7 +35,7 @@ main {
 #start-btn {
     padding: 15px 40px;
     font-size: 1.5em;
-    background-color: #28a745;
+    background-color: gray;
     border: none;
     color: white;
     border-radius: 5px;
@@ -44,7 +44,7 @@ main {
 }
 
 #start-btn:hover {
-    background-color: #218838;
+    background-color: #000201;
 }
 
 #instructions {
