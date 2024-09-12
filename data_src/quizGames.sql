@@ -11,12 +11,6 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (userID)
 );
 
-ALTER TABLE user
-ADD email VARCHAR(255);
-ALTER TABLE user
-ADD date DATE;
-ALTER TABLE user
-ADD firstname VARCHAR(255) NOT NULL;
 
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 	questionID INT AUTO_INCREMENT,
@@ -142,4 +136,4 @@ INSERT INTO hangman (word) VALUES ("JAYNEST");
 INSERT INTO hangman (word) VALUES ("THOMPSON");
 INSERT INTO hangman (word) VALUES ("BRINSER");
 
-INSERT INTO user (username, email, date) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'));
+INSERT INTO user (username, email, date,firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'),'User');
