@@ -1,4 +1,4 @@
-let score;
+let score = 0;
 let name;
 let major;
 
