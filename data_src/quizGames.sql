@@ -27,6 +27,30 @@ CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 
 );
 
+CREATE TABLE IF NOT EXISTS visitor (
+
+	username VARCHAR(50) NOT NULL,
+    fav_game INT DEFAULT 0,
+    fav_genre INT DEFAULT 0,
+    unique_played INT DEFAULT 0,
+    num_played_flight INT DEFAULT 0,
+    num_played_flappy INT DEFAULT 0,
+    num_played_hangman INT DEFAULT 0,
+    PRIMARY KEY (username)
+
+);
+
+CREATE TABLE IF NOT EXISTS visit (
+	
+    visit_id INT AUTO_INCREMENT,
+	time_start DATETIME NOT NULL,
+    visit_length DATETIME,
+    visitor VARCHAR(50),
+    PRIMARY KEY (visit_id),
+    FOREIGN KEY (visitor) REFERENCES visitor (username)
+
+);
+
 CREATE TABLE IF NOT EXISTS answer (
 
 	answerID INT NOT NULL AUTO_INCREMENT,
