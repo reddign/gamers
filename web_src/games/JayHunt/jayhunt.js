@@ -78,8 +78,8 @@ function flybad(){
     if(jay_2_y < 0+radius){
         directiony2 = 1;
     }
-    jay_2_x = jay_2_x+2*directionx1;
-    jay_2_y = jay_2_y+2*directiony1;
+    jay_2_x = jay_2_x+2*directionx2;
+    jay_2_y = jay_2_y+2*directiony2;
 
 }
 
