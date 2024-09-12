@@ -3,15 +3,25 @@
 
 class Squirrel {
 
-    //position of squirrel
-    xPos;
-    yPos;
+    constructor(x, y, method) {
 
-    //target position of squirrel that it will path to
-    xTar;
-    yTar;
+        //position of squirrel
+        this.xPos = x;
+        this.yPos = y;
 
-    //which targetting method the squirrel will use, will be varied to prevent all squirrels following the same path
-    tarMethod;
+        //target position of squirrel that it will path to
+        this.xTar = 0;
+        this.yTar = 0;
+
+        //which targetting method the squirrel will use, will be varied to prevent all squirrels following the same path
+        this.tarMethod = method;
+
+    }
+
+    target() {
+
+
+
+    }
 
 }
