@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://ww8gc8sot4lh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_p11g3"]
+[ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
+[ext_resource type="Script" path="res://Jay.gd" id="1_x1awb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
+size = Vector2(10, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g81ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
+size = Vector2(255.839, 10.6369)
+
+[sub_resource type="Gradient" id="Gradient_e4r16"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2uvd"]
+gradient = SubResource("Gradient_e4r16")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4d2sx"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vxr7e"]
+width = 1280
+height = 720
+seamless = true
+noise = SubResource("FastNoiseLite_4d2sx")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_p11g3")
+
+[node name="Jay" type="CharacterBody2D" parent="."]
+position = Vector2(248, 584)
+script = ExtResource("1_x1awb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_eokgw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jay"]
+position = Vector2(-1, -0.125)
+scale = Vector2(9.99999, 19.75)
+texture = SubResource("PlaceholderTexture2D_g81ho")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(657.77, 598)
+scale = Vector2(5.615, 5.615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.106155, 4.68153)
+shape = SubResource("RectangleShape2D_qjn3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = 1
+texture = SubResource("GradientTexture1D_c2uvd")
+
+[node name="Obstacles" parent="." instance=ExtResource("1_vh1nm")]
+position = Vector2(612, 649)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1280, 720)
+
+[node name="Background" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = SubResource("NoiseTexture2D_vxr7e")
+
+[connection signal="end_game" from="Obstacles" to="." method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]

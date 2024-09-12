@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JayRunner Game</title>
+   
+    <link rel="stylesheet" href="jayrunner.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div hidden id="gameOverOverlay">
+        <div class="end-screen">
+            <h1>Game Over</h1>
+            <div class="animation" id="catchAnimation">
+                <!-- TODO: Cat Animation of catching Bird -->
+            </div>
+            <p>Score: <span id="score"></span></p>
+            <p>User ID: <span id="userId"></span></p>
+            <p>Date: <span id="date"></span></p>
+            <p>Time: <span id="time"></span></p>
+            <p>Rank: <span id="rank"></span></p>
+            
+            <h2>Leaderboard</h2>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>User ID</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Leaderboard data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="jayrunner.js"></script>
+</body>
+</html>
