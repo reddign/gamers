@@ -21,12 +21,15 @@ function hiddenCupcake(board, numCupcakes) {
 
     return board;
 }
+//This function would be played IF the actor finds the cupcakes
+function findCupcake(){
 
-// Example usage
-// Create a 5x5 board initialized with 0 (empty spaces)
-let board = Array.from({ length: 5 }, () => Array(5).fill(0));
+}
+//This function would be played IF the actor removes the cupcakes
+function removeCupcake(){
 
-// Place 3 hidden cupcakes on the board
-hiddenCupcake(board, 3);
+}
+//This function would add the hidden cupcakes to the score of the user
+function addToScore(){
 
-console.log(board);
+}
