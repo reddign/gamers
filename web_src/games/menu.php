@@ -101,6 +101,9 @@ session_start();
             <option value="2048">2048 - Etown Edition</option>
         </select>
     </div>
+
+    <center><a href="high_scores.php">View High Scores></a></center>
+
     <br><br><br><br><br><br><br>
 
     <!-- Mario Section -->
