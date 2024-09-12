@@ -21,7 +21,7 @@ require "../../includes/head.php";
                 Asher wayde is a Junior Computer Science major, and a student at Etown college. He is expecting to graduate in 2026, Asher also likes to play guitar, ride motorcycles,
                 and fiddle with servers in his free time.
         </section>
-        <p>
+        <p style="color: transparent; font-size:1px;">
         According to all known laws
 of aviation,
 there is no way a bee
