@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS user (
 
 );
 
-INSERT INTO user (username, email, date, firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), "%Y-%m-%d"), "user")
+INSERT INTO user (username, email, date, firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), "%Y-%m-%d"), "user");
 
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 
@@ -24,6 +24,30 @@ CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
     times_wrong INT DEFAULT 0,
     times_skipped INT DEFAULT 0,
     PRIMARY KEY (questionID)
+
+);
+
+CREATE TABLE IF NOT EXISTS visitor (
+
+	username VARCHAR(50) NOT NULL,
+    fav_game INT DEFAULT 0,
+    fav_genre INT DEFAULT 0,
+    unique_played INT DEFAULT 0,
+    num_played_flight INT DEFAULT 0,
+    num_played_flappy INT DEFAULT 0,
+    num_played_hangman INT DEFAULT 0,
+    PRIMARY KEY (username)
+
+);
+
+CREATE TABLE IF NOT EXISTS visit (
+	
+    visit_id INT AUTO_INCREMENT,
+	time_start DATETIME NOT NULL,
+    visit_length DATETIME,
+    visitor VARCHAR(50),
+    PRIMARY KEY (visit_id),
+    FOREIGN KEY (visitor) REFERENCES visitor (username)
 
 );
 
