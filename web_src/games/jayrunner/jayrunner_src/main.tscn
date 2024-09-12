@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ww8gc8sot4lh"]
+[gd_scene load_steps=12 format=3 uid="uid://ww8gc8sot4lh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_p11g3"]
 [ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
 [ext_resource type="Script" path="res://Jay.gd" id="1_x1awb"]
+[ext_resource type="Script" path="res://js_object.gd" id="4_r5d0f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
 size = Vector2(10, 20)
@@ -66,6 +67,9 @@ texture_repeat = 2
 offset_right = 1280.0
 offset_bottom = 720.0
 texture = SubResource("NoiseTexture2D_vxr7e")
+
+[node name="JSObject" type="Node" parent="."]
+script = ExtResource("4_r5d0f")
 
 [connection signal="end_game" from="Obstacles" to="." method="_on_obstacles_end_game"]
 [connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
