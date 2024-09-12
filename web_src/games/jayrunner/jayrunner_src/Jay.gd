@@ -24,6 +24,12 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2(0, 0)
 		if Input.is_action_just_pressed("ui_accept"):
 			get_tree().reload_current_scene()
+		
+	# handle animation
+	if is_on_floor():
+		$AnimatedSprite2D.animation = "walk"
+	else:
+		$AnimatedSprite2D.animation = "jump"
 
 
 func _on_obstacles_end_game() -> void:
