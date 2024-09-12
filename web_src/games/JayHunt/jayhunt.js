@@ -18,6 +18,8 @@ let  directiony1 = 1;
 let  directionx2 = 1;
 let  directiony2 = 1;
 
+let FPS = 60;
+
 function roundstart(){
 
 
