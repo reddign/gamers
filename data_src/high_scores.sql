@@ -2,13 +2,12 @@
 
 use triviagames;
 
--- TSK-8.1 Create a table to store the user, the date, the score, and the game played. (create table)
+-- 3. Create the highscores table
 CREATE TABLE IF NOT EXISTS highscores (
-    user_id INT NOT NULL,                 	 -- Unique ID for each user (auto-incremented)
+    user_id INT,                 			 -- Unique ID for each user (auto-incremented)
     game_played VARCHAR(100) NOT NULL,       -- Name of the game played
     score INT NOT NULL,                      -- Score achieved in the game
-    time_played DATETIME NOT NULL,           -- Date the game was played
-    username VARCHAR(100) NOT NULL,          -- Username for each user (picked)
+    time_played DATETIME NOT NULL,            -- Date the game was played
     FOREIGN KEY (user_id) REFERENCES user(userID)
 );
 
