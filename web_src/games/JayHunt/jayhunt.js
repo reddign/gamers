@@ -88,16 +88,26 @@ function gameover(){
 
 
 function net(e){
+    mouse_x = e.clientX;
+    mouse_y = e.clientY;
+}
 
+function capture(){
+
+    
 }
 
 
 
 
-
 function animate(){
-    mouse_x = e.clientX;
-    mouse_y = e.clientY;
+    document.addEventListener('keydown', capture);
+    roundstart();
+    fly();
+    flybad();
+
+    roundover();
+
 
 }
 
