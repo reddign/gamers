@@ -5,7 +5,7 @@ const context = canvas.getContext("2d");
 //Making our birds and setting them to be invisible
 let jay_1_x = 0;
 let jay_1_y = 0;
-let jay_2_x = 0;
+let jay_2_x = 100;
 let jay_2_y = 0;
 let jay_1_see = 0;
 let jay_2_see = 0;
@@ -100,9 +100,15 @@ function capture(){
 }
 
 
+function clear(){
+
+    context.fillStyle = "black";
+    context.fillRect(0,0,canvas.width,canvas.height);
+}
 
 
 function animate(){
+    clear();
     document.addEventListener('keydown', capture);
     roundstart();
     fly();
