@@ -108,7 +108,6 @@ session_start();
 
     <!-- Creating a hyperlink for the high scores page -->
     <center><a href="high_scores.php">View High Scores</a></center>
-    
     <br><br><br><br><br><br><br>
 
     <!-- Mario Section -->
