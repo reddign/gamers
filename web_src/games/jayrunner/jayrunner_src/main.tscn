@@ -1,39 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ww8gc8sot4lh"]
 
 [ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
-
-[sub_resource type="GDScript" id="GDScript_c5ibi"]
-script/source = "extends CharacterBody2D
-
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-var game_over = false
-
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor() && not game_over:
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_pressed(\"ui_accept\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-	
-	if Input.is_action_just_released(\"ui_accept\") and velocity.y < 0:
-		velocity.y = 0
-	
-	move_and_slide()
-	
-	if game_over:
-		velocity = Vector2(0, 0)
-		if Input.is_action_just_pressed(\"ui_accept\"):
-			get_tree().reload_current_scene()
-
-
-func _on_obstacles_end_game() -> void:
-	game_over = true
-"
+[ext_resource type="Script" path="res://Jay.gd" id="1_x1awb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
 size = Vector2(10, 20)
@@ -52,7 +20,7 @@ gradient = SubResource("Gradient_e4r16")
 
 [node name="Jay" type="CharacterBody2D" parent="."]
 position = Vector2(248, 584)
-script = SubResource("GDScript_c5ibi")
+script = ExtResource("1_x1awb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
 position = Vector2(-1, 0)
