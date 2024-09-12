@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="jayrunner.css">
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
-
+    <canvas id="gameCanvas">
+        
+    </canvas>
+    <div id="gameWindow">
+        <script id= "game" src="run.js"></script>
+    </div>
     <div hidden id="gameOverOverlay">
         <div class="end-screen">
             <h1>Game Over</h1>
             <div class="animation" id="catchAnimation">
                 <!-- TODO: Cat Animation of catching Bird -->
             </div>
+            
             <p>Score: <span id="score"></span></p>
             <p>User ID: <span id="userId"></span></p>
-            <p>Date: <span id="date"></span></p>
+            <p>Date: <span id="date"></span></p>x
             <p>Time: <span id="time"></span></p>
             <p>Rank: <span id="rank"></span></p>
             
@@ -38,6 +43,6 @@
         </div>
     </div>
 
-    <script src="jayrunner.js"></script>
+<!--    <script src="jayrunner.js"></script>-->
 </body>
 </html>
