@@ -20,7 +20,15 @@ class Squirrel {
 
     target() {
 
+        //called to update the squirrels target tile
+        //method for changing the target tile depends on targetting method, similar to pac man ghosts
 
+    }
+
+    move() {
+
+        //have the squirrel move towards their target tile
+        //will have pathfinding code to help with naviagation and will hopefully have checks in place to prevent the squirrels from getting stuck
 
     }
 
