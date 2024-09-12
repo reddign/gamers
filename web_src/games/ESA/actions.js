@@ -3,11 +3,26 @@ class Actions {
         this.name = "actions";
     }
 
+    help(currentLocation){
+        // List available functions in your current state
+    }
+
     look(currentLocation) {
-        // Define what the look function should do here
+        // Used to observe surroundings
     }
 
     goto(currentLocation, destination) {
-        // Define what the goto function should do here
+        // Used to travel to a different area
     }
+
+    use(item, currentLocation,){
+        // General interaction with environment
+    }
+
+    items(){
+        // Shows items you currently possess
+    }
+
+
+
 }
