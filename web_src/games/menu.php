@@ -106,8 +106,7 @@ session_start();
         </select>
     </div>
 
-    <!-- Creating a hyperlink for the high scores page -->
-    <center><a href="../../data_src/api/highscores/read.php">View High Scores</a></center>
+    <center><a href="high_scores.php">View High Scores</a></center>
 
     <br><br><br><br><br><br><br>
 
