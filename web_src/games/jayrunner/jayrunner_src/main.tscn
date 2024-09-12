@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ww8gc8sot4lh"]
+[gd_scene load_steps=11 format=3 uid="uid://ww8gc8sot4lh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_p11g3"]
 [ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
@@ -6,9 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://b786mgcc2388j" path="res://images/bluejayjump.png" id="3_onwaf"]
 [ext_resource type="Script" path="res://js_object.gd" id="4_r5d0f"]
 [ext_resource type="Texture2D" uid="uid://hnj3tv2hvu3e" path="res://images/bluejaywalk.png" id="4_rhjdu"]
+[ext_resource type="Texture2D" uid="uid://bx77t1kuiew36" path="res://images/City4.png" id="6_nrtjp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
-size = Vector2(10, 20)
+size = Vector2(41, 37)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f3h2s"]
 animations = [{
@@ -32,50 +33,36 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
 size = Vector2(255.839, 10.6369)
 
-[sub_resource type="Gradient" id="Gradient_e4r16"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2uvd"]
-gradient = SubResource("Gradient_e4r16")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_4d2sx"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vxr7e"]
-width = 1280
-height = 720
-seamless = true
-noise = SubResource("FastNoiseLite_4d2sx")
-
 [node name="Main" type="Node2D"]
 script = ExtResource("1_p11g3")
 
 [node name="Jay" type="CharacterBody2D" parent="."]
-position = Vector2(248, 584)
+position = Vector2(49, 685)
+scale = Vector2(2.36, 2.40001)
 script = ExtResource("1_x1awb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
-position = Vector2(-1, 0)
+position = Vector2(11, -33)
 shape = SubResource("RectangleShape2D_eokgw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jay"]
-position = Vector2(-1, -0.125)
-scale = Vector2(0.095, 0.095)
+position = Vector2(9.99999, -33)
+scale = Vector2(0.1715, 0.1675)
 sprite_frames = SubResource("SpriteFrames_f3h2s")
-animation = &"jump"
+animation = &"walk"
 
 [node name="Area2D" type="StaticBody2D" parent="."]
 position = Vector2(657.77, 598)
 scale = Vector2(5.615, 5.615)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.106155, 4.68153)
+position = Vector2(4.31522, 14.2475)
 shape = SubResource("RectangleShape2D_qjn3n")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-z_index = 1
-texture = SubResource("GradientTexture1D_c2uvd")
-
-[node name="Obstacles" parent="." instance=ExtResource("1_vh1nm")]
-position = Vector2(612, 649)
+[node name="Obstacles" parent="Area2D" instance=ExtResource("1_vh1nm")]
+position = Vector2(-8.32948, 9.08281)
+rotation = 0.00615358
+scale = Vector2(0.178094, 0.178094)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -84,12 +71,15 @@ motion_mirroring = Vector2(1280, 720)
 
 [node name="Background" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 texture_repeat = 2
-offset_right = 1280.0
-offset_bottom = 720.0
-texture = SubResource("NoiseTexture2D_vxr7e")
+offset_left = -35.0
+offset_top = 3.0
+offset_right = 1245.0
+offset_bottom = 723.0
+texture = ExtResource("6_nrtjp")
+expand_mode = 3
 
 [node name="JSObject" type="Node" parent="."]
 script = ExtResource("4_r5d0f")
 
-[connection signal="end_game" from="Obstacles" to="." method="_on_obstacles_end_game"]
-[connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Area2D/Obstacles" to="." method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Area2D/Obstacles" to="Jay" method="_on_obstacles_end_game"]

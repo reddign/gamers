@@ -8,41 +8,52 @@
     <link rel="stylesheet" href="jayrunner.css">
 </head>
 <body>
-    <canvas id="gameCanvas">
-        
-    </canvas>
-    <div id="gameWindow">
-        <script id= "game" src="run.js"></script>
-    </div>
-    <div hidden id="gameOverOverlay">
-        <div class="end-screen">
-            <h1>Game Over</h1>
-            <div class="animation" id="catchAnimation">
-                <!-- TODO: Cat Animation of catching Bird -->
-            </div>
-            
-            <p>Score: <span id="score"></span></p>
-            <p>User ID: <span id="userId"></span></p>
-            <p>Date: <span id="date"></span></p>x
-            <p>Time: <span id="time"></span></p>
-            <p>Rank: <span id="rank"></span></p>
-            
-            <h2>Leaderboard</h2>
-            <table id="leaderboard">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>User ID</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Leaderboard data will be inserted here -->
-                </tbody>
-            </table>
+    
+    <div id="startScreen">
+        <!-- TODO: Adjust style and appearance. Maybe Generate a Graphic.
+            ADD Button to view leaderboards? -->
+        <div class = "display-container">
+            <h1>JayRunner</h1>
+            <h2>Team Omacron</h2>
+            <button id="startButton">Start Game</button>
         </div>
     </div>
 
-<!--    <script src="jayrunner.js"></script>-->
+    <!-- Game Window -->
+    <div id="gameWindow" style="display: none;"> 
+        <!-- Game will be loaded here after clicking Start -->
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div hidden id="gameOverOverlay">
+        <!-- TODO: ADD Game Over Screen to appear after player dies
+            Include User, Score, Date, Rank -->
+    </div>
+
+    <!-- TODO: Connect to database through API
+        Get UserID
+        Post Score, Date, Rank -->
+    
+    <script>
+        // Function to dynamically load the game script
+        function loadGameScript() {
+            var script = document.createElement('script');
+            script.src = "run.js";  // Path to your game script
+            document.getElementById('gameWindow').appendChild(script);
+        }
+
+        // Event listener for the Start button
+        document.getElementById('startButton').addEventListener('click', function() {
+            // Hide the start screen
+            document.getElementById('startScreen').style.display = 'none';
+            
+            // Show the game window
+            document.getElementById('gameWindow').style.display = 'block';
+            
+            // Load the game script
+            loadGameScript();
+        });
+    </script>
+
 </body>
 </html>

@@ -6,6 +6,7 @@ var game_over = false
 
 func _ready():
 	position.x = 600
+	$cat2D.play()
 
 func _process(delta):
 	if not game_over:

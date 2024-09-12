@@ -1,29 +1,38 @@
 [gd_scene load_steps=6 format=3 uid="uid://bvxcamevtingt"]
 
 [ext_resource type="Script" path="res://obstacle.gd" id="1_njla2"]
+[ext_resource type="Texture2D" uid="uid://cv27qtnjwsdt0" path="res://images/cat1.png" id="2_06qgb"]
+[ext_resource type="Texture2D" uid="uid://bv3j3bpcxr5bd" path="res://images/cat2.png" id="3_57maj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pscy1"]
-size = Vector2(20, 88)
+size = Vector2(146, 113)
 
-[sub_resource type="Gradient" id="Gradient_s0xv6"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_wveoc"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0mvop"]
-width = 22
-height = 92
-color_ramp = SubResource("Gradient_s0xv6")
-noise = SubResource("FastNoiseLite_wveoc")
+[sub_resource type="SpriteFrames" id="SpriteFrames_5bwum"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_06qgb")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_57maj")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
 
 [node name="obstacle" type="Area2D"]
 script = ExtResource("1_njla2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -44)
+position = Vector2(17, -56.5)
 shape = SubResource("RectangleShape2D_pscy1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -43.645)
-texture = SubResource("NoiseTexture2D_0mvop")
+[node name="cat2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16.1155, -57.2275)
+scale = Vector2(0.422197, 0.45418)
+sprite_frames = SubResource("SpriteFrames_5bwum")
+animation = &"1"
+frame_progress = 0.712884
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
