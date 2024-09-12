@@ -11,10 +11,12 @@ if ($connection->connect_error) {
 }
 
 // TODO: Create a sql query to extract the necessary rows for the leaderboard
-$sql = "SELECT;"; 
+// Get individual top tens - so each player can only be in the top ten once
+$sql = "SELECT username, score, time FROM...;"; 
 
 $result = $connection->query($sql);
 
+// json encode?
 
 // Close the database connection
 $connection->close();
