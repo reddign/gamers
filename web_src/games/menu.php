@@ -105,6 +105,9 @@ session_start();
             <option value="Etown Student Adventure">Etown Student Adventure</option>
         </select>
     </div>
+
+    <center><a href="high_scores.php">View High Scores></a></center>
+
     <br><br><br><br><br><br><br>
 
     <!-- Mario Section -->
