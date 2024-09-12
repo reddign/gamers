@@ -22,7 +22,8 @@ h1 {
 
 main {
     display: flex;
-    justify-content: center;
+
+    justify-content: space-between;
     align-items: center;
     height: 60vh;
 }
