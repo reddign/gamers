@@ -31,6 +31,9 @@ main {
     background-color: rgba(1, 130, 250, 0.5); /* Dark background for contrast */
     padding: 30px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically */
 }
 
 #start-btn, #Leaderboard-btn {
