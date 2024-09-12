@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://ww8gc8sot4lh"]
+
+[ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
+
+[sub_resource type="GDScript" id="GDScript_c5ibi"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+var game_over = false
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor() && not game_over:
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_just_released(\"ui_accept\") and velocity.y < 0:
+		velocity.y = 0
+	
+	move_and_slide()
+	
+	if game_over:
+		velocity = Vector2(0, 0)
+		if Input.is_action_just_pressed(\"ui_accept\"):
+			get_tree().reload_current_scene()
+
+
+func _on_obstacles_end_game() -> void:
+	game_over = true
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
+size = Vector2(10, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g81ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
+size = Vector2(255.839, 10.6369)
+
+[sub_resource type="Gradient" id="Gradient_e4r16"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2uvd"]
+gradient = SubResource("Gradient_e4r16")
+
+[node name="Main" type="Node2D"]
+
+[node name="Jay" type="CharacterBody2D" parent="."]
+position = Vector2(248, 584)
+script = SubResource("GDScript_c5ibi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_eokgw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jay"]
+position = Vector2(-1, -0.125)
+scale = Vector2(9.99999, 19.75)
+texture = SubResource("PlaceholderTexture2D_g81ho")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(657.77, 598)
+scale = Vector2(5.615, 5.615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.106155, 4.68153)
+shape = SubResource("RectangleShape2D_qjn3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = 1
+texture = SubResource("GradientTexture1D_c2uvd")
+
+[node name="Obstacles" parent="." instance=ExtResource("1_vh1nm")]
+position = Vector2(612, 649)
+
+[connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
