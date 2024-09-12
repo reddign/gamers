@@ -102,6 +102,9 @@ session_start();
             <option value="jayrunner">JayRunner</option>
         </select>
     </div>
+
+    <center><a href="high_scores.php">View High Scores></a></center>
+
     <br><br><br><br><br><br><br>
 
     <!-- Mario Section -->
