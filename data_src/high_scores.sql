@@ -4,10 +4,11 @@ use triviagames;
 
 -- 3. Create the highscores table
 CREATE TABLE IF NOT EXISTS highscores (
-    user_id INT,                 			 -- Unique ID for each user (auto-incremented)
+    user_id INT NOT NULL,                 	 -- Unique ID for each user (auto-incremented)
     game_played VARCHAR(100) NOT NULL,       -- Name of the game played
     score INT NOT NULL,                      -- Score achieved in the game
-    time_played DATETIME NOT NULL,            -- Date the game was played
+    time_played DATETIME NOT NULL,           -- Date the game was played
+    username VARCHAR(100) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user(userID)
 );
 
