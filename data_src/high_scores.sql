@@ -2,13 +2,13 @@
 
 use triviagames;
 
--- 3. Create the highscores table
+-- TSK-8.1 Create a table to store the user, the date, the score, and the game played. (create table)
 CREATE TABLE IF NOT EXISTS highscores (
     user_id INT NOT NULL,                 	 -- Unique ID for each user (auto-incremented)
     game_played VARCHAR(100) NOT NULL,       -- Name of the game played
     score INT NOT NULL,                      -- Score achieved in the game
     time_played DATETIME NOT NULL,           -- Date the game was played
-    username VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL,          -- Username for each user (picked)
     FOREIGN KEY (user_id) REFERENCES user(userID)
 );
 
@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS highscores (
     -- (CURRENTLY) Foreign Key Constraint not matched due to no current users
 INSERT INTO highscores(user_id, game_played, score, time_played, username)
 VALUES(1, 'Tetris', '1000000', NOW(), 'Dashing78');
-VALUES(1, 'Breakout', '123456', NOW(), 'Dancing67');
 
 -- Notes:
     -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
