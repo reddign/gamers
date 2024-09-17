@@ -20,6 +20,8 @@ require "../../includes/head.php";
             <div id="bio"> Vincent Liu is a student in this class. Majoring in Computer Engineering with a minor in Japanese and part of the class of 2026, he also doesn't check for assignments until the day they are due, Owen Yang</div>
 
             <p>Editing this file to demonstrate git merge</p>
+            <br>
+            <div>Rabble Rabble Rabble Rabble, Rabble Rabble <div>
         </section>
     </main>
 </body>
