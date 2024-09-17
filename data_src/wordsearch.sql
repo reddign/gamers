@@ -16,7 +16,8 @@ references WordSearch_Category (category_id)
 
 insert into WordSearch_Category(Name)
 VALUES
-("Dorms")
+("Dorms"),
+("Professors")
 ;
 
 insert into WordSearch_WordBank(word,category_id)
@@ -28,4 +29,13 @@ VALUES
 ("Hackman",1),
 ("Quads",1),
 ("Myer",1)
+;
+
+insert into WordSearch_WordBank(word,category_id)
+VALUES
+("Leap",2),
+("Reddig",2),
+("DrLi",2),
+("Wang",2),
+("Wonderlich",2)
 ;
