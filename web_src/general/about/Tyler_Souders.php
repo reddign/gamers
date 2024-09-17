@@ -17,8 +17,8 @@ require "../../includes/head.php";
         <section id="tyler Souders's Bio">
             <div class="bio-title">Tyler Souders</div>
             <br>
-            <div id="bio"> I am Tyler Souders. I am currently a newborn baby at Etown College and plan
-                to graduate with my Bachelores in milk formula techniques, activities, experience hopefully by 3000.
+            <div id="bio"> I am Tyler Souders. I am currently a Senior at Etown College and plan
+                to graduate with my Bachelores in Computer Science hopefully 2025.
         </section>
     </main>
 </body>

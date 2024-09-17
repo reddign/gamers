@@ -75,7 +75,7 @@ session_start();
 
             <div>
                 <div id="basicContainer">
-                <form action="../../data_src/api/user/create.php" method="post" id="add-user" style="text-align: left">
+                <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: left">
 
                     <label for="username">Enter your <b>Username:</b></label>
                     <input type="text" id= "username" name="user" required> <br><br>
