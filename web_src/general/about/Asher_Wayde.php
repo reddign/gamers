@@ -7,8 +7,12 @@ require "../../includes/head.php";
 <body>
 <?php
      require "../../includes/navbar.php";
+
+     require_once "../../../data_src/api/includes/db_config.php";
+     $connection= new mysqli($host,$dbUsername,$dbPassword,$database);
+     $connection->query("Select * from WordSearch_WordBank");
 ?>
-   
+
     <div class="buttons">
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
@@ -19,7 +23,7 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> 
                 Asher wayde is a Junior Computer Science major, and a student at Etown college. He is expecting to graduate in 2026, Asher also likes to play guitar, ride motorcycles,
-                and fiddle with servers in his free time.
+                and fiddle with servers in his free time. EXTRA STUFF THIS IS INSANE
         </section>
         <p style="color: transparent; font-size:1px;">
         According to all known laws
