@@ -17,7 +17,7 @@ require "../../includes/head.php";
         <section id="Matt Smith's Bio">
             <div class="bio-title">Matt Smith</div>
             <br>
-            <div id="bio"> Hello, I'm Matt a Computer Science Major and Math Minor! I intend to graduate in 2026. James was here.
+            <div id="bio"> Hewwo, I'm Matt a computew science majow awnd math minow! I intend tuwu gwaduate in 2026.
         </section>
     </main>
 </body>
