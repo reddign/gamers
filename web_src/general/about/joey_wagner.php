@@ -17,7 +17,8 @@ require "../../includes/head.php";
         <section id="Joey Wagner's Bio">
             <div class="bio-title">Joey Wagner</div>
             <br>
-            <div id="bio"> 
+            <div id="bio"> Joey Wagner is a junior Computer Science major, with a concentration in Data Science. He also has minors in Psychology and
+                Cognitive Science. He will be graduating in May 2026.
         </section>
     </main>
 </body>
