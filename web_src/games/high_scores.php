@@ -10,8 +10,12 @@ if($connection->connect_error) {
 }
 
 //SQL query
-$sql = "SELECT /* Column names*/";
-$result = $connection->query($sql);
+$sql = $connection->prepare("/*ENTER SQL STATEMENT*/");
+
+/*
+ - CREATE A QUERY TO FIND ALL GAMES AVAILABLE FROM THE GAMES TABLE
+ - ECHO THE TOP RESULTS USING A FOR EACH LOOP FROM THE RESULTS OF THE SQL QUERY ABOVE
+*/
 
 //If there are results
 if($result->num_rows > 0) {
@@ -23,6 +27,6 @@ if($result->num_rows > 0) {
   else{
     echo "0 results";
   }
-  $conn->close();
+  $connection->close();
 
 ?>
