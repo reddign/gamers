@@ -12,7 +12,8 @@ require "../../includes/head.php";
     <div class="buttons">
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
-        
+        #THIS IS A COMMENT 
+        #Leif, edit here
     <main>
         <section id="Austin Smith's Bio">
             <div class="bio-title">Austin Smith</div>
