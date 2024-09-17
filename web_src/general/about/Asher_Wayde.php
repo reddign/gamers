@@ -7,10 +7,6 @@ require "../../includes/head.php";
 <body>
 <?php
      require "../../includes/navbar.php";
-
-     require_once "../../../data_src/api/includes/db_config.php";
-     $connection= new mysqli($host,$dbUsername,$dbPassword,$database);
-     $connection->query("Select * from WordSearch_WordBank");
 ?>
 
     <div class="buttons">
