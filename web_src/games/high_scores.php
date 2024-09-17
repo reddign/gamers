@@ -11,7 +11,7 @@ if($connection->connect_error) {
 
 //SQL query
 $sql = "SELECT /* Column names*/";
-$result = $conn->query($sql);
+$result = $connection->query($sql);
 
 //If there are results
 if($result->num_rows > 0) {
