@@ -7,10 +7,13 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+# TODO increase scrolling speed with time
+# TODO implement scoring system
 func _process(delta: float) -> void:
 	if scrolling == true:
 		$ParallaxBackground.scroll_offset.x -= delta * 100
 
+# TODO spawn obstacles at random intervals
 
 func _on_obstacles_end_game() -> void:
 	scrolling = false
