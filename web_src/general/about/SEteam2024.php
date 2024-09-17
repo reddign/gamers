@@ -57,13 +57,13 @@ require "../../includes/head.php";
         <div class="section" id="team-names">
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
-                <a href="kevin_barbieri.php">Kevin Barbieri</a>, <a href="joseph_culkin.php">Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>,<a href="ParkerEngle.php">Parker Engle</a>,
-                <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, <a href="laney_humble.php">Laney Humble</a>, <a href="James_Hutchins.php">James Hutchins</a>,
-                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href="john_mcgovern.php">John McGovern</a>, <a href="Jackson_Miller.php">Jackson Miller</a>,
-                <a href='MildredNwachukwu.php'>Mildred Nwachukwu-Innocent</a>, <a href='MartinRatchford.php'>Martin Ratchford</a>, <a href='AlexRoop.php'> Alexander Roop </a>, Wesley Ryan, <a href='Joshua_Schmitt.php'> Joshua Schmitt </a>, <a href="Ian_Skeete.php">Ian Skeete</a> , <a href='austin_smith.php'>Austin Smith</a>, <a href='matthew_smith.php'>Matthew Smith,
-                <a href='Tyler_Souders.php'>Tyler Souders</a>, Joshua Stoner, <a href='camila_torres.php'>Camila Torres</a>, <a href='joey_wagner.php'>Joey Wagner</a>,
-                <a href='Asher_Wayde.php'>Asher Wayde</a>, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>, 
-                and <a href='Prof_reddig.php'>Prof Reddig</a>
+                <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, Brian Duva, Parker Engle,
+                <a href="leif_hoffman.php">Leif Hoffman</a>, Cameron Hollabaugh, Laney Humble, <a href="James_Hutchins.php">James Hutchins<a/> ,
+                <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller,
+                Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, <a href='wesJRyan.php'>Wes J. Ryan</a>,
+                Joshua Schmitt, Ian Skeete, Austin Smith, Matthew Smith,
+                Tyler Souders, <a href='Joshua_Stoner.php'>Joshua Stoner</a>, Camila Torres, Joey Wagner,
+                Asher Wayde, <a href='OwenWertzberger.php'>Owen Wertzberger</a>, <a href='owen_yang.php'>Owen Yang</a>, and <a href='student_template.php'>Jane Doe</a>
             </span>
         </div>
     </div>

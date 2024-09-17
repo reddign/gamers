@@ -17,7 +17,7 @@ require "../../includes/head.php";
         <section id="Joshua Stoner's Bio">
             <div class="bio-title">Joshua Stoner</div>
             <br>
-            <div id="bio"> Joshua Stoner, Computer Engineering 2025. Other Josh was here....
+            <div id="bio"> Joshua Stoner, Computer Engineering 2025
         </section>
     </main>
 </body>
