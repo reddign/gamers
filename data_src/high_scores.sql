@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS highscores (
     -- (CURRENTLY) Foreign Key Constraint not matched due to no current users
 INSERT INTO highscores(user_id, game_played, score, time_played, username)
 VALUES(1, 'Tetris', '1000000', NOW(), 'Dashing78');
+VALUES(1, 'Breakout', '123456', NOW(), 'Dancing67');
 
 -- Notes:
     -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
