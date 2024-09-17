@@ -17,7 +17,7 @@ require "../../includes/head.php";
         <section id="Jane Doe's Bio">
             <div class="bio-title">Brian Duva</div>
             <br>
-            <div id="bio"> Brian Duva is majoring in Computer Science with a concentration in Data Science,. He intends to graduate in 2027.
+            <div id="bio"> 
         </section>
     </main>
 </body>
