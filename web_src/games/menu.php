@@ -101,7 +101,6 @@ session_start();
             <option value="2048">2048 - Etown Edition</option>
         </select>
     </div>
-
     <!-- Creating a hyperlink for the high scores page -->
     <center><a href="high_scores.php">View High Scores</a></center>
 
