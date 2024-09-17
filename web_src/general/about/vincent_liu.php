@@ -22,6 +22,7 @@ require "../../includes/head.php";
             <p>Editing this file to demonstrate git merge</p>
             <br>
             <div>Rabble Rabble Rabble Rabble, Rabble Rabble <div>
+            <p>another line for vince</p>
         </section>
     </main>
 </body>
