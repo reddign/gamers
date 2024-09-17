@@ -16,20 +16,14 @@ function reportScore() {
         // time: gameTime // maybe implemented depending on database capabilities
     };
 
-    // TODO: Update below once more lectures have occurred 
 
-    // fetch('file where this will be stored.php', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(gameStats),
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log('Success', data);
-    // })
-    // .catch((error) => {
-    //     console.error('Error:', error);
-    // });
+    fetch('PLACEHOLDER.php', { // TODO: Update with the create.php file associated with highscores 
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(gameStats),
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 }
