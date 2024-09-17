@@ -6,6 +6,8 @@ function detectCOllision(){
     //add collision to the map
 }
 
+//:)
+
 function reportScore() {
     // TODO: report username, game, score, maybe time? to database
     let gameStats = {
