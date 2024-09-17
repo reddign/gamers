@@ -102,6 +102,7 @@ session_start();
             <option value="jayrunner">JayRunner</option>
         </select>
     </div>
+
     <!-- Creating a hyperlink for the high scores page -->
     <center><a href="../../data_src/api/highscores/read.php">View High Scores</a></center>
 
