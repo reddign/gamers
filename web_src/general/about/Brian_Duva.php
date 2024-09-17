@@ -15,11 +15,10 @@ require "../../includes/head.php";
         
     <main>
         <section id="Jane Doe's Bio">
-            <div class="bio-title">Brian Duva</div>
+            <div class="bio-title">Jane Doe</div>
             <br>
             <div id="bio"> Brian Duva is majoring in Computer Science with a concentration in Data Science,. He intends to graduate in 2027.
         </section>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ucv0b7iMMuVtWzmb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
 </body>
 <?php
