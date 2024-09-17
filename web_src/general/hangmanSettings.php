@@ -149,7 +149,7 @@ if (!isset($_SESSION['id'])) {
             <div id="welcome-text">Hangman Settings</div>
             <div id= "basicContainer">
             
-            <form action="../../data_src/api/hangman/create.php" method="post" id="add-word" style="text-align: left">
+            <form action="../../data_src/api/hangman/add.php" method="post" id="add-word" style="text-align: left">
             &nbspAdd A Word: <input type="text" name="word"><br>
             &nbsp<input type="submit" value="Submit">
                 <div id="response"></div>

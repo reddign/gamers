@@ -143,7 +143,7 @@ if (!isset($_SESSION['id'])) {
             <div id="welcome-text">Trivia Settings</div>
             <div id= "basicContainer">
             
-            <form action="../../data_src/api/trivia/create.php" method="post" id="add-question" style="text-align: left">
+            <form action="../../data_src/api/trivia/add.php" method="post" id="add-question" style="text-align: left">
             &nbspAdd a Question: <input type="text" name="question"><br><br>
             &nbspAnswer 1 (Correct) <input type="text" name="answer1"> Answer 2 (Incorrect) <input type="text" name="answer2"> Answer 3 (Incorrect) <input type="text" name="answer3">
             &nbsp<input type="submit" value="Submit">

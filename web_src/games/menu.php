@@ -105,6 +105,7 @@ session_start();
             <option value="Etown Student Adventure">Etown Student Adventure</option>
         </select>
     </div>
+
     <!-- Creating a hyperlink for the high scores page -->
     <center><a href="high_scores.php">View High Scores</a></center>
 
