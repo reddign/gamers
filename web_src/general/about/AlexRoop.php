@@ -19,7 +19,6 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> Alex Roop is a junior with a major in computer science with a contentration in data science
                             and a minor in math, and intends to graduate in 2026.
-                            Martin edited this.
         </section>
     </main>
 </body>

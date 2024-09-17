@@ -21,7 +21,7 @@ if (!isset($_SESSION['id'])) {
             const input = form.querySelector("input[name='word']"); // Reference to input element where user enters word
 
             form.addEventListener("submit", function(e) { // Listens for submit button
-                e.preventDefault(); // Prevents page from reloading to create.php?
+                e.preventDefault(); // Prevents page from reloading to add.php?
                 const formData = new FormData(form); // Access to the form data, to send AJAX request
 
                
@@ -149,7 +149,7 @@ if (!isset($_SESSION['id'])) {
             <div id="welcome-text">Hangman Settings</div>
             <div id= "basicContainer">
             
-            <form action="../../data_src/api/hangman/create.php" method="post" id="add-word" style="text-align: left">
+            <form action="../../data_src/api/hangman/add.php" method="post" id="add-word" style="text-align: left">
             &nbspAdd A Word: <input type="text" name="word"><br>
             &nbsp<input type="submit" value="Submit">
                 <div id="response"></div>
