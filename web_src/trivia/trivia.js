@@ -30,7 +30,7 @@ function displayRandomQuestion() {
 }
 
 function randomQuestion() { // Get questions from database
-    fetch('../../data_src/api/trivia/questions.php', {method: 'get'}) // TODO: Change file path for FTP
+    fetch('../../data_src/api/question/questions.php', {method: 'get'}) // TODO: Change file path for FTP
         .then(response => response.json())
         .then(data => { const question = data.question; const answers = data.answers; // 1 questions with 3 answers
             triviaQuestions.push({question, answers}); // .push adds to arrays

@@ -1,5 +1,5 @@
 <?php
-$pageName = "Vincent Liu's Webpage";
+$pageName = "Camila Torres's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,11 +14,12 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Vincent Liu's Bio">
-            <div class="bio-title">Vincent Liu</div>
+        <section id="Camila Torres's Bio">
+            <div class="bio-title">Camila Torres</div>
             <br>
-            <div id="bio"> Vincent Liu is a student in this class. Majoring in Computer Engineering with a minor in Japanese and part of the class of 2026, he also doesn't check for assignments until the day they are due, Owen Yang</div>
-
+            <div id="bio"> Camila Torres is a student in this class. She is a Data Science major. She intends to graduate 2025. 
+                Camila also loves to read and watch movies, particulary horror movies.
+    
         </section>
     </main>
 </body>

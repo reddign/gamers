@@ -1,5 +1,5 @@
 <?php
-$pageName = "Owen Yang's Webpage";
+$pageName = "Professor Reddig's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,12 +14,12 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Owen Yang's Bio">
-            <div class="bio-title">Owen Yang</div>
+        <section id="Professor Reddig's Bio">
+            <div class="bio-title">Jane Doe</div>
             <br>
-            <div id="bio"> Owen Yang is a third year Computer Science major. He is also minoring in Japanese and is expected to graduate Spring 2026.
-                 Jackson M. was here......
-        </section>
+            <div id="bio"> Professor Reddig is the instructor.
+            </div>
+            </section>
     </main>
 </body>
 <?php

@@ -1,5 +1,5 @@
 <?php
-$pageName = "Vincent Liu's Webpage";
+$pageName = "Jackson Miller's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,11 +14,10 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Vincent Liu's Bio">
-            <div class="bio-title">Vincent Liu</div>
+        <section id="Jackson Miller's Bio">
+            <div class="bio-title">Jackson Miller</div>
             <br>
-            <div id="bio"> Vincent Liu is a student in this class. Majoring in Computer Engineering with a minor in Japanese and part of the class of 2026, he also doesn't check for assignments until the day they are due, Owen Yang</div>
-
+            <div id="bio"> Jackson Miller is a Computer Science major at Elizabethtown College. He is expected to graduate in 2025.             Owen was here
         </section>
     </main>
 </body>

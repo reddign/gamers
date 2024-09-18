@@ -14,11 +14,13 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Jane Doe's Bio">
-            <div class="bio-title">Jane Doe</div>
+        <section id="Mildred's Bio">
+            <div class="bio-title">Mildred</div>
             <br>
-            <div id="bio"> Mildred is a Computer Science Major with a concentration in Data Science and minors in Data Analytics.
-                 Mildred intends to graduate in 2026.
+            <div id="bio"> Mildred is a Computer Science Major with a concentration in Data Science and a minors in Data Analytics.
+                 Mildred intends to graduate in 2026. On her free time, Mildred likes to watch adventure movies and play card games.
+
+                 Laney edited this!!
         </section>
     </main>
 </body>
