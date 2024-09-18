@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ww8gc8sot4lh"]
+[gd_scene load_steps=13 format=3 uid="uid://ww8gc8sot4lh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_p11g3"]
 [ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://js_object.gd" id="4_r5d0f"]
 [ext_resource type="Texture2D" uid="uid://hnj3tv2hvu3e" path="res://images/bluejaywalk.png" id="4_rhjdu"]
 [ext_resource type="Texture2D" uid="uid://bx77t1kuiew36" path="res://images/City4.png" id="6_nrtjp"]
+[ext_resource type="FontFile" uid="uid://c72xl21b1vp7g" path="res://PressStart2P-vaV7.ttf" id="8_8krd5"]
+[ext_resource type="Script" path="res://score_label.gd" id="9_6bb6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
 size = Vector2(41, 37)
@@ -81,5 +83,18 @@ expand_mode = 3
 [node name="JSObject" type="Node" parent="."]
 script = ExtResource("4_r5d0f")
 
+[node name="ObstacleTimer" type="Timer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 32.0
+offset_right = 761.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("8_8krd5")
+theme_override_font_sizes/font_size = 90
+text = "Score: 0"
+script = ExtResource("9_6bb6e")
+
 [connection signal="end_game" from="Area2D/Obstacles" to="." method="_on_obstacles_end_game"]
 [connection signal="end_game" from="Area2D/Obstacles" to="Jay" method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Area2D/Obstacles" to="ScoreLabel" method="_on_obstacles_end_game"]
