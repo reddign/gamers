@@ -3,8 +3,8 @@ const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 
 //Making our birds and setting them to be invisible
-let jay_1_x = 50;
-let jay_1_y = 25;
+let jay_1_x = 75;
+let jay_1_y = 100;
 let jay_2_x = 100;
 let jay_2_y = 100;
 let jay_1_see = 0;
