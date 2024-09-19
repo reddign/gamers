@@ -12,6 +12,33 @@ CREATE TABLE IF NOT EXISTS highscores (
     FOREIGN KEY (user_id) REFERENCES user(userID)
 );
 
+--Dummy Players:
+INSERT INTO user VALUES(100, 'User0', 'User0@etown.edu', NOW(), 'Dummy0');
+INSERT INTO user VALUES(101, 'User1', 'User1@etown.edu', NOW(), 'Dummy1');
+INSERT INTO user VALUES(102, 'User2', 'User2@etown.edu', NOW(), 'Dummy2');
+INSERT INTO user VALUES(103, 'User3', 'User3@etown.edu', NOW(), 'Dummy3');
+
+--Dummy Scores:
+INSERT INTO highscores VALUES (100, 'Pong', 20, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Pong', 47, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Pong', 14, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Pong', 51, NOW(), 'Dummy0');
+
+INSERT INTO highscores VALUES (101, 'Pong', 6, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Pong', 11, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Pong', 15, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Pong', 60, NOW(), 'Dummy1');
+
+INSERT INTO highscores VALUES (102, 'Pong', 32, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Pong', 37, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Pong', 24, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Pong', 30, NOW(), 'Dummy2');
+
+INSERT INTO highscores VALUES (103, 'Pong', 64, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Pong', 27, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Pong', 31, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Pong', 17, NOW(), 'Dummy3');
+
 -- TSK-8.2	Create a screen to show the top 10 players for each game.
     -- high_scores.php which has a filepath of gamers/web_src/games/high_scores.php (R: Read for 8.3)
 
