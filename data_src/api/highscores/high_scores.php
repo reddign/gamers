@@ -3,7 +3,7 @@ require_once "../includes/db_config.php";
 session_start();
 
 // Create database connection
-$connection = new mysqli("localhost", "root", "", "triviagames");
+$connection = new mysqli($host, $dbUsername, $dbPassword, $database);
 
 if($connection->connect_error) {
     die("Connection failed: ".$connection->connect_error);
