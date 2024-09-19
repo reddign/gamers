@@ -10,9 +10,8 @@ if($connection->connect_error) {
 }
 
 //SQL query
-$sql = $connection->prepare("SELECT DISTINCT game_played FROM highscores;");
-$sql->execute();
-$result = $sql->get_result();
+$sql = "SELECT DISTINCT game_played FROM highscores;";
+$result = $connection->query($sql);
 
 //If there are results
 if($result->num_rows > 0) {
@@ -26,6 +25,6 @@ if($result->num_rows > 0) {
   else{
     echo "0 results";
   }
-  $conn->close();
+  $connection->close();
 
 ?>
