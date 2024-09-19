@@ -16,7 +16,7 @@ require "../includes/head.php";
         <div id="basicContainer">
             
         <!-- Registration Form -->
-        <form action="../../data_src/api/admin/add.php" method="post" style= "text-align: left">
+        <form action="../../data_src/api/admin/create.php" method="post" style= "text-align: left">
             <label for="username"><b>Username: </b></label>
             <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
