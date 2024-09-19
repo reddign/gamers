@@ -18,13 +18,13 @@ CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 CREATE TABLE IF NOT EXISTS answer (
 	answerID INT NOT NULL AUTO_INCREMENT,
     questionID INT NOT NULL,
-    triv_answer varchar(255) DEFAULT ("Google it"),
+    triv_answer varchar(255) DEFAULT ("No"),
     is_Correct boolean NOT NULL,
     PRIMARY KEY (answerID),
     FOREIGN KEY (questionID) REFERENCES trivia (questionID)
 );
 
-CREATE TABLE Scores (
+CREATE TABLE IF NOT EXISTS scores (
     score_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     score INT NOT NULL,
@@ -41,3 +41,5 @@ INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "In class", 
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Jim", FALSE);
 
 INSERT INTO user (username, date) VALUES ("user1", DATE_FORMAT(NOW(), '%Y-%m-%d'));
+
+INSERT INTO user (user_id, questionID, answerID) VALUES (1,1,1);
