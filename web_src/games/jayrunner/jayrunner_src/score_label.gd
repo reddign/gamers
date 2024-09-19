@@ -25,3 +25,16 @@ func _on_obstacles_end_game() -> void:
 		""" % [score, score])
 	else:
 		print("Game Over! Score: %s" % score)
+
+func stop_scrolling():
+	game_over = true
+
+func stop_scrolling():
+	game_over = true
+	if OS.has_feature('web'):
+		JavaScriptBridge.eval("""
+			console.log('Sending game over message with score: %s');
+			window.parent.postMessage({type: 'gameOver', score: %s}, '*');
+		""" % [score, score])
+	else:
+		print("Game Over! Score: %s" % score)
