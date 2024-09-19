@@ -84,9 +84,12 @@ wait_time = 3.0
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="." groups=["scrollers"]]
-offset_left = 1075.0
-offset_top = 28.0
-offset_bottom = 122.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 165.0
+offset_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("8_8krd5")
 theme_override_font_sizes/font_size = 20
 text = "Score: 0"
