@@ -21,12 +21,12 @@ function hiddenCupcake(board, numCupcakes) {
 
     return board;
 }
+//part where the actor can find and remove cupcakes
+function findAndRemove() {
 
-// Example usage
-// Create a 5x5 board initialized with 0 (empty spaces)
-let board = Array.from({ length: 5 }, () => Array(5).fill(0));
+}
 
-// Place 3 hidden cupcakes on the board
-hiddenCupcake(board, 3);
-
-console.log(board);
+//part where cupcakes are added to the score
+function addToScore() {
+    
+}
