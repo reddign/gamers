@@ -13,7 +13,7 @@ let jay_2_see = 0;
 let mouse_x = 0;
 let mouse_y = 0;
 let radius = 50;
-let round = 0;
+let round = 1;
 let  directionx1 = 1;
 let  directiony1 = 1;
 let  directionx2 = 1;
@@ -21,7 +21,8 @@ let  directiony2 = 1;
 let score = 0;
 let FPS = 60;
 let round0ver = false;
-
+let time=0;
+let gameOver = false;
 function net(e){
     const rect = canvas.getBoundingClientRect();
     mouse_x = e.clientX- rect.left;
@@ -32,7 +33,7 @@ function net(e){
 
 function drawScoreboard(){
     context.fillStyle = "white"
-    var scoreString = "Round: "+round+" Score: "+score;
+    var scoreString = "Round: "+round+" Score: "+score+" Time:"+time;
     context.fillText(scoreString,20,500);
 }
 
@@ -47,11 +48,14 @@ function roundstart(){
 }
 
 function roundover(){
-    if(jay_1_see==1&&jay_2_see==1){
+    if(jay_1_see==1&&jay_2_see==1&&!gameOver){
         round0ver=true;
         roundstart();
+        time=0;
     }
-
+    if(time==250){
+        gameover();
+    }
 
 }
 
@@ -88,8 +92,8 @@ function flybad(){
     if(jay_1_y < 0+radius){
         directiony1 = 1;
     }
-    jay_1_x = jay_1_x+2*directionx1;
-    jay_1_y = jay_1_y+.5*directiony1;
+    jay_1_x = jay_1_x+2*directionx1*1.05*round;
+    jay_1_y = jay_1_y+.5*directiony1*1.05*round;
     if(jay_2_x+radius>canvas.width){
         directionx2 = -1;
     }
@@ -102,12 +106,19 @@ function flybad(){
     if(jay_2_y < 0+radius){
         directiony2 = 1;
     }
-    jay_2_x = jay_2_x+.5*directionx2;
-    jay_2_y = jay_2_y+2*directiony2;
+    jay_2_x = jay_2_x+.5*directionx2*1.05*round;
+    jay_2_y = jay_2_y+2*directiony2*1.05*round;
 
 }
 
 function gameover(){
+    gameOver=true;
+    jay_1_see=1;
+    jay_2_see=1;
+    context.fillStyle = "white"
+    var loseString = "You Lose!";
+    context.fillText(loseString,20,450);
+    gameover();
 
 
 }
@@ -122,6 +133,12 @@ function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
 
 
 function capture(){
+    if(gameOver){
+        gameOver=false;
+        round=0;
+        time=0;
+        score=0;
+    }
     console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
     if(isDuckInCircle(mouse_x,mouse_y,jay_1_x,jay_1_y,radius)){
         console.log("hit");
@@ -154,7 +171,7 @@ function animate(){
     flybad();
     drawScoreboard();
     roundover();
-    
+    time++;
 
 
 }
