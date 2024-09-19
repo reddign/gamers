@@ -1,22 +1,7 @@
 <?php
 session_start();
-<<<<<<< HEAD
-// need to access the db config file here instead of this
-$host = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$database = "triviagames";
-
-
-// make a connection
-$connection = new mysqli($host, $dbUsername, $dbPassword, $database);
 ?>
 
-<!DOCTYPE html>
-=======
-?>
-
->>>>>>> 62bf04f (style, php visits)
 <html>
 
 <html lang="en">
@@ -25,15 +10,10 @@ $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visits Stats</title>
     <link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
-    
-=======
->>>>>>> 62bf04f (style, php visits)
 
 </head>
 <body>
     <h1>Visit Statistics</h1>
-<<<<<<< HEAD
 
     <?php
 
@@ -63,8 +43,6 @@ $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
 
     ?>
 
-=======
->>>>>>> 62bf04f (style, php visits)
     <table border="1">
         <tr>
             <th># Visited Once</th>
@@ -72,7 +50,6 @@ $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
             <th># Visited 6+ Times</th>
         </tr>
         <tr>
-<<<<<<< HEAD
             <td>
                 <?php
                 if (!empty($visitedOnce)) {
@@ -113,13 +90,11 @@ $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
     $connection->close();
     ?>
     
-=======
             <td>Loading...</td>
             <td>Loading...</td>
             <td>Loading...</td>
         </tr>
         <!-- Need to take data from a database and present it on this chart -->
     </table>
->>>>>>> 62bf04f (style, php visits)
 </body>
 </html>
