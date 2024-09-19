@@ -99,6 +99,7 @@ session_start();
             <option value="hangman">Flight of the Jay</option>
             <option value="flappybird">Flappy Jay</option>
             <option value="2048">2048 - Etown Edition</option>
+            <option value="carrotcake">Carrot Cake Collection</option>
         </select>
     </div>
     <br><br><br><br><br><br><br>
