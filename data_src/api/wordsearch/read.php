@@ -6,7 +6,7 @@ require_once "../wordsearch/word.php";
 
 // this should read the words from the database and provide the words in the format we need
 
-function Get_wordBank($wordcount,$category){
+function Get_WordBank($wordcount,$category){
 
     global $host;
     global $dbUsername;

@@ -16,26 +16,50 @@ references WordSearch_Category (category_id)
 
 insert into WordSearch_Category(Name)
 VALUES
-("Dorms"),
-("Professors")
+("DORMS"),
+("EXPERTISE"),
+("TOOLS"),
+("LANGUAGES")
 ;
 
 insert into WordSearch_WordBank(word,category_id)
 VALUES
-("Schlosser",1),
-("Royer",1),
-("Brinser",1),
-("Ober",1),
-("Hackman",1),
-("Quads",1),
-("Myer",1)
+("SCHLOSSER",1),
+("ROYER",1),
+("BRINSER",1),
+("OBER",1),
+("HACKMAN",1),
+("QUADS",1),
+("MYER",1)
 ;
 
 insert into WordSearch_WordBank(word,category_id)
 VALUES
-("Leap",2),
-("Reddig",2),
-("DrLi",2),
-("Wang",2),
-("Wonderlich",2)
+("DATASCIENCE",2),
+("DATABASES",2),
+("LLMS",2),
+("CYBERSECURITY",2),
+("WEBDEV",2),
+("JAVA",2)
+;
+
+insert into WordSearch_WordBank(word,category_id)
+VALUES
+("ECLIPSE",3),
+("VSCODE",3),
+("JJ",3),
+("PANDAS",3),
+("MYSQL",3),
+("XAMPP",3),
+("GNU",3)
+;
+
+insert into WordSearch_WordBank(word,category_id)
+VALUES
+("JAVA",4),
+("PYTHON",4),
+("HTML",4),
+("PHP",4),
+("JAVASCRIPT",4),
+("CSS",4)
 ;
