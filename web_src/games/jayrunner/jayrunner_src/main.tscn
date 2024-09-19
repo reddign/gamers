@@ -61,17 +61,13 @@ scale = Vector2(5.615, 5.615)
 position = Vector2(4.31522, 14.2475)
 shape = SubResource("RectangleShape2D_qjn3n")
 
-[node name="Obstacles" parent="Area2D" instance=ExtResource("1_vh1nm")]
-position = Vector2(-8.32948, 9.08281)
-rotation = 0.00615358
-scale = Vector2(0.178094, 0.178094)
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1280, 720)
 
 [node name="Background" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -6
 texture_repeat = 2
 offset_left = -35.0
 offset_top = 3.0
@@ -84,6 +80,7 @@ expand_mode = 3
 script = ExtResource("4_r5d0f")
 
 [node name="ObstacleTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 41.0
@@ -95,6 +92,13 @@ theme_override_font_sizes/font_size = 90
 text = "Score: 0"
 script = ExtResource("9_6bb6e")
 
-[connection signal="end_game" from="Area2D/Obstacles" to="." method="_on_obstacles_end_game"]
-[connection signal="end_game" from="Area2D/Obstacles" to="Jay" method="_on_obstacles_end_game"]
-[connection signal="end_game" from="Area2D/Obstacles" to="ScoreLabel" method="_on_obstacles_end_game"]
+[node name="Obstacles" parent="." groups=["obstacles"] instance=ExtResource("1_vh1nm")]
+position = Vector2(1400, 649)
+rotation = 0.00615358
+scale = Vector2(0.999998, 0.999998)
+
+[connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]
+[connection signal="end_game" from="Obstacles" to="." method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Obstacles" to="ScoreLabel" method="_on_obstacles_end_game"]
+[connection signal="end_game" from="Obstacles" to="Obstacles" method="_on_end_game"]
