@@ -16,10 +16,6 @@ config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/image="res://White_E_Logo.png"
 config/icon="res://icon.svg"
 
-[autoload]
-
-Global="*res://global.gd"
-
 [display]
 
 window/size/viewport_width=1280
@@ -34,6 +30,7 @@ version_control/autoload_on_startup=true
 [global_group]
 
 obstacles=""
+scrollers=""
 
 [input]
 

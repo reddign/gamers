@@ -1,8 +1,8 @@
 extends Node2D
 
+@onready var obstacle:PackedScene = preload("res://Obstacles.tscn")
 var scrolling = true
 @export var SCROLL_SPEED = 300
-@onready var obstacle:PackedScene = preload("res://Obstacles.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,13 +12,12 @@ func _ready() -> void:
 # TODO increase scrolling speed with time
 func _process(delta: float) -> void:
 	if scrolling == true:
-		$ParallaxBackground.scroll_offset.x -= Global.SCROLL_SPEED * delta
+		$ParallaxBackground.scroll_offset.x -= SCROLL_SPEED * delta
 
 # TODO spawn obstacles at random intervals
 
-func _on_obstacles_end_game() -> void:
+func stop_scrolling():
 	scrolling = false
-	get_children()
 
 
 func _on_obstacle_timer_timeout() -> void:

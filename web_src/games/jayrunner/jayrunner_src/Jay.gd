@@ -34,3 +34,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_obstacles_end_game() -> void:
 	game_over = true
+
+func stop_scrolling():
+	game_over = true

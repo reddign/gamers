@@ -35,10 +35,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
 size = Vector2(255.839, 10.6369)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["scrollers"]]
 script = ExtResource("1_p11g3")
 
-[node name="Jay" type="CharacterBody2D" parent="."]
+[node name="Jay" type="CharacterBody2D" parent="." groups=["scrollers"]]
 position = Vector2(49, 685)
 scale = Vector2(2.36, 2.40001)
 script = ExtResource("1_x1awb")
@@ -82,7 +82,7 @@ script = ExtResource("4_r5d0f")
 [node name="ObstacleTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="ScoreLabel" type="Label" parent="." groups=["scrollers"]]
 offset_left = 41.0
 offset_top = 32.0
 offset_right = 761.0
@@ -98,7 +98,5 @@ rotation = 0.00615358
 scale = Vector2(0.999998, 0.999998)
 
 [connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]
-[connection signal="end_game" from="Obstacles" to="." method="_on_obstacles_end_game"]
 [connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
 [connection signal="end_game" from="Obstacles" to="ScoreLabel" method="_on_obstacles_end_game"]
-[connection signal="end_game" from="Obstacles" to="Obstacles" method="_on_end_game"]

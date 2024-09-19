@@ -3,6 +3,7 @@ extends Area2D
 signal end_game
 
 var game_over = false
+@export var SCROLL_SPEED = 300
 
 func _ready():
 	position.x = 1400
@@ -11,7 +12,7 @@ func _ready():
 
 func _process(delta):
 	if not game_over:
-		position.x -= Global.SCROLL_SPEED * delta
+		position.x -= SCROLL_SPEED * delta
 	
 	if position.x < -200:
 		queue_free()
@@ -23,6 +24,7 @@ func _on_body_entered(_body: CharacterBody2D) -> void:
 	$cat2D.pause()
 	emit_signal("end_game")
 	get_tree().call_group("obstacles","stop_moving")
+	get_tree().call_group("scrollers","stop_scrolling")
 	print("GAME OVER")
 	print("Press space to try again!")
 
