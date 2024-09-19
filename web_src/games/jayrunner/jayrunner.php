@@ -44,11 +44,11 @@ require "../../includes/head.php";
             document.getElementById('gameOverOverlay').hidden = false;
 
             var gamePlayed = "JayRunner";
-            submitScore(gamePlayed, score);
+            createScore(gamePlayed, score);
         }
 
         // Function to submit score to database
-        function submitScore(gamePlayed, score) {
+        function createScore(gamePlayed, score) {
             // TODO: For when we can get the userID and username for when DataBase group fixes it. currently these are null and it prompt user to enter a username
             var userId = "<?php echo isset($_SESSION['userID']) ? $_SESSION['userID'] : ''; ?>";
             var username = "<?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?>"; 
@@ -62,7 +62,7 @@ require "../../includes/head.php";
                 }
             }
 
-            fetch('submit_score.php', {
+            fetch('create_score.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',

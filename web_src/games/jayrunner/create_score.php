@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "../../../data_src/api/includes/db_config.php";
 
 header('Content-Type: application/json');
@@ -7,7 +6,7 @@ header('Content-Type: application/json');
 // Get POST data
 $gamePlayed = $_POST["gamePlayed"];
 $score = $_POST["score"];
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : $_POST["username"];
+$username = $_POST["username"];
 $userId = 1;
 
 // Validate the data
