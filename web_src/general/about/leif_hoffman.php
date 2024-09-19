@@ -13,7 +13,7 @@ require "../../includes/head.php";
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
         #THIS IS A COMMENT 
-        #Austin, edit this line.
+        # I like pizza.
     <main>
         <section id="Leif Hoffman's Bio">
             <div class="bio-title">Leif Hoffman</div>
