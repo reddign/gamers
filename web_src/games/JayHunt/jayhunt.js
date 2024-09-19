@@ -3,6 +3,13 @@ const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
+
+const birdImage = new Image();
+birdImage.src = 'bluejaygif.gif'; 
+
+let birdWidth = 100;  // 
+let birdHeight = 100;
+
 //Making our birds and setting them to be invisible
 let jay_1_x = 75;
 let jay_1_y = 100;
@@ -59,21 +66,13 @@ function roundover(){
 
 }
 
-function fly(){
-    if(jay_1_see==0){
-    context.fillStyle = "blue";
-    context.beginPath();
-    context.arc(jay_1_x,jay_1_y,radius,0,2*Math.PI);
-    context.closePath();
-    context.fill();}
-    if(jay_2_see==0){
-        context.fillStyle = "blue";
-        context.beginPath();
-        context.arc(jay_2_x,jay_2_y,radius,0,2*Math.PI);
-        context.closePath();
-        context.fill();        
+function fly() {
+    if (jay_1_see == 0) {
+        context.drawImage(birdImage, jay_1_x - birdWidth / 2, jay_1_y - birdHeight / 2, birdWidth, birdHeight);
     }
-
+    if (jay_2_see == 0) {
+        context.drawImage(birdImage, jay_2_x - birdWidth / 2, jay_2_y - birdHeight / 2, birdWidth, birdHeight);
+    }
 }
 
 
@@ -175,6 +174,7 @@ function animate(){
 
 
 }
+
 
 
 window.setInterval(animate,1000/FPS);
