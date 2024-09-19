@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (userID)
 );
 
-
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 	questionID INT AUTO_INCREMENT,
     question VARCHAR(255) NOT NULL,
