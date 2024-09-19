@@ -54,7 +54,7 @@ session_start()
 </html
 
 <?php
- 
+ //trial table, needs to be adjusted
 $dataPoints1 = array(
 	array("label"=> "2010", "y"=> 36.12),
 	array("label"=> "2011", "y"=> 34.87),
@@ -73,7 +73,7 @@ $dataPoints2 = array(
 	array("label"=> "2015", "y"=> 69.38),
 	array("label"=> "2016", "y"=> 98.70)
 );
-	
+
 ?>
 <!DOCTYPE HTML>
 <html>
