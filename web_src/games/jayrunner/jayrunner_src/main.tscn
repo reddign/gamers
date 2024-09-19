@@ -45,7 +45,6 @@ script = ExtResource("1_x1awb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
 position = Vector2(11.8644, -34.1665)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eokgw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jay"]
@@ -61,11 +60,6 @@ scale = Vector2(5.615, 5.615)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(4.31522, 14.2475)
 shape = SubResource("RectangleShape2D_qjn3n")
-
-[node name="Obstacles" parent="Area2D" instance=ExtResource("1_vh1nm")]
-position = Vector2(-8.50758, 8.72662)
-rotation = 0.00615358
-scale = Vector2(0.178094, 0.178094)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -86,6 +80,7 @@ expand_mode = 3
 script = ExtResource("4_r5d0f")
 
 [node name="ObstacleTimer" type="Timer" parent="."]
+wait_time = 3.0
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="." groups=["scrollers"]]
@@ -103,5 +98,3 @@ rotation = 0.00615358
 scale = Vector2(0.999998, 0.999998)
 
 [connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]
-[connection signal="end_game" from="Obstacles" to="Jay" method="_on_obstacles_end_game"]
-[connection signal="end_game" from="Obstacles" to="ScoreLabel" method="_on_obstacles_end_game"]

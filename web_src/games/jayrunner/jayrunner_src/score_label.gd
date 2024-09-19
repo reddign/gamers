@@ -28,9 +28,6 @@ func _on_obstacles_end_game() -> void:
 
 func stop_scrolling():
 	game_over = true
-
-func stop_scrolling():
-	game_over = true
 	if OS.has_feature('web'):
 		JavaScriptBridge.eval("""
 			console.log('Sending game over message with score: %s');
