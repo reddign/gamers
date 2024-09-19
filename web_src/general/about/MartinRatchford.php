@@ -12,7 +12,7 @@ require "../../includes/head.php";
     <div class="buttons">
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
-        Crazy? I was crazy once. They locked me in a room. A rubber room...
+        something random
     <main>
         <section id="Martin Ratchford's Bio">
             <div class="bio-title">Martin Ratchford</div>
