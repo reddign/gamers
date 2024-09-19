@@ -19,6 +19,8 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> Parker Engle is a student in this class. They are majoring in Computer Science,
                 and intends to graduate in 2027.
+
+                prof reddig here.
         </section>
     </main>
 </body>
