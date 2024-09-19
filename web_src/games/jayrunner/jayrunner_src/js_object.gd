@@ -5,5 +5,3 @@ func _ready():
 		JavaScriptBridge.eval("""console.log('The JavaScriptBridge singleton is available')""")
 	else:
 		print("The JavaScriptBridge singleton is NOT available")
-
-# TODO emit score through javascript

@@ -227,12 +227,9 @@ session_start();
         function loadGame(select) {
             const selectedGame = select.value;
             if (selectedGame) {
-                if (selectedGame == "jayrunner"){
-                window.location.href = selectedGame + "/" + selectedGame + ".html";
-                }
-                else{
+                
                 window.location.href = selectedGame + "/" + selectedGame + ".php";
-                }
+                
             }
             
         }

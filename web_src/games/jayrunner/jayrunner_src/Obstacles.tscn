@@ -25,12 +25,12 @@ animations = [{
 script = ExtResource("1_njla2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(17, -56.5)
+position = Vector2(17, -61)
 shape = SubResource("RectangleShape2D_pscy1")
 
 [node name="cat2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(16.1155, -57.2275)
-scale = Vector2(0.422197, 0.45418)
+position = Vector2(17, -61)
+scale = Vector2(0.416813, 0.45418)
 sprite_frames = SubResource("SpriteFrames_5bwum")
 animation = &"1"
 frame_progress = 0.712884

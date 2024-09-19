@@ -12,11 +12,7 @@ func _process(delta):
 	if not game_over:
 		position.x -= 100 * delta
 
-
-
 func _on_body_entered(_body: CharacterBody2D) -> void:
 	game_over = true
 	$cat2D.pause()
 	emit_signal("end_game")
-	print("GAME OVER")
-	print("Press space to try again!")

@@ -44,12 +44,11 @@ scale = Vector2(2.36, 2.40001)
 script = ExtResource("1_x1awb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
-position = Vector2(11.8644, -34.1665)
-scale = Vector2(1, 1)
+position = Vector2(11, -33)
 shape = SubResource("RectangleShape2D_eokgw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jay"]
-position = Vector2(10.5932, -32.4999)
+position = Vector2(9.99999, -33)
 scale = Vector2(0.1715, 0.1675)
 sprite_frames = SubResource("SpriteFrames_f3h2s")
 animation = &"walk"
@@ -63,7 +62,7 @@ position = Vector2(4.31522, 14.2475)
 shape = SubResource("RectangleShape2D_qjn3n")
 
 [node name="Obstacles" parent="Area2D" instance=ExtResource("1_vh1nm")]
-position = Vector2(-8.50758, 8.72662)
+position = Vector2(-8.32948, 9.08281)
 rotation = 0.00615358
 scale = Vector2(0.178094, 0.178094)
 
@@ -87,8 +86,9 @@ script = ExtResource("4_r5d0f")
 [node name="ObstacleTimer" type="Timer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 1075.0
-offset_top = 28.0
+offset_left = 41.0
+offset_top = 32.0
+offset_right = 761.0
 offset_bottom = 122.0
 theme_override_fonts/font = ExtResource("8_8krd5")
 theme_override_font_sizes/font_size = 20
