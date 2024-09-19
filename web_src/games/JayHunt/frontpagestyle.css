@@ -3,62 +3,63 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-image: url('background.jpg'); /* Replace with a suitable image */
-    background-size: cover;
-    color: white;
+    background-color: #f0f0f0;
+    color: #333;
     text-align: center;
 }
 
 header {
-    padding: 50px 0;
-    background-color: rgba(1, 130, 250, 0.5); /* Semi-transparent background */
+    background-color: #0044cc;
+    padding: 20px 0;
+    color: white;
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: 2px;
-    color: blue;
+    margin: 0;
+    font-size: 2.5em;
 }
 
 main {
     display: flex;
-
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
 }
 
-.content {
-    background-color: rgba(1, 130, 250, 0.5); /* Dark background for contrast */
-    padding: 30px;
-    border-radius: 10px;
+section {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#start-btn, #Leaderboard-btn {
-    padding: 15px 40px;
-    font-size: 1.5em;
-    background-color: gray;
-    border: none;
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #0044cc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
     color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#start-btn:hover, #Leaderboard-btn:hover {
-    background-color: #000201;
+button:hover {
+    background-color: black ;
 }
 
-#instructions {
-    font-size: 1.2em;
-    margin-top: 20px;
-    color: black;
-}
-
-/* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;

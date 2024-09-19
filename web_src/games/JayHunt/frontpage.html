@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Hunter Game</title>
-    <link rel="stylesheet" href="frontpagestyle.css">
+    <title>Project Stub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Jay Hunter</h1>
+        <h1>Jay Hunt</h1>
+        <!-- This is where the project title or branding will be displayed -->
     </header>
 
     <main>
-        <div class="content">
+        <!-- Start Game Section -->
+        <section id="start-game">
+            <h2>Start Game</h2>
             <button id="start-btn">Start Game</button>
-            <p id="instructions">
-                Aim, capture, and score as many points as you can by hitting the flying Jays!
-            </p>
-        </div>
-        <div class="content">
-            <button id="Leaderboard-btn">Leaderboard</button>
-        </div>
+            <p>Catch the Flying Blue Jays in order to Score.</p>
+            <!-- This is where the game logic and display will be placed -->
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <button id="leaderboard-btn">View Leaderboard</button>
+            <p>See where you rank in the game!!!</p>
+            <!-- Future leaderboard feature will go here -->
+        </section>
+
+        <!-- Placeholder for Database Interaction -->
+        <section id="database">
+            <h2>Database Interaction</h2>
+            <p>"This is where values will be saved to the database."</p>
+            <!-- Database integration will be added in this section -->
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Jay Hunter Game. Developed by [Lambda]</p>
+        <p>&copy; 2024 Jay Hunt Game. Developed by [Lambda]. ALL RIGHTS RESERVED.</p>
     </footer>
-    <canvas onmousemove="net(event);" style="background-color: black;" width="800" height="600">
-    </canvas>
-    <script src="jayhunt.js">
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
