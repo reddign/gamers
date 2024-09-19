@@ -100,10 +100,12 @@ function net(e){
 }
 
 function capture(){
+    console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
     if(isDuckInCircle(mouse_x,mouse_y,jay_1_x,jay_1_y,radius)){
         score += 25;
         jay_1_see=1;
     }
+
     if(isDuckInCircle(mouse_x,mouse_y,jay_2_x,jay_2_y,radius)){
         score += 25;
         jay_2_see=1;
