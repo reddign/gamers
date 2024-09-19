@@ -1,3 +1,9 @@
+import { resources } from './resources.js';
+
+// Canvas and context
+const canvas = document.querySelector("#game-canvas");
+const ctx = canvas.getContext('2d');
+
 // Get background
 const backgroundImage = new Image();
 backgroundImage.src = 'sprites/betamap.jpg';
@@ -6,10 +12,6 @@ backgroundImage.src = 'sprites/betamap.jpg';
 const playerSize = 32;
 let playerX = 400;
 let playerY = 400;
-
-// Canvas and context
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
 
 // Creates the game area
 function draw() {
@@ -21,22 +23,20 @@ function draw() {
     const offsetY = playerY - canvas.height / 2 + playerSize / 2;
 
     // Draws the background image
-    ctx.drawImage(backgroundImage, 0, 0, 3300, 2037);
+    const background = resources.images.map;
+    if (background.isLoaded) {
+        ctx.drawImage(background.image, 0, 0, 3300, 2037);
+    }
     
     // Draws the player
     ctx.fillStyle = 'red'; // Player color
     ctx.fillRect(playerX - playerSize / 2, playerY - playerSize / 2, playerSize, playerSize);
 }
 
-// Starts the drawing process when the image is loaded
-backgroundImage.onload = () => {
+// Starts the drawing
+setInterval(() => {
     draw();
-};
-
-// Load fail error
-backgroundImage.onerror = () => {
-    console.error("Failed to load the background image.");
-};
+}, 300)
 
 function animate(){
     //add  selection through character spritesheet for animation

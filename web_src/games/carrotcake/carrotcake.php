@@ -1,5 +1,8 @@
 <?php
-
+    $pageName = "Carrot Cake Collection";
+    require "../../includes/functions.php";
+    require "../../includes/head.php";
+    
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrot Cake Collection</title>
     <link rel="stylesheet" href="style.css">
-    <script src="web_src\games\carrotcake\rpg.js"></script>
+    <script type="module" src="/gamers/web_src/games/carrotcake/rpg.js"></script>
 </head>
 <body>
-    <canvas id="game-canvas" width="320" height="180"></canvas>
+<?php 
+    include '../../includes/navbar.php'; 
+?>
+    <canvas id="game-canvas" width="320" height="117"></canvas>
 </body>
+
+<?php
+     require "../../includes/footer.php";
+?>
 
 </html>
