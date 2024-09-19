@@ -18,9 +18,6 @@ CREATE TABLE IF NOT EXISTS highscores (
 -- TSK-8.3 Make sure that there are CRUD methods for this data in data_src/api/scoreRecord (possible folder name?)???
     -- high_scores.sql add data to the table (C: Create for 8.3)
     -- (CURRENTLY) Foreign Key Constraint not matched due to no current users
-INSERT INTO highscores(user_id, game_played, score, time_played, username)
-VALUES(1, 'Tetris', '1000000', NOW(), 'Dashing78');
-VALUES(1, 'Breakout', '123456', NOW(), 'Dancing67');
 
 -- Notes:
     -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
