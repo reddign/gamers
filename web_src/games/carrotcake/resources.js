@@ -2,10 +2,10 @@ class Resources {
     constructor() {
         // Everything we plan to download
         this.toLoad = {
-            map: "/sprites/betamap.jpg",
-            student: "/sprites/student.png",
-            student_cupcake: "/sprites/student_cupcake",
-            squirrel: "/sprites/enemysquirrel.png"
+            map: "./sprites/betamap.jpg",
+            student: "./sprites/student.png",
+            student_cupcake: "./sprites/student_cupcake.png",
+            squirrel: "./sprites/enemysquirrel.png"
         };
 
         this.images = {};
