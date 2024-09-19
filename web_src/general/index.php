@@ -1,6 +1,12 @@
 <?php
-// Start the session to access session variables
-session_start();
+
+    // Start the session to access session variables
+    session_start();
+
+    $_SESSION['hangman'] = 0;
+    $_SESSION['flappy'] = 0;
+    $_SESSTION['twozerofoureight'] = 0;
+
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,16 @@
 <?php
-session_start();
+
+    session_start();
+
+    if (!isset($_SESSION['flappy'])) $_SESSION['flappy'] = 1;
+    else $_SESSION['flappy']++;
+
+    if (!isset($_SESSION['flappyTotal'])) $_SESSION['flappyTotal'] = 1;
+    else $_SESSION['flappyTotal']++;
+
+    echo $_SESSION['flappy'];
+    echo "<br>Total: ".$_SESSION['flappyTotal'];
+
 ?>
 
 <!DOCTYPE html>
