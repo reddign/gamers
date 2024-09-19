@@ -14,6 +14,7 @@ require "../../includes/head.php";
     </div>
         #THIS IS A COMMENT 
         # Austin likes pizza
+        # Mangoes are better
     <main>
         <section id="Austin Smith's Bio">
             <div class="bio-title">Austin Smith</div>
