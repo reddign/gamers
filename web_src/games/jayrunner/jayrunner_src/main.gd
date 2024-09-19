@@ -14,8 +14,6 @@ func _process(delta: float) -> void:
 	if scrolling == true:
 		$ParallaxBackground.scroll_offset.x -= SCROLL_SPEED * delta
 
-# TODO spawn obstacles at random intervals
-
 func stop_scrolling():
 	scrolling = false
 
