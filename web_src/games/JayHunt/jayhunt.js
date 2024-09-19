@@ -92,8 +92,8 @@ function flybad(){
     if(jay_1_y < 0+radius){
         directiony1 = 1;
     }
-    jay_1_x = jay_1_x+2*directionx1*1.05*round;
-    jay_1_y = jay_1_y+.5*directiony1*1.05*round;
+    jay_1_x = jay_1_x+2*directionx1*1.02*round;
+    jay_1_y = jay_1_y+.5*directiony1*1.02*round;
     if(jay_2_x+radius>canvas.width){
         directionx2 = -1;
     }
@@ -106,8 +106,8 @@ function flybad(){
     if(jay_2_y < 0+radius){
         directiony2 = 1;
     }
-    jay_2_x = jay_2_x+.5*directionx2*1.05*round;
-    jay_2_y = jay_2_y+2*directiony2*1.05*round;
+    jay_2_x = jay_2_x+.5*directionx2*1.02*round;
+    jay_2_y = jay_2_y+2*directiony2*1.02*round;
 
 }
 
@@ -165,7 +165,7 @@ function clear(){
 
 function animate(){
     clear();
-    document.addEventListener('keydown', capture);
+    document.addEventListener('click', capture);
     
     fly();
     flybad();
