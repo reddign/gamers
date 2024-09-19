@@ -1,23 +1,11 @@
-/* This file will be used for all the design work
-
 body {
-
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
 }
 
-#logo {
 
-}
 
-#game_container {
-
-}
-
-#bird {
-
-}
-
-#score_container {
-
-}
-
-*/
