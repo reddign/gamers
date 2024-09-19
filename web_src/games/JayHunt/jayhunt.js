@@ -23,8 +23,11 @@ let FPS = 60;
 let round0ver = false;
 
 function net(e){
-    mouse_x = e.clientX;
-    mouse_y = e.clientY;
+    const rect = canvas.getBoundingClientRect();
+    mouse_x = e.clientX- rect.left;
+    mouse_y = e.clientY - rect.top;
+
+
 }
 
 function drawScoreboard(){
@@ -110,6 +113,7 @@ function gameover(){
 }
 
 function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
+    console.log("check");
     let distance = Math.sqrt((x - xCenter) ** 2 + (y - yCenter) ** 2);
     return distance <= radius1;
 }
@@ -120,11 +124,14 @@ function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
 function capture(){
     console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
     if(isDuckInCircle(mouse_x,mouse_y,jay_1_x,jay_1_y,radius)){
+        console.log("hit");
         score += 25;
         jay_1_see=1;
     }
 
     if(isDuckInCircle(mouse_x,mouse_y,jay_2_x,jay_2_y,radius)){
+        console.log("hit");
+
         score += 25;
         jay_2_see=1;
     }
