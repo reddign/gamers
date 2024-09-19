@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAD9D9 !important;
+}
+
+#logo {
+    height: 80px;
+    width: 150px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+main {
+    text-align: center;
+    padding-top: 15px;
+}
