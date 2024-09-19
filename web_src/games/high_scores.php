@@ -1,5 +1,5 @@
 <?php
-require_once "../includes/db_config.php";
+require_once "../../data_src/api/includes/db_config.php";
 session_start();
 
 // Create database connection
