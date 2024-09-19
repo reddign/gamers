@@ -1,7 +1,8 @@
 //Starting the intial Canvas
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
-
+const canvasWidth = canvas.width;
+const canvasHeight = canvas.height;
 //Making our birds and setting them to be invisible
 let jay_1_x = 75;
 let jay_1_y = 100;
@@ -19,14 +20,34 @@ let  directionx2 = 1;
 let  directiony2 = 1;
 let score = 0;
 let FPS = 60;
+let round0ver = false;
+
+function net(e){
+    mouse_x = e.clientX;
+    mouse_y = e.clientY;
+}
+
+function drawScoreboard(){
+    context.fillStyle = "white"
+    var scoreString = "Round: "+round+" Score: "+score;
+    context.fillText(scoreString,20,500);
+}
 
 function roundstart(){
-
-
+    jay_1_see = 0;
+    jay_2_see = 0;
+    jay_1_x = Math.random() * canvasWidth;
+    jay_1_y = Math.random() * canvasHeight;
+    jay_2_x = Math.random() * canvasWidth;
+    jay_2_y = Math.random() * canvasHeight;
+    round++;
 }
 
 function roundover(){
-
+    if(jay_1_see==1&&jay_2_see==1){
+        round0ver=true;
+        roundstart();
+    }
 
 
 }
@@ -94,10 +115,7 @@ function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
 }
 
 
-function net(e){
-    mouse_x = e.clientX;
-    mouse_y = e.clientY;
-}
+
 
 function capture(){
     console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
@@ -124,11 +142,12 @@ function clear(){
 function animate(){
     clear();
     document.addEventListener('keydown', capture);
-    roundstart();
+    
     fly();
     flybad();
-
+    drawScoreboard();
     roundover();
+    
 
 
 }
