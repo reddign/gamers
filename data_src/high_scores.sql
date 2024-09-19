@@ -35,4 +35,4 @@ CREATE TABLE IF NOT EXISTS highscores (
 -- Notes:
     -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
     -- 2) Show leaderboard after each game, to show top 10 for the game just played
-	-- 3) (CURRENTLY) Foreign Key Constraint not matched due to no current users
+    -- 3) (CURRENTLY) Foreign Key Constraint not matched due to no current users
