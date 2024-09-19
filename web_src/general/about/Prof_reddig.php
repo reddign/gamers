@@ -1,5 +1,5 @@
 <?php
-$pageName = "Martin Ratchford Webpage";
+$pageName = "Professor Reddig's Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
@@ -14,12 +14,12 @@ require "../../includes/head.php";
     </div>
         
     <main>
-        <section id="Martin Ratchford's Bio">
-            <div class="bio-title">Martin Ratchford</div>
+        <section id="Professor Reddig's Bio">
+            <div class="bio-title">Jane Doe</div>
             <br>
-            <div id="bio"> Martin Ratchford is a computer science major at Etown and plans to graduate in 2026.
-                        Alex edited this.
-        </section>
+            <div id="bio"> Professor Reddig is the instructor.
+            </div>
+            </section>
     </main>
 </body>
 <?php
