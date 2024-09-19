@@ -18,7 +18,7 @@
 <?php 
     include '../../includes/navbar.php'; 
 ?>
-    <canvas id="game-canvas" width="320" height="117"></canvas>
+    <canvas id="game-canvas" width="320" height="120"></canvas>
 </body>
 
 <?php
