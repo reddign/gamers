@@ -12,23 +12,32 @@ function Get_WordBank($wordcount,$category){
     global $dbUsername;
     global $dbPassword;
     global $database;
+
     $wordBank= array();
-    $connection= new mysqli($host,$dbUsername,$dbPassword,$database);
-    if($connection->connect_error){
-        die("Connection Error: ".$connection->connect_error);
-    }
+    $sql="select word from WordSearch_WordBank 
+    join WordSearch_Category using (category_id)
+    where Name=:c
+    order by rand() limit :q";
+
+    $connection= new PDO("mysql:host=$host;dbname=$database",$dbUsername,$dbPassword);
+    $connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     
-    $sql="select word from WordSearch_WordBank order by rand() limit ".$wordcount;
-    $result = $connection->query($sql);
     
-    if($result->num_rows > 0){
-        while(($row = $result->fetch_assoc()) != NULL){
-            $word = new Word ($row['word']);
+    
+    $stmt = $connection->prepare($sql);
+    $stmt->bindParam(":q",$wordcount,PDO::PARAM_INT);
+    $stmt->bindParam(":c",$category,PDO::PARAM_STR);
+    $stmt->execute();
+    $data=$stmt->fetchAll();
+    if(sizeof($data)>0){
+        $i=0;
+        while($i<sizeof($data)){
+            $word = new Word ($data[$i]['word']);
             $wordBank[]=$word;
+            $i++;
         }
     }
     return $wordBank;
 }
-print_r(Get_wordBank(9,1));
 
 ?>
