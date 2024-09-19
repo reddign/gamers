@@ -5,7 +5,7 @@ var game_over = false
 
 func _ready():
 	position.x = 1400
-	$cat2D.play()
+	$Enemy.play(var_to_str(randi_range(1, 3)))
 	add_to_group("obstacles")
 
 func _process(delta):
@@ -14,7 +14,7 @@ func _process(delta):
 
 func _on_body_entered(_body: CharacterBody2D) -> void:
 	game_over = true
-	$cat2D.pause()
+	$Enemy.pause()
 	get_tree().call_group("obstacles","stop_moving")
 	get_tree().call_group("scrollers","stop_scrolling")
 	print("GAME OVER")
@@ -23,4 +23,4 @@ func _on_body_entered(_body: CharacterBody2D) -> void:
 
 func stop_moving():
 	game_over = true
-	$cat2D.pause()
+	$Enemy.pause()
