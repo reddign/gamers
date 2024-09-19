@@ -10,15 +10,18 @@ if($connection->connect_error) {
 }
 
 //SQL query
-$sql = "SELECT /* Column names*/";
-$result = $conn->query($sql);
+$sql = $connection->prepare("SELECT DISTINCT game_played FROM highscores;");
+$sql->execute();
+$result = $sql->get_result();
 
 //If there are results
 if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-      echo /* Add data */;
-    }
-  } 
+  echo "Select game";
+  foreach ($row = $r_set->fetch_assoc()) {
+  echo "<option value=$row[id]>$row[name]</option>";
+  }
+  echo "</select>";
+  }
   //If there has been no scores set
   else{
     echo "0 results";
