@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (userID)
 );
 
-CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
+CREATE TABLE IF NOT EXISTS trivia (
 	questionID INT AUTO_INCREMENT,
     question VARCHAR(255) NOT NULL,
     PRIMARY KEY (questionID)
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS answer (
 CREATE TABLE IF NOT EXISTS scores (
     score_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    score INT NOT NULL,
+    score INT NOT NULL
 );
 
 INSERT INTO trivia (question) VALUES ("How old is Skeeter?");
@@ -41,5 +41,3 @@ INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "In class", 
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Jim", FALSE);
 
 INSERT INTO user (username, date) VALUES ("user1", DATE_FORMAT(NOW(), '%Y-%m-%d'));
-
-INSERT INTO user (user_id, questionID, answerID) VALUES (1,1,1);
