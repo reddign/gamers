@@ -8,7 +8,7 @@
         body {
             background-image: url('../pictures/bowers.jpg');
             background-size: cover;  /*This makes sure the image covers the entire page */
-            background-position: center 5%;
+            background-position: center 50px;
             background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
         }
     </style>

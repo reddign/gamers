@@ -9,7 +9,7 @@
             /* image directory: ".." in front takes it back a folder:
             background-image: url('../pictures/{image name}');
             background-size: cover;  /*This makes sure the image covers the entire page */
-            background-position: center 5%;
+            background-position: center 5%; /* percentage is vertical adjustment
             background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
         }
     </style>

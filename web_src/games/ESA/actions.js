@@ -11,7 +11,7 @@ class Actions {
         // Used to observe surroundings
     }
 
-    goto(currentLocation, destination) {
+    goto(destination) {
         // Used to travel to a different area
     }
 
