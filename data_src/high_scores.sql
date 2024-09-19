@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS highscores (
         -- After game played, automatically filter by game_played (show top 10 DESC ... you) 
         -- Be able to cgo to high scores page by click button from high scores showed after games
 
-
 -- Notes:
     -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
     -- 2) Show leaderboard after each game, to show top 10 for the game just played
