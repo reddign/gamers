@@ -18,10 +18,10 @@ require "../../includes/head.php";
             <div class="bio-title">Ian Skeete</div>
             <br>
             <div id="bio">"I am a freshamn information systems major with many minors. I will also be graduating this spring of 2065.
-            I am a freshamn information systems major with many minors
-            I am a freshamn information systems major with many minors
-            I am a freshamn information systems major with many minors
-            I am a freshamn information systems major with many minors"
+            I am a an information systems major with many minors
+            I am a man information systems major with many minors
+            I am a eshan information systems major with many minors
+            I am a frshamn information systems major with many minors"
         </section>
     </main>
 </body>
