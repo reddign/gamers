@@ -1,0 +1,7 @@
+GODOT exports updated html everytime when adjusting game content and finalizing so easier to track TODOS for game here.
+
+TODOS in GODOT:
+
+- ADD MORE OBSTACLES, GENERATE PIXEL ART THROUGH GPT OR LOOK FOR ASSETS ON ITCH.IO
+- ADJUST OBSTACLES TO BE RANDOMLY SPAWNED
+- ADJUST PLAYER SPEED TO DYNAMICALLY INCREASE WITH DISTANCE

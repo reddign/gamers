@@ -99,6 +99,7 @@ session_start();
             <option value="hangman">Flight of the Jay</option>
             <option value="flappybird">Flappy Jay</option>
             <option value="2048">2048 - Etown Edition</option>
+            <option value="jayrunner">JayRunner</option>
         </select>
     </div>
     <br><br><br><br><br><br><br>
@@ -226,8 +227,11 @@ session_start();
         function loadGame(select) {
             const selectedGame = select.value;
             if (selectedGame) {
+                
                 window.location.href = selectedGame + "/" + selectedGame + ".php";
+                
             }
+            
         }
     </script>
 

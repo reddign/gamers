@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://ww8gc8sot4lh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_p11g3"]
+[ext_resource type="PackedScene" uid="uid://bvxcamevtingt" path="res://Obstacles.tscn" id="1_vh1nm"]
+[ext_resource type="Script" path="res://Jay.gd" id="1_x1awb"]
+[ext_resource type="Texture2D" uid="uid://b786mgcc2388j" path="res://images/bluejayjump.png" id="3_onwaf"]
+[ext_resource type="Script" path="res://js_object.gd" id="4_r5d0f"]
+[ext_resource type="Texture2D" uid="uid://hnj3tv2hvu3e" path="res://images/bluejaywalk.png" id="4_rhjdu"]
+[ext_resource type="Texture2D" uid="uid://bx77t1kuiew36" path="res://images/City4.png" id="6_nrtjp"]
+[ext_resource type="FontFile" uid="uid://c72xl21b1vp7g" path="res://PressStart2P-vaV7.ttf" id="8_8krd5"]
+[ext_resource type="Script" path="res://score_label.gd" id="9_6bb6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
+size = Vector2(41, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3h2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_onwaf")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rhjdu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
+size = Vector2(255.839, 10.6369)
+
+[node name="Main" type="Node2D" groups=["scrollers"]]
+script = ExtResource("1_p11g3")
+
+[node name="Jay" type="CharacterBody2D" parent="." groups=["scrollers"]]
+position = Vector2(49, 685)
+scale = Vector2(2.36, 2.40001)
+script = ExtResource("1_x1awb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
+position = Vector2(11.8644, -34.1665)
+shape = SubResource("RectangleShape2D_eokgw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jay"]
+position = Vector2(10.5932, -32.4999)
+scale = Vector2(0.1715, 0.1675)
+sprite_frames = SubResource("SpriteFrames_f3h2s")
+animation = &"walk"
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(657.77, 598)
+scale = Vector2(5.615, 5.615)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4.31522, 14.2475)
+shape = SubResource("RectangleShape2D_qjn3n")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1280, 720)
+
+[node name="Background" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+z_index = -6
+texture_repeat = 2
+offset_left = -35.0
+offset_top = 3.0
+offset_right = 1245.0
+offset_bottom = 723.0
+texture = ExtResource("6_nrtjp")
+expand_mode = 3
+
+[node name="JSObject" type="Node" parent="."]
+script = ExtResource("4_r5d0f")
+
+[node name="ObstacleTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="ScoreLabel" type="Label" parent="." groups=["scrollers"]]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 165.0
+offset_bottom = 25.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("8_8krd5")
+theme_override_font_sizes/font_size = 20
+text = "Score: 0"
+script = ExtResource("9_6bb6e")
+
+[node name="Obstacles" parent="." groups=["obstacles"] instance=ExtResource("1_vh1nm")]
+position = Vector2(1400, 649)
+rotation = 0.00615358
+scale = Vector2(0.999998, 0.999998)
+
+[connection signal="timeout" from="ObstacleTimer" to="." method="_on_obstacle_timer_timeout"]

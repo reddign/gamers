@@ -18,6 +18,7 @@ require "../../includes/head.php";
             <div class="bio-title">Owen Yang</div>
             <br>
             <div id="bio"> Owen Yang is a third year Computer Science major. He is also minoring in Japanese and is expected to graduate Spring 2026.
+                 Jackson M. was here......
         </section>
     </main>
 </body>
