@@ -17,7 +17,8 @@ require "../../includes/head.php";
         <section id="Muzahidul Islam's Bio">
             <div class="bio-title">Muzahidul Islam</div>
             <br>
-            <div id="bio"> Muzahidul Islam is a student at Elizabethtown College studying Information Systems and Data Analytics
+            <div id="bio"> Muzahidul Islam is a student at Elizabethtown College studying Data Analytics and Information Systems
+                This is a test message added to a profile while syncing outdated branch
         </section>
     </main>
 </body>
