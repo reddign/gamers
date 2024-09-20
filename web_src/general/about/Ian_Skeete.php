@@ -17,10 +17,7 @@ require "../../includes/head.php";
         <section id="Ian Skeete's Bio">
             <div class="bio-title">Ian Skeete</div>
             <br>
-            <div id="bio">"I am a freshamn information systems major with many minors. I will also be graduating this spring of 2065.
-            I am a an informs major with many minors
-            I am a man infos major with many minors
-            I am a eshan information systems maj"
+            <div id="bio">"I am a freshamn information systems major with many minors. I will also be graduating this spring.
         </section>
     </main>
 </body>
