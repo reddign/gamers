@@ -3,7 +3,7 @@
 $pageName = "Trivia Questions page";
 require "../includes/functions.php";
 require "../includes/head.php";
-
+//Nancy was here
 ?>
 <script src="trivia.js"></script>
 <body>
