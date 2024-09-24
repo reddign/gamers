@@ -21,6 +21,7 @@
     include '../../includes/navbar.php'; 
 ?>
     <canvas id="game-canvas" width="320" height="120"></canvas>
+    <h1>Carrot Cake!</h1>
 </body>
 
 <?php
