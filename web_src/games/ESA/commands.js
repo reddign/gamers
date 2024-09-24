@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(command.value == "help"){
             help();
         }
-        if(command.value == "lool"){
+        if(command.value == "look"){
             look();
         }
     });
