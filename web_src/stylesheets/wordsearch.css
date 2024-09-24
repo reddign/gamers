@@ -25,9 +25,26 @@ h1 {
     margin: 20px 0;
     color: #004B98;
     text-shadow: 2px 2px 4px #3DB5E6;
+    display:inline-block;
 }
 
 main {
     text-align: center;
     padding-top: 15px;
+}
+
+#timer {
+    font-size: xxx-large;
+    padding-right: 10px;
+    font-family: "Orbitron",sans-serif;
+}
+
+#timerBox{
+    color:white;
+    float:right;
+    height: 80px;
+    width: 150px;
+    background-color: #004B98;
+    padding-left: 10px;
+    padding-right: 10px;
 }

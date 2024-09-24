@@ -9,6 +9,15 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../../stylesheets/wordsearch.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Script Code -->
+    <script src="timer.js"></script>
+
+    <!-- Clock Font: from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar bg-blue">
@@ -67,11 +76,15 @@ session_start();
     </nav>
     
     <main>
-
+        
         <h1>Jay to Z</h1>
+        <div id="timerBox">
+            <span id="timer" width="100px">7:00</span>
+        </div>
         <break>
         <h6>Word Search</h6>
             <p>placeholder text</p>
+        
         <ul>
             <div class="divv" id="row8">
                 <li class="box" id="b801"></li>
