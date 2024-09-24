@@ -7,7 +7,6 @@
     $database = "triviagames";
 
     $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
-
     require "../../includes/functions.php";
 ?>
 
