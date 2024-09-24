@@ -15,8 +15,8 @@ let jay_1_x = 75;
 let jay_1_y = 100;
 let jay_2_x = 100;
 let jay_2_y = 100;
-let jay_1_see = 0;
-let jay_2_see = 0;
+let jay_1_see = 1;
+let jay_2_see = 1;
 let mouse_x = 0;
 let mouse_y = 0;
 let radius = 50;
@@ -52,13 +52,17 @@ function roundstart(){
     jay_2_x = Math.random() * canvasWidth;
     jay_2_y = Math.random() * canvasHeight;
     round++;
+    round0ver=false;
 }
 
 function roundover(){
     if(jay_1_see==1&&jay_2_see==1&&!gameOver){
+        context.fillStyle = "white"
+        var startString = "Round: "+round+ " Start Click to begin!";
+        context.fillText(startString,20,300);
         round0ver=true;
-        roundstart();
         time=0;
+        roundover()
     }
     if(time==250){
         gameover();
@@ -132,6 +136,9 @@ function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
 
 
 function capture(){
+    if(round0ver){
+        roundstart();
+    }
     if(gameOver){
         gameOver=false;
         round=0;
