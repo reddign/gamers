@@ -7,6 +7,9 @@
 $words = []; //this process will be a for loop once the word bank is made, but for now I will use arbitrary examples
 $words[] = 'BLUEJAY';
 $words[] = 'CONRAD';
+$angle = 0; //Will be randomly assigned int between 0 and 7 (inclusive). 
+$xmod = 0;
+$ymod = 0;
 
 //$words = Get_wordBank()
 
@@ -20,6 +23,41 @@ for ($i = 0; $i < $size; $i++) {
         $innerList[] = '&nbsp;'; 
     }
     $nestedList[] = $innerList;
+}
+//Determine xmod and ymod
+switch($angle) {
+    case 0:
+        $xmod = 1;
+        $ymod = 0;
+        break;
+    case 1:
+        $xmod = 1;
+        $ymod = -1;
+        break;
+    case 2:
+        $xmod = 0;
+        $ymod = -1;
+        break;
+    case 3:
+        $xmod = -1;
+        $ymod = -1;
+        break;
+    case 4:
+        $xmod = -1;
+        $ymod = 0;
+        break;
+    case 5:
+        $xmod = -1;
+        $ymod = 1;
+        break;
+    case 6:
+        $xmod = 0;
+        $ymod = 1;
+        break;
+    case 7:
+        $xmod = 1;
+        $ymod = 1;
+        break;
 }
 //Place words
 foreach($words as $word) {
@@ -35,7 +73,7 @@ foreach($words as $word) {
     while(!$isvalid) {
         $isvalid = true;
         for ($i = 0; $i < strlen($word); $i++) {
-            if($nestedList[$col][$row+$i] != '&nbsp;'){
+            if($nestedList[$col+($i*$ymod)][$row+($i*$xmod)] != '&nbsp;'){
                 $isvalid = false;
                 $col = random_int(0,$size-1);
                 break;
@@ -44,7 +82,7 @@ foreach($words as $word) {
     }
     //add letters of word to nestedList
     for ($i = 0; $i < strlen($word); $i++) {
-        $nestedList[$col][$row+$i] = $word[$i]; 
+        $nestedList[$col+($i*$ymod)][$row+($i*$xmod)] = $word[$i]; 
     }
 }
 //print the board
