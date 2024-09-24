@@ -1,4 +1,5 @@
 import { resources } from './resources.js';
+import { Sprite } from './sprite.js';
 
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
@@ -37,6 +38,13 @@ function draw() {
 setInterval(() => {
     draw();
 }, 300)
+
+const hero = new Sprite({
+    resource: resources.images.student,
+    hFrames: 1,
+    vFrames: 0,
+    frame: 1
+})
 
 function animate(){
     //add  selection through character spritesheet for animation
