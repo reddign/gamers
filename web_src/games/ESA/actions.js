@@ -1,3 +1,9 @@
+//testing
+console.log("actions.js loaded");
+
+
+const command = document.getElementById("Text_Input");
+const button = document.getElementById("Button")
 class Actions {
     constructor() {
         this.name = "actions";
@@ -11,12 +17,17 @@ class Actions {
         // Used to observe surroundings
     }
 
-    goToPage(destination) {
-        // Get the value from the text input
-        var location = document.getElementById('locationInput').value;
-        // Construct the URL (You may want to validate or sanitize this input)
-        var url = 'locations/' + destination + '.php';
-        // Redirect to the constructed URL
+     goto(destination) {
+        // Get the value from the input field
+        var destination = document.getElementById("destinationInput").value;
+    
+        // Define the base URL for navigation
+        var baseUrl = 'locations/';
+    
+        // Append the destination and add '.php' extension
+        var url = baseUrl + destination + '.php';
+    
+        // Redirect to the new URL
         window.location.href = url;
     }
     
@@ -32,3 +43,4 @@ class Actions {
 
 
 }
+const actions = new Actions();
