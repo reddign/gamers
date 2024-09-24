@@ -14,6 +14,10 @@ class Squirrel {
         this.yTar = NaN;
 
         //which targetting method the squirrel will use, will be varied to prevent all squirrels following the same path
+        //three main targetting methods (string)
+        //direct    - target tile matches player position
+        //flank     - target tile is slightly behind the player
+        //intercept - target tile is in front of the player
         this.tarMethod = method;
 
     }
@@ -24,12 +28,23 @@ class Squirrel {
         //method for changing the target tile depends on targetting method, similar to pac man ghosts
 
         //update target tile if it is reached (will later be updated every movement tick instead)
-        if((this.xTar == this.xPos || isNaN(this.xTar)) && 
-           (this.yTar == this.yPos || isNaN(this.yTar))) {
+        //stub code for different methods
+        if(self.tarMethod == "direct") {
 
-            //just pick a random tile for now
-            this.xTar = Math.floor(Math.random() * board.length);
-            this.yTar = Math.floor(Math.random() * board[this.xTar].length);
+        } else if(self.tarMethod == "flank") {
+
+        } else if(self.tarMethod == "intercept") {
+            
+        } else {
+
+            if((this.xTar == this.xPos || isNaN(this.xTar)) && 
+               (this.yTar == this.yPos || isNaN(this.yTar))) {
+
+                //just pick a random tile for now
+                this.xTar = Math.floor(Math.random() * board.length);
+                this.yTar = Math.floor(Math.random() * board[this.xTar].length);
+
+            }
 
         }
 
