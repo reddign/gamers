@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if(command.value == "help"){
             help();
         }
+        if(command.value == "lool"){
+            look();
+        }
     });
 
     function help(){
