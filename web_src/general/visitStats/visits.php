@@ -1,9 +1,16 @@
 <?php
-session_start();
+    session_start();
+
+
+    $host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $database = "triviagames";
+
+    $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
+
 ?>
 
-<!DOCTYPE html>
-?>
 
 <html>
 
@@ -25,8 +32,8 @@ session_start();
 
     // List of visitors
     $visitOnce = [];
-    $visitTwoFive = [];
-    $visitSixPlus =[];
+    $visit2To5 = [];
+    $visit6Plus =[];
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -34,11 +41,11 @@ session_start();
             $visitor = $row['visitor'];
 
             if ($visitCount == 1) {
-                $visitedOnce[] = $visitor;
+                $visitOnce[] = $visitor;
             } else if ($visitCount >= 2 && $visitCount <= 5) {
-                $visited2To5[] = $visitor;
+                $visit2To5[] = $visitor;
             } else if ($visitCount >= 6) {
-                $visited6Plus[] = $visitor;
+                $visit6Plus[] = $visitor;
             }
         }
     }
@@ -55,8 +62,8 @@ session_start();
         <tr>
             <td>
                 <?php
-                if (!empty($visitedOnce)) {
-                    echo implode ('<br>', $visitedOnce);
+                if (!empty($visitOnce)) {
+                    echo implode ('<br>', $visitOnce);
                 } else {
                     echo "Loading...";
                 }
@@ -66,8 +73,8 @@ session_start();
 
             <td>
                 <?php
-                if (!empty($visited2To5)) {
-                    echo implode ('<br>', $visited2To5);
+                if (!empty($visit2To5)) {
+                    echo implode ('<br>', $visit2To5);
                 } else {
                     echo "Loading...";
                 }
@@ -77,8 +84,8 @@ session_start();
 
             <td>
                 <?php
-                if (!empty($visited6Plus)) {
-                    echo implode ('<br>', $visited6Plus);
+                if (!empty($visit6Plus)) {
+                    echo implode ('<br>', $visit6Plus);
                 } else {
                     echo "Loading...";
                 }
@@ -92,12 +99,5 @@ session_start();
     <?php
     $connection->close();
     ?>
-    
-            <td>Loading...</td>
-            <td>Loading...</td>
-            <td>Loading...</td>
-        </tr>
-        <!-- Need to take data from a database and present it on this chart -->
-    </table>
 </body>
 </html>
