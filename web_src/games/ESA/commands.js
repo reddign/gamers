@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function help(){
         //Displays all commands
-        window.alert("Help\n Look\n Items\n Use\n Moveto\n Grab\n Talk\n");
+        console.log("Help\n Look\n Items\n Use\n Moveto\n Grab\n Talk\n");
 
     }
 
