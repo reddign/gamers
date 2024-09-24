@@ -157,25 +157,22 @@ function capture(){
     }
     if(gameOver){
         gameOver=false;
-        round=1;
+        round=0;
         time=0;
         score=0;
     }
     console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
     if(isDuckInCircle(mouse_x,mouse_y,jay_1_x,jay_1_y,radius)){
         console.log("hit");
-        if( jay_1_see==0){
-
         score += 25;
-        jay_1_see=1;}
-
+        jay_1_see=1;
     }
 
     if(isDuckInCircle(mouse_x,mouse_y,jay_2_x,jay_2_y,radius)){
         console.log("hit");
-        if( jay_2_see==0){
+
         score += 25;
-        jay_2_see=1;}
+        jay_2_see=1;
     }
 
 }

@@ -7,13 +7,3 @@ body {
     text-align: center;
 }
 
-#game-container {
-    position: relative;
-    width: 800px;
-    height: 600px;
-    background-color: #87CEEB;
-    border: 2px solid black;
-    margin: auto;
-    
-}
-
