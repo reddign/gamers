@@ -13,11 +13,13 @@ if($connection->connect_error) {
 $sql = "SELECT DISTINCT game_played FROM highscores;";
 $result = $connection->query($sql);
 
-echo "<select name='Game'>";
-  while($row -> fetch_assoc($result)){
-    echo "<option value='" . $row['game_played'] . "'>" . $row['game_played'] . "</option>";
-  }
-  echo "</select>";
+if($result->num_rows > 0){
+  echo '<select name="game">';
+  while ($row = $result->fetch_assoc()) {
+    echo '<option value="' . $row['game_played'] . '">' . $row['game_played'] . '</option>';
+}
+echo '</select>';
+}
 
   $connection->close();
 ?>
