@@ -1,6 +1,7 @@
 extends Label
 
 var score:int = 0
+var displayScore:float = 0
 var game_over = false
 var frames_since_last_increment = 0
 var frames_per_increment = 30  # Increment score every 30 frames
@@ -11,7 +12,8 @@ var frames_per_increment = 30  # Increment score every 30 frames
 func _process(_delta: float) -> void:
 	if not game_over:
 		score += 1
-		text = "Score: %010d" % score
+		displayScore = float(score)/10
+		text = "Score: %010d" % displayScore
 
 func _on_obstacles_end_game() -> void:
 	game_over = true
@@ -19,9 +21,9 @@ func _on_obstacles_end_game() -> void:
 		JavaScriptBridge.eval("""
 			console.log('Sending game over message with score: %s');
 			window.parent.postMessage({type: 'gameOver', score: %s}, '*');
-		""" % [score, score])
+		""" % [displayScore, displayScore])
 	else:
-		print("Game Over! Score: %s" % score)
+		print("Game Over! Score: %s" % displayScore)
 
 func stop_scrolling():
 	game_over = true
@@ -29,6 +31,6 @@ func stop_scrolling():
 		JavaScriptBridge.eval("""
 			console.log('Sending game over message with score: %s');
 			window.parent.postMessage({type: 'gameOver', score: %s}, '*');
-		""" % [score, score])
+		""" % [displayScore, displayScore])
 	else:
-		print("Game Over! Score: %s" % score)
+		print("Game Over! Score: %s" % displayScore)
