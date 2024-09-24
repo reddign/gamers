@@ -1,11 +1,14 @@
 
 <?php
 $pageName = "Trivia Questions page";
+//Extra files to be loaded by head.php
+$jsFiles = ["trivia.js"];
+$cssFiles = ["trivia.css"];
+
 require "../includes/functions.php";
 require "../includes/head.php";
 //Nancy was here
 ?>
-<script src="trivia.js"></script>
 <body>
 <?php
      require "../includes/navbar.php";
