@@ -25,7 +25,7 @@ function draw() {
     // Draws the background image
     const background = resources.images.map;
     if (background.isLoaded) {
-        ctx.drawImage(background.image, 0, 0, 3300, 2037);
+        ctx.drawImage(background.image, 0, 0, 1650, 1019);
     }
     
     // Draws the player
