@@ -43,9 +43,9 @@ function net(e){
 
 function drawScoreboard(){
     context.font = "16px serif";
-    context.fillStyle = "white"
+    context.fillStyle = "orange"
     var scoreString = "Round: "+round+" Score: "+score+" Time:"+time;
-    context.fillText(scoreString,20,500);
+    context.fillText(scoreString,20,200);
 }
 
 function roundstart(){
@@ -67,7 +67,7 @@ function roundover(){
         
         const yPosition = 300;  
         context.font = "bold 48px serif";
-        context.fillStyle = "white"
+        context.fillStyle = "black"
         var startString = "Round: "+round+ " Start Click to begin!";
         const textWidth = context.measureText(startString).width;
         const xPosition = (canvas.width - textWidth) / 2;
@@ -130,7 +130,7 @@ function gameover(){
     gameOver=true;
     jay_1_see=1;
     jay_2_see=1;
-    context.fillStyle = "white"
+    context.fillStyle = "black"
     var loseString = "You Lose!";
     const yPosition = 300;  
     context.font = "bold 48px serif";
