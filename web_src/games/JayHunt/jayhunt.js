@@ -5,7 +5,10 @@ const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
 
 const birdImage = new Image();
-birdImage.src = 'bluejaygif.gif'; 
+birdImage.src = 'Images/bluejay.gif';
+
+const background = new Image();
+background.src = 'Images/Outside.jpg'; 
 
 let birdWidth = 100;  // 
 let birdHeight = 100;
@@ -165,12 +168,9 @@ function capture(){
 }
 
 
-function clear(){
-
-    context.fillStyle = "black";
-    context.fillRect(0,0,canvas.width,canvas.height);
+function clear() {
+    context.drawImage(background, 0, 0, canvas.width, canvas.height);
 }
-
 
 function animate(){
     clear();
