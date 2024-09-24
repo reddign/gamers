@@ -1,4 +1,4 @@
-body {
+#main_body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ body {
     justify-content: center; 
 }
 
-h1 {
+#nameOfPage {
     font-size: 36px;
     font-family: "Georgia", Times, serif;
     text-align: center;
@@ -17,22 +17,23 @@ h1 {
     text-shadow: 2px 2px 4px #3DB5E6;
 }
 
-table {
-    width: 80%;
+#main_table {
+    width: 1000px;
     margin: 20px auto;
     border-collapse: collapse;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 }
 
-th {
-    background-image: linear-gradient(to right, #004B98, #3DB5E6);
+.tr th {
+    background-image: linear-gradient(to left, #004B98, #3DB5E6);
     color: white;
     font-size: 20px;
     padding: 15px;
+    text-align: center;
 }
 
-td {
+.tr td {
     padding: 12px;
     text-align: center;
     font-size: 16px;
