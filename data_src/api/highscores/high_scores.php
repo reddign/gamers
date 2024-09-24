@@ -15,10 +15,12 @@ $result = $connection->query($sql);
 
 if($result->num_rows > 0){
   echo '<select name="game">';
+  echo '<option value="' . $none . '">' . "--Select Game--" . '</option>';
   while ($row = $result->fetch_assoc()) {
     echo '<option value="' . $row['game_played'] . '">' . $row['game_played'] . '</option>';
 }
 echo '</select>';
+echo $row['game_played'];
 }
 
   $connection->close();
