@@ -3,6 +3,9 @@
 var item = 'Key';       // This is testing, change later
 var location = 'esbenshade'; // This is testing, change later
 
+const command = document.getElementById("Text_Input");
+const button = document.getElementById("Button2")
+
 function Help(){
     //Displays all commands
     System.out.println("Help\n Look\n Items\n Use\n Moveto\n Grab\n Talk\n");
