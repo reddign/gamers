@@ -31,18 +31,9 @@ require "../includes/head.php";
                 <div id="circle3"></div>
             </div>
     </main>
-
-
-    <!-- <div id="game-select">
-        <label for="game-selector">Select a game: </label>
-        <select id="game-selector" onchange="loadGame(this)">
-            <option value="">Select a game</option>
-            <option value="hangman">Hangman</option>
-            <option value="flappybird">Flappy Bird</option>
-            <option value="pacman">Pacman</option>
-        </select>
-    </div> -->
-
+<?
+require "../includes/footer.php";
+?>
     <script>
         function loadGame(select) {
             const selectedGame = select.value;
@@ -51,5 +42,6 @@ require "../includes/head.php";
             }
         }
     </script>
+
 </body>
 </html>
