@@ -13,12 +13,15 @@
     <title>Carrot Cake Collection</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="/gamers/web_src/games/carrotcake/rpg.js"></script>
+    <script src="web_src\games\carrotcake\rpg.js"></script>
+    <script src = "web_src\games\carrotcake\hiddenCupcake.js">
 </head>
 <body>
 <?php 
     include '../../includes/navbar.php'; 
 ?>
     <canvas id="game-canvas" width="320" height="120"></canvas>
+    <h1>Carrot Cake!</h1>
 </body>
 
 <?php

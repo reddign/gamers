@@ -40,7 +40,7 @@ require "../../includes/head.php";
             <!-- <span class="name">From Left to Right: </span>  -->
             <span class="name">
                 <a href="kevin_barbieri.php">Kevin Barbieri</a>, Joseph Culkin, <a href="Brian_Duva.php">Brian Duva</a>, Parker Engle,
-                <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, Laney Humble, <a href="James_Hutchins.php">James Hutchins<a/> ,
+                <a href="leif_hoffman.php">Leif Hoffman</a>, <a href="cameron_hollabaugh.php">Cameron Hollabaugh</a>, <a href = "laney_humble.php">Laney Humble</a>, <a href="James_Hutchins.php">James Hutchins<a/> ,
                 <a href='muzahidul_islam.php'>Muzahidul Islam</a>, <a href='vincent_liu.php'>Vincent Liu</a>, <a href='john_mcgovern.php'>John McGovern</a>, Jackson Miller, <a href='Joshua_Schmitt.php'>
                 Mildred Nwachukwu-Innocent, Martin Ratchford, Alexander Roop, <a href='wesJRyan.php'>Wes J. Ryan</a>,
                 Joshua Schmitt </a>, Ian Skeete, Austin Smith, Matthew Smith,

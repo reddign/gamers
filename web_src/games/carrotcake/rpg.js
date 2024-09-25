@@ -1,17 +1,30 @@
 import { resources } from './resources.js';
+import { Sprite } from './sprite.js';
+import { Vector2 } from './Vector2.js';
 
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
 const ctx = canvas.getContext('2d');
 
-// Get background
-const backgroundImage = new Image();
-backgroundImage.src = 'sprites/betamap.jpg';
-
 // Player settings
-const playerSize = 32;
-let playerX = 400;
-let playerY = 400;
+const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Position centered in canvas
+// const playerSize = 32;
+// let playerX = 400;
+// let playerY = 400;
+
+// Sprites
+const backgroundSprite = new Sprite({
+    resource: resources.images.map,
+    frameSize: new Vector2(1650, 1019)
+})
+
+const characterSprite = new Sprite({
+    resource: resources.images.student,
+    frameSize: new Vector2(16, 16),
+    hFrames: 10,
+    vFrames: 1,
+    frame: 1
+})
 
 // Creates the game area
 function draw() {
@@ -19,15 +32,15 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     // Scrolls screen
-    const offsetX = playerX - canvas.width / 2 + playerSize / 2;
-    const offsetY = playerY - canvas.height / 2 + playerSize / 2;
+    // const offsetX = playerX - canvas.width / 2 + playerSize / 2;
+    // const offsetY = playerY - canvas.height / 2 + playerSize / 2;
 
-    // Draws the background image
-    const background = resources.images.map;
-    if (background.isLoaded) {
-        ctx.drawImage(background.image, 0, 0, 1650, 1019);
-    }
-    
+    // Draw sprites
+    backgroundSprite.drawImage(ctx, 0, 0);
+    characterSprite.drawImage(ctx, characterPos.x, characterPos.y);
+    // Potential TODO: create a hero offset that puts the hero into a specific square in the grid
+    // ^Assumes we are doing grid snapping
+
     // Draws the player
     ctx.fillStyle = 'red'; // Player color
     ctx.fillRect(playerX - playerSize / 2, playerY - playerSize / 2, playerSize, playerSize);
@@ -37,6 +50,13 @@ function draw() {
 setInterval(() => {
     draw();
 }, 300)
+
+const hero = new Sprite({
+    resource: resources.images.student,
+    hFrames: 10,
+    vFrames: 1,
+    frame: 1
+})
 
 function animate(){
     //add  selection through character spritesheet for animation
