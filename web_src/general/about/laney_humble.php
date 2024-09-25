@@ -26,6 +26,8 @@ require "../../includes/head.php";
                            She has a passion for graphic and web design.
                            She is going to make an amazing web developer in the future.
                            
+                           Computer Science(Concentration in Web and Application Design) dual major who is planning to graduate 
+                           in May, 2026.
         </section>
     </main>
 </body>
