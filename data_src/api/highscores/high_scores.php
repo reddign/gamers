@@ -13,18 +13,20 @@ if($connection->connect_error) {
 $sql = "SELECT DISTINCT game_played FROM highscores;";
 $result = $connection->query($sql);
 
+$selectGame = isset($_POST['game']) ? $_POST['game'] = '';
+echo '<form method="POST" action=""';
+echo '<select name="game"' . ' onchange="this.form.submit()">';
+echo '<option value="' . "" . '">' . "--Select Game--" . '</option>';
+
 if($result->num_rows > 0){
-  echo '<select name="game"' . ' onchange="loadScore(this)">';
-  echo '<option value="' . "" . '">' . "--Select Game--" . '</option>';
   while ($row = $result->fetch_assoc()) {
     echo '<option value="' . $row['game_played']. '">' . $row['game_played'] . '</option>';
     $title = $row['game_played'];
 }
 echo '</select>';
-echo $title;
+echo '</form>';
 }
 
-//Create function "loadScore" that implements the code below and the results from above dropdown menu
 
 $sql = "SELECT username, game_played, score, time_played FROM highscores WHERE game_played = 'Pong'";
 $result = $connection->query($sql);
