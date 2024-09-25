@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial test for text commands
     const command = document.getElementById("Text_Input");
     const button = document.getElementById("Button2")
+    const location_change = document.getElementById("location_change");
 
     button.addEventListener("click", function () {
         if(command.value == "help"){
@@ -10,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if(command.value == "look"){
             look();
+        }
+        if(command.value == "gotobowers"){
+            goto("bowers");
         }
     });
 
@@ -50,10 +54,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    function goto(){
-        //Requires input after command (Moveto (location)) to function
-        //Syntax example:  Moveto BSC
-        //Moves player character to new location
+    function goto(location){
+        //Test location change to Bowers
+        if (location == "bowers"){
+            location_change.src = "../../../web_src/games/ESA/images/bowers.png";
+        }
 
     }
 
