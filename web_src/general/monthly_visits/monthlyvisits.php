@@ -25,29 +25,27 @@ session_start()
         <br>
         <h2>Monthly Visits Table<h2>
 <?php
-// TODO: Connect to the database
-// example connection: $conn = new mysqli("localhost", "username", "password", "database");
 
-// Check the connection using the following...
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
+$conn = new mysqli("localhost", "username", "password", "database");
 
-
-//TODO: Write a SQL query to grab the data for number of users per month
-// LIKE $sql = "SELECT MONTH(visit_date) AS month, COUNT(user_id) AS num_visits FROM visits GROUP BY MONTH(visit_date)";
-// $result = $conn->query($sql);
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+ }
 
 
-// TODO: Write a loop to go through the results and display them in the table
-// if any results were returnes, we loop through each row in result set
-// then we print each row in the new row in the table
-// else, if no reults were found we can display an error
+$sql = "SELECT YEAR(time_start) AS visit_year, MONTH(time_start) AS visit_month, COUNT(visit_id) AS number_of_visits FROM visit GROUP BY  YEAR(time_start), MONTH(time_start) ORDER BY visit_year, visit_month";
+$result = $conn->query($sql);
 
 
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["visit_year"] . "-" . $row["visit_month"] . "</td><td>" . $row["number_of_visits"] . "</td></tr>";
+    }
+} else {
+    echo "<tr><td colspan='2'>No data available</td></tr>";
+}
 
-// TODO: Close database connection
-// $conn->close();
+$conn->close();
 ?>
     </table>
 </body>
