@@ -23,13 +23,19 @@ require "../../includes/head.php";
                            Computer Science (Concentration in Web and Application Design) dual major who is 
                            planning on graduating in May, 2026.
 
+<<<<<<< HEAD
                            Laney Humble is an amazing, incredible person.
+=======
+                           Laney Humblean incredible person.
+>>>>>>> ba1e89b (added to bio page)
                            She is thoughtful, kind, and caring.
                            She loves to hang out with friends and get to know other people.
                            She is going to make an amazing web developer in the future.
                            
                            Computer Science(Concentration in Web and Application Design) dual major who is planning to graduate 
                            in May, 2026.
+
+                           Laney is in Melica Acapella, WWEC Radio Station, and SWE.
         </section>
     </main>
 </body>
