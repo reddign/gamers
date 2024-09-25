@@ -23,3 +23,25 @@ function update(){
     //updating the current frame to simulate the walking
     frame = (frame + 1) % totalFrames;
 }
+
+//function darw() will draw the current frame of the student sprite
+function draw(){
+        ctx.drawImage(
+        student,
+        frame * frameWidth, 0, //this is source x and y for which frame to pick up from the sprite
+        frameWidth, frameHeight, //this is the source of the width and height
+        studentX, studentY, //this is destination x and y
+        frameWidth, frameHeight // this is the destination width and height.
+    );
+}
+
+function loop(){
+    update();
+    draw();
+    requestAnimationFrame(loop);
+}
+
+//This is to start the loop when the image is loaded
+student.onload = function(){
+    loop();
+}
