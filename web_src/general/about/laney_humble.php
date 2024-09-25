@@ -19,10 +19,10 @@ require "../../includes/head.php";
             <div class="bio-title">Laney Humble</div>
             <br>
             <div id="bio"> Laney Humble is a Junior at Elizabethtown College. She is a Graphic Design and 
-                           Computer Science(Concentration in Web and Application Design) dual major who is 
-                           planing on graduating in 2026.
+                           Computer Science (Concentration in Web and Application Design) dual major who is 
+                           planning on graduating in May, 2026.
 
-                           Laney Humble is an incredible person.
+                           Laney Humble is an amazing, incredible person.
                            She is thoughtful, kind, and caring.
                            She has a passion for graphic and web design.
                            She is going to make an amazing web developer in the future.
