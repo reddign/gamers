@@ -6,6 +6,7 @@ require "../../includes/head.php";
 ?>
 <body>
 <?php
+//This is a comment
      require "../../includes/navbar.php";
 ?>
    
@@ -19,7 +20,13 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> Laney Humble is a Junior at Elizabethtown College. She is a Graphic Design and 
                            Computer Science(Concentration in Web and Application Design) dual major who is 
-                           planing on graduating in 2026
+                           planing on graduating in 2026.
+
+                           Laney Humble is an incredible person.
+                           She is thoughtful, kind, and caring.
+                           She has a passion for graphic and web design.
+                           She is going to make an amazing web developer in the future.
+                           
         </section>
     </main>
 </body>
