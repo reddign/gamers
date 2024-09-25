@@ -39,6 +39,26 @@ INSERT INTO highscores VALUES (103, 'Pong', 27, NOW(), 'Dummy3');
 INSERT INTO highscores VALUES (103, 'Pong', 31, NOW(), 'Dummy3');
 INSERT INTO highscores VALUES (103, 'Pong', 17, NOW(), 'Dummy3');
 
+INSERT INTO highscores VALUES (100, 'Tetris', 25, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Tetris', 47, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Tetris', 24, NOW(), 'Dummy0');
+INSERT INTO highscores VALUES (100, 'Tetris', 71, NOW(), 'Dummy0');
+
+INSERT INTO highscores VALUES (101, 'Tetris', 60, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Tetris', 11, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Tetris', 45, NOW(), 'Dummy1');
+INSERT INTO highscores VALUES (101, 'Tetris', 65, NOW(), 'Dummy1');
+
+INSERT INTO highscores VALUES (102, 'Tetris', 49, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Tetris', 75, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Tetris', 74, NOW(), 'Dummy2');
+INSERT INTO highscores VALUES (102, 'Tetris', 30, NOW(), 'Dummy2');
+
+INSERT INTO highscores VALUES (103, 'Tetris', 67, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Tetris', 27, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Tetris', 31, NOW(), 'Dummy3');
+INSERT INTO highscores VALUES (103, 'Tetris', 17, NOW(), 'Dummy3');
+
 -- TSK-8.2	Create a screen to show the top 10 players for each game.
     -- high_scores.php which has a filepath of gamers/web_src/games/high_scores.php (R: Read for 8.3)
 

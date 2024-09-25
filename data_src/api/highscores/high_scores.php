@@ -17,10 +17,11 @@ if($result->num_rows > 0){
   echo '<select name="game">';
   echo '<option value="' . $none . '">' . "--Select Game--" . '</option>';
   while ($row = $result->fetch_assoc()) {
-    echo '<option value="' . $row['game_played'] . '">' . $row['game_played'] . '</option>';
+    echo '<option value="' . $row['game_played']. '">' . $row['game_played'] . '</option>';
+    $title = $row['game_played'];
 }
 echo '</select>';
-echo $row['game_played'];
+echo $title;
 }
 
 $sql = "SELECT username, game_played, score, time_played FROM highscores WHERE game_played = 'Pong'";
