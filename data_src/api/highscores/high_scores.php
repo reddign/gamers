@@ -23,5 +23,19 @@ echo '</select>';
 echo $row['game_played'];
 }
 
+$sql = "SELECT username, game_played, score, time_played FROM highscores WHERE game_played = 'Pong'";
+$result = $connection->query($sql);
+
+// Check if there are results
+if ($result->num_rows > 0) {
+  echo "<br>";
+  // Output data for each row
+  while ($row = $result->fetch_assoc()) {
+      echo "Username: " . $row["username"] . " - Game: " . $row["game_played"] . " - Score: " . $row["score"] . " - Time Played: " . $row["time_played"] . "<br>";
+  }
+} else {
+  echo "No results found.";
+}
+
   $connection->close();
 ?>
