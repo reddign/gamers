@@ -14,8 +14,8 @@ $sql = "SELECT DISTINCT game_played FROM highscores;";
 $result = $connection->query($sql);
 
 if($result->num_rows > 0){
-  echo '<select name="game">';
-  echo '<option value="' . $none . '">' . "--Select Game--" . '</option>';
+  echo '<select name="game"' . ' onchange="loadScore(this)">';
+  echo '<option value="' . "" . '">' . "--Select Game--" . '</option>';
   while ($row = $result->fetch_assoc()) {
     echo '<option value="' . $row['game_played']. '">' . $row['game_played'] . '</option>';
     $title = $row['game_played'];
@@ -23,6 +23,8 @@ if($result->num_rows > 0){
 echo '</select>';
 echo $title;
 }
+
+//Create function "loadScore" that implements the code below and the results from above dropdown menu
 
 $sql = "SELECT username, game_played, score, time_played FROM highscores WHERE game_played = 'Pong'";
 $result = $connection->query($sql);
