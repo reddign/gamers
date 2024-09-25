@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function help(){
         //Displays all commands
-        console.log("Help\n Look\n Items\n Use\n Moveto\n Grab\n Talk\n");
+        console.log("help: Shows Commands\nlook: Describes Surroundings\nitems: Show Inventory\nuse: Uses selected item\ngoto: Travel to selected location\ngrab: Pick up item in area\ntalk: Talks to person in area\n");
 
     }
 
