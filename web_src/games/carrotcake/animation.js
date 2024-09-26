@@ -19,7 +19,7 @@ function update(){
     //update student's X position to move right
     studentX += 2;
     if (studentX > canvas.width){
-        studentX -= frameWidth; //looping back to the left side.
+        studentX = -frameWidth; //looping back to the left side.
     }
     //updating the current frame to simulate the walking
     frame = (frame + 1) % totalFrames;
@@ -27,6 +27,8 @@ function update(){
 
 //function draw() will draw the current frame of the student sprite
 function draw(){
+        ctx.clearRect(0,0,canvas.width, canvas.height);    
+
         ctx.drawImage(
         student,
         frame * frameWidth, 0, //this is source x and y for which frame to pick up from the sprite
