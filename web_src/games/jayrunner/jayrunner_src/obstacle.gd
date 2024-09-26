@@ -1,12 +1,13 @@
 extends Area2D
 
 var game_over = false
-@export var SCROLL_SPEED = 300
+var SCROLL_SPEED:int
 
 func _ready():
 	position.x = 1400
-	$Enemy.play(var_to_str(randi_range(1, 3)))
+	$Enemy.play(var_to_str(randi_range(1, 3)), SCROLL_SPEED / 300)
 	add_to_group("obstacles")
+	add_to_group("scrollers")
 
 func _process(delta):
 	if not game_over:
@@ -24,3 +25,6 @@ func _on_body_entered(_body: CharacterBody2D) -> void:
 func stop_moving():
 	game_over = true
 	$Enemy.pause()
+
+func update_scrolling_speed(CURRENT_SPEED):
+	SCROLL_SPEED = CURRENT_SPEED
