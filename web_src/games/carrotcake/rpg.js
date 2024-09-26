@@ -17,6 +17,8 @@ const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Po
 
 const update = () => {
  // TODO: updating assets in game
+ student.frame += 1;
+ studentPos.x += 1; 
 };
 
 const gameLoop = new GameLoop(update, draw);
