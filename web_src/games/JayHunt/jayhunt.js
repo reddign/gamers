@@ -8,7 +8,7 @@ const birdImage = new Image();
 birdImage.src = 'Images/bluejay.gif';
 
 const background = new Image();
-background.src = 'Images/Outside.jpg'; 
+background.src = 'Images/outdoor.jpg'; 
 
 let birdWidth = 100;  // 
 let birdHeight = 100;
@@ -42,8 +42,8 @@ function net(e){
 }
 
 function drawScoreboard(){
-    context.font = "16px serif";
-    context.fillStyle = "orange"
+    context.font = "20px serif";
+    context.fillStyle = "black"
     var scoreString = "Round: "+round+" Score: "+score+" Time:"+time;
     context.fillText(scoreString,20,200);
 }
