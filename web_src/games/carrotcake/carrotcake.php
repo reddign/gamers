@@ -19,7 +19,7 @@
 <?php 
     include '../../includes/navbar.php'; 
 ?>
-    <h1>Carrot Cake!</h1>
+    <h1>Carrot Cake Collection</h1>
     <canvas id="game-canvas" width="320" height="120"></canvas>
 </body>
 
