@@ -5,6 +5,8 @@ import { Vector2 } from './Vector2.js';
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
 const ctx = canvas.getContext('2d');
+const gameTitle = "Carrot Cake Collection";
+let score = 0;
 
 // Player settings
 const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Position centered in canvas
@@ -65,10 +67,11 @@ function detectCOllision(){
 function reportScore() {
     // TODO: report username, game, score, maybe time? to database
     let gameStats = {
-        username: username,
-        gameName: gameName,
+        user_id: user_id,
+        game_played: gameTitle,
         score: score,
-        // time: gameTime // maybe implemented depending on database capabilities
+        time_played: date,
+        username: username
     };
 
 
