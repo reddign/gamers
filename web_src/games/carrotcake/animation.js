@@ -2,9 +2,10 @@
  
 //loading the student image
 const student = new Image();
-student.src = 'student.png';
+student.src = 'gamers/web_src/games/carrotcake/sprites/student.png';
 
-const canvas = document.getElementById('betamap.png');
+const canvas = document.getElementById('gamers/web_src/games/carrotcake/sprites/betamap.png');
+const ctx = canvas.getContext('2d');
 
 //variables
 let studentX = 0; //X position of the student
@@ -12,7 +13,7 @@ let studentY = canvas.height - 100; //Y position of the student
 let frame = 0; //framing for the animation
 let frameWidth = 64;
 let frameHeight = 64;
-let total = 4;
+let total = 4; //this is total amount of frames.
 
 function update(){
     //update student's X position to move right
@@ -24,7 +25,7 @@ function update(){
     frame = (frame + 1) % totalFrames;
 }
 
-//function darw() will draw the current frame of the student sprite
+//function draw() will draw the current frame of the student sprite
 function draw(){
         ctx.drawImage(
         student,

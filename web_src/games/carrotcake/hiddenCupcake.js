@@ -30,11 +30,11 @@ function findCupcake(board, playerRow, playerColumn){
     } 
     return board;
 }
-//This function would be played IF the actor removes the cupcakes
-function removeCupcake(){
 
-}
-//This function would add the hidden cupcakes to the score of the user
-function addToScore(){
-
+//part where the hidden cupcakes that are found, are then added to the score
+function addToScore() {
+    score += cupcakes;
+    //setting the cupcakes to 0, since they all added to the score
+    cupcakes = 0;
+    return score;
 }
