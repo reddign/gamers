@@ -21,14 +21,14 @@ function hiddenCupcake(board, numCupcakes) {
 
     return board;
 }
-//part where the actor can find and remove cupcakes
+//part where the player can find and remove cupcakes
 function findAndRemove() {
     //this is removing the cupcake from the board (setting the cell to 0)
     board[row][col] =0;
     return board;
 }
 
-//part where cupcakes are added to the score
+//part where the hidden cupcakes that are found, are then added to the score
 function addToScore() {
     score += cupcakes;
     //setting the cupcakes to 0, since they all added to the score
