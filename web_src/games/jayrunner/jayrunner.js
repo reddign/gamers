@@ -14,6 +14,9 @@
     }
 
     function createScore(gamePlayed, score) {
+
+        score = parseInt(score);
+        
         // If username is empty, ask the user to enter a username
         if (!username) {
             username = prompt("Enter your username to submit your score:");
