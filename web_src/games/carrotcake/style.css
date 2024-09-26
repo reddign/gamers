@@ -9,3 +9,7 @@ canvas {
     width: 100%;
     background: blue;
 }
+
+h1 {
+    text-align: center;
+}
