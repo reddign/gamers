@@ -13,6 +13,37 @@ export class Sprite{
     }
 }
 
+export class GameLoop{
+    constructor(update, render){
+        this.lastFrameTime = 0;
+        this.accumulatedTime = 0;
+        this.timeStep = 1000/60; //60 frames per second
+
+        this.update = update;
+        this.render = render;
+
+        this.rafID = null;
+        this.isRunning = false;
+    }
+}
+
+mainLoop = (timestamp) => {
+    if(!this.isRunning) return;
+    let deltaTime = timestamp - this.lastFrameTime;
+    this.lastFrameTime = timestamp;
+
+    //accumulating all the time since the last frame.
+    this.accumulateTime += deltaTime;
+
+    //if there's enough accumulated time to run one or more fixed updates
+    while(this.accumulateTime >= this.timeStep){
+        this.update(this.timestamp); //we pass the fixed time step here
+        this.accumulateTime -= this.timeStep;
+    }
+
+    this.render();
+    this.rafID = requestAnimationFrame(this.mainLoop);
+}
 
 
 
