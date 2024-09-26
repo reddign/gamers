@@ -42,9 +42,10 @@ function net(e){
 }
 
 function drawScoreboard(){
-    context.fillStyle = "white"
+    context.font = "16px serif";
+    context.fillStyle = "orange"
     var scoreString = "Round: "+round+" Score: "+score+" Time:"+time;
-    context.fillText(scoreString,20,500);
+    context.fillText(scoreString,20,200);
 }
 
 function roundstart(){
@@ -60,9 +61,17 @@ function roundstart(){
 
 function roundover(){
     if(jay_1_see==1&&jay_2_see==1&&!gameOver){
-        context.fillStyle = "white"
+
+        
+
+        
+        const yPosition = 300;  
+        context.font = "bold 48px serif";
+        context.fillStyle = "black"
         var startString = "Round: "+round+ " Start Click to begin!";
-        context.fillText(startString,20,300);
+        const textWidth = context.measureText(startString).width;
+        const xPosition = (canvas.width - textWidth) / 2;
+        context.fillText(startString,xPosition, yPosition);
         round0ver=true;
         time=0;
         roundover()
@@ -121,9 +130,13 @@ function gameover(){
     gameOver=true;
     jay_1_see=1;
     jay_2_see=1;
-    context.fillStyle = "white"
+    context.fillStyle = "black"
     var loseString = "You Lose!";
-    context.fillText(loseString,20,450);
+    const yPosition = 300;  
+    context.font = "bold 48px serif";
+    const textWidth = context.measureText(loseString).width;
+    const xPosition = (canvas.width - textWidth) / 2;
+    context.fillText(loseString,xPosition, yPosition);
     gameover();
 
 
@@ -144,25 +157,22 @@ function capture(){
     }
     if(gameOver){
         gameOver=false;
-        round=1;
+        round=0;
         time=0;
         score=0;
     }
     console.log(mouse_x,mouse_y,jay_1_x,jay_1_y,jay_2_x,jay_2_y);
     if(isDuckInCircle(mouse_x,mouse_y,jay_1_x,jay_1_y,radius)){
         console.log("hit");
-        if( jay_1_see==0){
-
         score += 25;
-        jay_1_see=1;}
-
+        jay_1_see=1;
     }
 
     if(isDuckInCircle(mouse_x,mouse_y,jay_2_x,jay_2_y,radius)){
         console.log("hit");
-        if( jay_2_see==0){
+
         score += 25;
-        jay_2_see=1;}
+        jay_2_see=1;
     }
 
 }
