@@ -28,21 +28,30 @@ echo '</form>';
 }
 
 echo $selectGame;
-echo $selected;
 
 // Check if there are results
 if (!empty($selectGame)) {
   echo "<br>";
   // Output data for each row
-  $sql =  $connection -> prepare("SELECT username, game_played, score, time_played FROM highscores WHERE game_played = ?");
+  $sql =  $connection -> prepare("SELECT username, game_played, score, time_played FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10");
   $sql -> bind_param("s", $selectGame);
   $sql -> execute();
   $result = $sql -> get_result();
 
   if($result -> num_rows > 0){
+    echo '<table style="width:100%">';
+    echo '<tr>';
+    echo '<th> -Username- </th> <th> -Game- </th> <th> -Score- </th> <th> -Time- </th>';
+    echo '</tr>';
     while($row = $result -> fetch_assoc()){
-      echo "Username: " . $row['username'] . " - Game: " . $row['game_played'] . " - Score: " . $row['score'] . " - Time: " . $row['time_played'] . "<br>";
+      echo '<tr>';
+      echo '<td> ' . $row['username'] . ' </td>';
+      echo '<td> ' . $row['game_played'] . ' </td>';
+      echo '<td> ' . $row['score'] . ' </td>';
+      echo '<td> ' . $row['time_played'] . ' </td>';
+      echo '</tr>';
     }
+    echo '</table>';
   }
 }
 
