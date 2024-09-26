@@ -20,29 +20,30 @@ echo '<option value="">--Select Game--</option>';
 
 if($result->num_rows > 0){
   while ($row = $result->fetch_assoc()) {
-    $selectGame = ($row['game_played'] == $selectGame) ? 'selected' : '';
-    echo '<option value="' . $row['game_played']. '">' . $row['game_played'] . '</option>';
-    $title = $row['game_played'];
+    $selected = ($row['game_played'] == $selectGame) ? 'selected' : '';
+    echo '<option value="' . $row['game_played']. '"' . $selected . '>' . $row['game_played'] . '</option>';
 }
 echo '</select>';
 echo '</form>';
 }
 
-
-$sql =  $connection -> prepare("SELECT username, game_played, score, time_played FROM highscores WHERE game_played = ?");
-$sql -> bind_param("s", $selectGame);
-$sql -> execute();
-$result = $sql -> get_result();
+echo $selectGame;
+echo $selected;
 
 // Check if there are results
-if ($result->num_rows > 0) {
+if (!empty($selectGame)) {
   echo "<br>";
   // Output data for each row
-  while ($row = $result->fetch_assoc()) {
-      echo "Username: " . $row["username"] . " - Game: " . $row["game_played"] . " - Score: " . $row["score"] . " - Time Played: " . $row["time_played"] . "<br>";
+  $sql =  $connection -> prepare("SELECT username, game_played, score, time_played FROM highscores WHERE game_played = ?");
+  $sql -> bind_param("s", $selectGame);
+  $sql -> execute();
+  $result = $sql -> get_result();
+
+  if($result -> num_rows > 0){
+    while($row = $result -> fetch_assoc()){
+      echo "Username: " . $row['username'] . " - Game: " . $row['game_played'] . " - Score: " . $row['score'] . " - Time: " . $row['time_played'] . "<br>";
+    }
   }
-} else {
-  echo "No results found.";
 }
 
   $connection->close();
