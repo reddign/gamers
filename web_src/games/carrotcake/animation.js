@@ -34,18 +34,38 @@ student.src = 'gamers/web_src/games/carrotcake/sprites/student.png';
 const canvas = document.getElementById('gamers/web_src/games/carrotcake/sprites/betamap.png');
 const ctx = canvas.getContext('2d');
 
-const makeStandingFrames =(rootFrame = 0) => {
-    return{
-        duration: 400,
-        frames: {
-            {
-                time: 0,
-                frame: startingFrame,
-            }
-        }
-    }
-}
-const makeWalkingFrames =(rootFrame = 0) => {...}
+// const makeStandingFrames =(rootFrame = 0) => {
+//     return{
+//         duration: 400,
+//         frames: {
+//             {
+//                 time: 0,
+//                 frame: startingFrame,
+//             }
+//         }
+//     }
+// }
+// const makeWalkingFrames =(rootFrame = 0) => {
+//     return{
+//         duration: 400,
+//         frame: {
+//             time: 0,
+//             frame: rootFrame + 1
+//         },
+//         {
+//             time: 100,
+//             frame: rootFrame
+//         },
+//         {
+//             time: 200,
+//             frame: rootFrame +1
+//         },
+//         {
+//             time: 300,
+//             frame: rootFrame+2
+//         }
+//     }
+// }
 
 
 
