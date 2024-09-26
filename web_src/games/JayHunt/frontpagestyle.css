@@ -72,3 +72,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+#bluejay-img, #thirdbluejay-img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+   
+
+
