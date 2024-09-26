@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     //Variables
-
+    let current_location;
 
     // Initial test for text commands
     const command = document.getElementById("Text_Input");
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if(command.value == "gotobowers"){
             goto("bowers");
+            current_location = "bowers"
         }
     });
 
@@ -60,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function goto(location){
         //Test location change to Bowers
         if (location == "bowers"){
-            window.location.replace('locations/bowers.php')
+            window.location.replace('locations/'+location+'.php')
         }
 
     }

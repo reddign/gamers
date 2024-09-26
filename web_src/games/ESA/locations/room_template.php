@@ -103,7 +103,5 @@ session_start();
 
     <br>
     </main>
-
-    <script src="Etown.js"></script>
 </body>
 </html>
