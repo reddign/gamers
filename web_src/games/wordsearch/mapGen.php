@@ -1,22 +1,23 @@
 <?php
 //this is where the map generation algorithm will go
-//require_once '../data_src/api/wordsearch/read.php';
-//require_once '../data_src/api/wordsearch/word.php';
+require_once '../data_src/api/wordsearch/read.php';
+require_once '../data_src/api/wordsearch/word.php';
 //need another require for when word bank generation happens. 
 
-$words = []; //this process will be a for loop once the word bank is made, but for now I will use arbitrary examples
-$words[] = 'BLUEJAY';
-$words[] = 'CONRAD';
-$angle = 0; //Will be randomly assigned int between 0 and 7 (inclusive). 
+$words = Get_WordBank(5, ["DORMS","EXPERTISE","TOOLS","LANGUAGES"]) // return 5 words from any of the categories
+//$words = []; //this process will be a for loop once the word bank is made, but for now I will use arbitrary examples
+//$words[] = 'BLUEJAY';
+//$words[] = 'CONRAD';
+//$angle = 0; //Will be randomly assigned int between 0 and 7 (inclusive). 
 $xmod = 0;
 $ymod = 0;
 
 //$words = Get_wordBank()
 
 //Generate a blank map to size 
-$size = 10;
+$size = 15;
 $nestedList = [];
-//Fill board with random spaces
+//Fill board with blank spaces
 for ($i = 0; $i < $size; $i++) {
     $innerList = [];
     for ($j = 0; $j < $size; $j++) {
@@ -24,46 +25,47 @@ for ($i = 0; $i < $size; $i++) {
     }
     $nestedList[] = $innerList;
 }
-//Determine xmod and ymod
-switch($angle) {
-    case 0:
-        $xmod = 1;
-        $ymod = 0;
-        break;
-    case 1:
-        $xmod = 1;
-        $ymod = -1;
-        break;
-    case 2:
-        $xmod = 0;
-        $ymod = -1;
-        break;
-    case 3:
-        $xmod = -1;
-        $ymod = -1;
-        break;
-    case 4:
-        $xmod = -1;
-        $ymod = 0;
-        break;
-    case 5:
-        $xmod = -1;
-        $ymod = 1;
-        break;
-    case 6:
-        $xmod = 0;
-        $ymod = 1;
-        break;
-    case 7:
-        $xmod = 1;
-        $ymod = 1;
-        break;
-}
 //Place words
 foreach($words as $word) {
     $col = random_int(0,$size-1);
     $row = random_int(0,$size-1);
-    $i = 0;
+    //Determine xmod and ymod
+    $word
+    switch($angle) {
+        case 0:
+            $xmod = 1;
+            $ymod = 0;
+            break;
+        case 1:
+            $xmod = 1;
+            $ymod = -1;
+            break;
+        case 2:
+            $xmod = 0;
+            $ymod = -1;
+            break;
+        case 3:
+            $xmod = -1;
+            $ymod = -1;
+            break;
+        case 4:
+            $xmod = -1;
+            $ymod = 0;
+            break;
+        case 5:
+            $xmod = -1;
+            $ymod = 1;
+            break;
+        case 6:
+            $xmod = 0;
+            $ymod = 1;
+            break;
+        case 7:
+            $xmod = 1;
+            $ymod = 1;
+            break;
+    }
+    $i = 0; //defined here to iterate.
     //check to see if word would go off the board
     while($row+strlen($word) >= $size) {
         $row = random_int(0,$size-1);
@@ -85,7 +87,7 @@ foreach($words as $word) {
         $nestedList[$col+($i*$ymod)][$row+($i*$xmod)] = $word[$i]; 
     }
 }
-//print the board
+//print the board - added for testing
 for ($i = 0; $i < $size; $i++) {
     for ($j = 0; $j < $size; $j++) {
         echo $nestedList[$i][$j];
