@@ -13,13 +13,14 @@ if($connection->connect_error) {
 $sql = "SELECT DISTINCT game_played FROM highscores;";
 $result = $connection->query($sql);
 
-$selectGame = isset($_POST['game']) ? $_POST['game'] = '';
-echo '<form method="POST" action=""';
-echo '<select name="game"' . ' onchange="this.form.submit()">';
-echo '<option value="' . "" . '">' . "--Select Game--" . '</option>';
+$selectGame = isset($_POST['game']) ? $_POST['game'] : '';
+echo '<form method="POST" action="">';
+echo '<select name="game" onchange="this.form.submit()">';
+echo '<option value="">--Select Game--</option>';
 
 if($result->num_rows > 0){
   while ($row = $result->fetch_assoc()) {
+    $selectGame = ($row['game_played'] == $selectGame) ? 'selected' : '';
     echo '<option value="' . $row['game_played']. '">' . $row['game_played'] . '</option>';
     $title = $row['game_played'];
 }
@@ -28,8 +29,10 @@ echo '</form>';
 }
 
 
-$sql = "SELECT username, game_played, score, time_played FROM highscores WHERE game_played = 'Pong'";
-$result = $connection->query($sql);
+$sql =  $connection -> prepare("SELECT username, game_played, score, time_played FROM highscores WHERE game_played = ?");
+$sql -> bind_param("s", $selectGame);
+$sql -> execute();
+$result = $sql -> get_result();
 
 // Check if there are results
 if ($result->num_rows > 0) {
