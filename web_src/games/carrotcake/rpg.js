@@ -17,8 +17,22 @@ const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Po
 const input = new Input();
 const update = () => {
  // TODO: updating assets in game
- student.frame += 1;
- studentPos.x += 1; 
+ if(input.direction == DOWN){
+    studentPos.y += 1;
+    student.frame = 0;
+ }
+ if(input.direction == UP){
+    studentPos.y -= 1;
+    student.frame = 6;
+ }
+ if(input.direction == LEFT){
+    studentPos.y -= 1;
+    student.frame = 9;
+ }
+ if(input.direction == RIGHT){
+    studentPos.y += 1;
+    student.frame = 3;
+ }
 };
 
 const gameLoop = new GameLoop(update, draw);

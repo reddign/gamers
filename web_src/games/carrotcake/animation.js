@@ -45,12 +45,6 @@ mainLoop = (timestamp) => {
     this.rafID = requestAnimationFrame(this.mainLoop);
 }
 
-
-
-
-
-
-
 export const LEFT =  "LEFT";
 export const RIGHT = "RIGHT";
 export const UP = "UP";
