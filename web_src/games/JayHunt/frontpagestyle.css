@@ -72,13 +72,23 @@ footer {
     bottom: 0;
     width: 100%;
 }
-#bluejay-img, #thirdbluejay-img {
+#bluejay-left {
+    position: absolute;
+    left: 0; /* Aligns the image to the left */
+    top: 50%; /* Vertically centers the image */
+    transform: translateY(-50%);
     width: 200px;
     height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 8px;
+    margin-left: 10px; /* Add margin to move it slightly away from the edge */
 }
-   
+#bluejay-right {
+    position: absolute;
+    right: 0; /* Aligns the image to the right */
+    top: 50%; /* Vertically centers the image */
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    margin-right: 10px; /* Add margin to move it slightly away from the edge */
+}
 
 
