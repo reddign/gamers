@@ -40,10 +40,6 @@ function draw() {
     characterSprite.drawImage(ctx, characterPos.x, characterPos.y);
     // Potential TODO: create a hero offset that puts the hero into a specific square in the grid
     // ^Assumes we are doing grid snapping
-
-    // Draws the player
-    ctx.fillStyle = 'red'; // Player color
-    ctx.fillRect(playerX - playerSize / 2, playerY - playerSize / 2, playerSize, playerSize);
 }
 
 // Starts the drawing
