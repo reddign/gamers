@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSC</title>
+    <title>Cookie test 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../stylesheets/ESA.css">
     <style>
@@ -30,10 +30,12 @@
         // Set cookie when the user leaves the page
         window.onbeforeunload = function() {
             setCookie("visitedPage", "page1", 1);  // Set cookie "visitedPage" to "page1"
+            setCookie("visitedPage2", "Congrats! retrieved cookies successfully", 2); //Cookie visitedpage2 to conrgats
         };
-    <script/>
+    </script>
     <h2>Test page for sending and reciving cookies</h2>
 </body>
+<button id ="Button1" onclick="window.location.href='../locations/ctRecieve.php'";>CookieTest</button>
 </html>
 
 

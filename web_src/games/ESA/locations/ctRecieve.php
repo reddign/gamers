@@ -1,4 +1,7 @@
+
 <!-- page2.php -->
+<!-- Checking if cookies went though and setting local variables -->
+
 <?php
 // Check if the "visitedPage" cookie exists
 if (isset($_COOKIE['visitedPage'])) {
@@ -6,7 +9,15 @@ if (isset($_COOKIE['visitedPage'])) {
 } else {
     $visitedPage = "No page visited yet.";
 }
+
+// Check if the "visitedPage2" cookie exists
+if (isset($_COOKIE['visitedPage2'])) {
+    $visitedPage2 = $_COOKIE['visitedPage2'];
+} else {
+    $visitedPage2 = "No page visited yet.";
+}
 ?>
+<!-- HTML to show cookie values -->
 
 <!DOCTYPE html>
 <html>
@@ -27,6 +38,7 @@ if (isset($_COOKIE['visitedPage'])) {
     <p>This is the second page.</p>
 
     <p>Cookie Value: <?php echo $visitedPage; ?></p>
+    <p>Cookie Value: <?php echo $visitedPage2; ?></p>
 
 </body>
 </html>
