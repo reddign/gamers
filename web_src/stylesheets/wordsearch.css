@@ -48,3 +48,31 @@ main {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#rand:hover{
+    background-color: red;
+    border-color: red;
+}
+
+#start:hover{
+    background-color: green;
+    border-color: green;
+}
+
+.Box{
+    height:100px;
+    width:300px;
+    margin: auto;
+}
+
+.formHeader{
+    display:inline;
+}
+
+.container label{
+    color:rgb(3, 70, 128);
+}
+
+.container input:checked ~ label{
+    color:rgb(0, 163, 188);
+}

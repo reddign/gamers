@@ -1,4 +1,5 @@
 
+//(function(){
 let interval=null;
 window.addEventListener('load',init);
 
@@ -25,3 +26,9 @@ function updateTimer(){
         timer.innerHTML=(Math.floor(totalSecs/60))+":"+(totalSecs%60);
     }
 }
+
+function stopTimer(){
+    window.clearInterval(interval);
+}
+
+//})();
