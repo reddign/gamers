@@ -1,10 +1,13 @@
 <?php
     session_start();
 
-    $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $database = "triviagames";
+    // $host = "localhost";
+    // $dbUsername = "root";
+    // $dbPassword = "";
+    // $database = "triviagames";
+
+    // Connect to database
+    require_once "../../../data_src/api/includes/db_connect.php";
 
     $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
     require "../../includes/functions.php";
@@ -16,14 +19,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visits Stats</title>
-    <link rel="stylesheet" href="style.css">
+    
 
     <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/index.css">
     <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/about.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
@@ -69,7 +72,7 @@
                 <td>
                     <?php
                     if (!empty($visitOnce)) {
-                        echo implode('<br>', $visitOnce);
+                        echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visitOnce);
                     } else {
                         echo "Loading...";
                     }
@@ -80,7 +83,7 @@
                 <td>
                     <?php
                     if (!empty($visit2To5)) {
-                        echo implode('<br>', $visit2To5);
+                        echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visit2To5);
                     } else {
                         echo "Loading...";
                     }
@@ -91,7 +94,7 @@
                 <td>
                     <?php
                     if (!empty($visit6Plus)) {
-                        echo implode('<br>', $visit6Plus);
+                        echo implode('<br><hr style="height: 1px; background-color: darkgray;"><br>', $visit6Plus);
                     } else {
                         echo "Loading...";
                     }
