@@ -1,9 +1,6 @@
 //testing
 console.log("actions.js loaded");
 
-
-const command = document.getElementById("Text_Input");
-const button = document.getElementById("Button2")
 class Actions {
     constructor() {
         this.name = "actions";
