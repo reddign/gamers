@@ -1,13 +1,5 @@
 <?php
-require_once "../includes/db_config.php"; // Follow the lines
-
-// Create database connection
-$connection = new mysqli($host, $dbUsername, $dbPassword, $database);
-
-// Check if the connection was successful
-if ($connection->connect_error) {
-    die("Connection failed: ".$connection->connect_error);
-}
+require_once "../includes/db_connect.php"; // Follow the lines
 
 $question = "SELECT t.question AS question FROM trivia t JOIN answer a ON t.questionID = a.questionID 
     ORDER BY RAND() LIMIT 1;"; // Choose a random question
