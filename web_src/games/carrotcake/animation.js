@@ -1,11 +1,86 @@
+export class Sprite{
+    constructor(
+        resourse, //the image we want to draw
+        frameSize, // size of the crop of the image
+        frameWidth, // how the sprite is arranged horizontally
+        frameHeight, //how the sprite is arranged vertically
+        total, // which frame we want to show
+        scale, //how large to draw the image
+        position, //where to draw it (top left)
+
+    ){
+        this.resource = resource;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //this is for all the animation
  
 //loading the student image
 const student = new Image();
 student.src = 'gamers/web_src/games/carrotcake/sprites/student.png';
-
 const canvas = document.getElementById('gamers/web_src/games/carrotcake/sprites/betamap.png');
 const ctx = canvas.getContext('2d');
+
+// const makeStandingFrames =(rootFrame = 0) => {
+//     return{
+//         duration: 400,
+//         frames: {
+//             {
+//                 time: 0,
+//                 frame: startingFrame,
+//             }
+//         }
+//     }
+// }
+// const makeWalkingFrames =(rootFrame = 0) => {
+//     return{
+//         duration: 400,
+//         frame: {
+//             time: 0,
+//             frame: rootFrame + 1
+//         },
+//         {
+//             time: 100,
+//             frame: rootFrame
+//         },
+//         {
+//             time: 200,
+//             frame: rootFrame +1
+//         },
+//         {
+//             time: 300,
+//             frame: rootFrame+2
+//         }
+//     }
+// }
+
+
+
+export const walkDown = makeWalkingFrames(0);
+export const walkRight = makeWalkingFrames(3);
+export const walkUp = makeWalkingFrames(6);
+export const walkLeft = makeWalkingFrames(9);
+
+export const standDown = makeStandingFrame(1);
+export const standRight= makeStandingFrame(4);
+export const standUp = makeStandingFrame(7);
+export const standLeft = makeStandingFrame(10);
+
+
+
 
 //variables
 let studentX = 0; //X position of the student
