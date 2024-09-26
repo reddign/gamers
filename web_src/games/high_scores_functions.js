@@ -16,16 +16,28 @@ function insertScore(ID, game, score, date, username) {
     date: Date the game was played
     username: Username for each user (picked)
     ```
-    const query = 'INSERT INTO highscores (ID, game, score, date, username) VALUES (?, ?, ?, ?, ?)';
-  
-    connection.execute(query, [ID, game, score, date, username], (err, results) => {
-      if (err) {
-        console.error('Error inserting data:', err);
-        return;
-      }
-      return;
+    // Create a FormData object to store the data
+    const formData = new FormData();
+    formData.append('ID', ID); // example ID
+    formData.append('game', game);
+    formData.append('score', score);
+    formData.append('date', date);
+    formData.append('username', username);
+
+    // Make the fetch request to the PHP script
+    fetch('data_src\\api\\highscores\\create.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text()) // Assuming PHP returns some response
+    .then(data => {
+      console.log(data); // Handle success response (e.g., display confirmation)
+    })
+    .catch(error => {
+      console.error('Error:', error); // Handle error
     });
-}
+  }
+  
 
 
 function getTopScores(game){
