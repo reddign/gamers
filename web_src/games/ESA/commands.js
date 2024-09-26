@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    function look(){
+    function look(current_location){
         //Describes current surroundings
 
     }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    function goto(location){
+    function goto(current_location, location){
         //Test location change to Bowers
         if (location == "bowers"){
             location_change.src = "../../../web_src/games/ESA/images/bowers.png";
