@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     //Variables
-    
+
 
     // Initial test for text commands
     const command = document.getElementById("Text_Input");
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function goto(location){
         //Test location change to Bowers
         if (location == "bowers"){
-            location_change.src = "../../../web_src/games/ESA/images/bowers.png";
+            window.location.replace('locations/bowers.php')
         }
 
     }
