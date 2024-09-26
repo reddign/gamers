@@ -45,6 +45,20 @@ mainLoop = (timestamp) => {
     this.rafID = requestAnimationFrame(this.mainLoop);
 }
 
+function start(){
+    if(!this.isRunning){
+        this.isRunning = true;
+        this.rafId = requestAnimationFrame(this.mainloop);
+    }
+}
+
+function stop(){
+    if(this.rafId){
+        cancelAnimationFrame(this.rafId);
+    }
+    this.isRunning = false;
+}
+
 
 
 

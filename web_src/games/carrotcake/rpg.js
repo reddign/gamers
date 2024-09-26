@@ -1,6 +1,7 @@
 import { resources } from './resources.js';
 import { Sprite } from './sprite.js';
 import { Vector2 } from './Vector2.js';
+import { GameLoop } from './animation.js';
 
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
@@ -13,6 +14,13 @@ const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Po
 // const playerSize = 32;
 // let playerX = 400;
 // let playerY = 400;
+
+const update = () => {
+ // TODO: updating assets in game
+};
+
+const gameLoop = new GameLoop(update, draw);
+gameLoop.start();
 
 // Sprites
 const backgroundSprite = new Sprite({
