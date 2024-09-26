@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(message);
             guessInput.disabled = true;
             guessButton.disabled = true;
-            window.location.href = "../../trivia/trivia.php";
+            window.location.href = "../../../data_src/api/visitor/update.php";
         }, 1000);
     }
 });

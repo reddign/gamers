@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS visitor (
     fav_game INT DEFAULT 0,
     fav_genre INT DEFAULT 0,
     unique_played INT DEFAULT 0,
-    num_played_flight INT DEFAULT 0,
-    num_played_flappy INT DEFAULT 0,
     num_played_hangman INT DEFAULT 0,
+    num_played_flappy INT DEFAULT 0,
+    num_played_2048 INT DEFAULT 0,
     PRIMARY KEY (username)
 
 );
