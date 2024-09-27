@@ -1,17 +1,11 @@
 <?php
-//this is where the map generation algorithm will go
 require_once "../../../data_src/api/includes/db_config.php";
 require_once '../../../data_src/api/wordsearch/read.php';
 require_once '../../../data_src/api/wordsearch/word.php';
 
 generateMap(15);
-//TODO organize program into functions
 function generateMap($size){
-    $words = Get_WordBank(5, ["DORMS","EXPERTISE","TOOLS","LANGUAGES"]); // return 5 words from any of the categories
-    //$words = []; //arbitrary example
-    //$words[] = 'BLUEJAY';
-    //$words[] = 'CONRAD';
-    //$angle = 0; //Will be randomly assigned int between 0 and 7 (inclusive). 
+    $words = Get_WordBank(5, ["DORMS","EXPERTISE","TOOLS","LANGUAGES"]); // return 5 words from any of the categories 
     $size = 15;
     $map = [];
     for ($i = 0; $i < $size; $i++) {
@@ -62,7 +56,6 @@ function generateMap($size){
                 $ymod = 1;
                 break;
         }
-        //TODO validate placement better
         //check to see if word would go off the board
         while($row+(strlen($word->name)*$xmod) >= $size || $row+(strlen($word->name)*$xmod) < 0) {
             $row = random_int(0,$size-1);
@@ -109,22 +102,6 @@ function generateMap($size){
             }
         }
         $map[$i] = $innerList;
-    }
-    //print the board - added for testing
-    for ($i = 0; $i < $size; $i++) {
-        for ($j = 0; $j < $size; $j++) {
-            echo $map[$i][$j];
-        }
-        echo "<br>";
-    }
-    foreach($words as $word) {
-        echo "<br>";
-        print_r($word->name);
-        echo "<br>";
-        print_r($word->start);
-        echo "<br>";
-        print_r($word->end);
-        echo "<br>";
     }
     
 }
