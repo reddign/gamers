@@ -42,7 +42,7 @@ if (!$sql->execute()) {
     exit();
 }
 
-// Define timePlayed if you want to return it
+// Get the current time
 $timePlayed = date('Y-m-d H:i:s');
 
 // Prepare the response so gameover screen displays them, can change later to select score based on username, latest or highest rank
