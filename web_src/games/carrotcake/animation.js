@@ -130,6 +130,7 @@ function stop(){
 
 
 
+
 //this is for all the animation
  
 //loading the student image
