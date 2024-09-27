@@ -13,6 +13,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if scrolling == true:
 		$ParallaxBackground.scroll_offset.x -= SCROLL_SPEED * delta
+		SCROLL_SPEED += 0.1
+		get_tree().call_group("scrollers", "update_scrolling_speed", SCROLL_SPEED)
 
 func stop_scrolling():
 	scrolling = false
@@ -24,6 +26,7 @@ func _on_obstacle_timer_timeout() -> void:
 		var new_obstacle = obstacle.instantiate()
 		new_obstacle.position.x = 1400
 		new_obstacle.position.y = 649
+		new_obstacle.SCROLL_SPEED = SCROLL_SPEED
 		new_obstacle.visible = true
 		new_obstacle.add_to_group('obstacles')
 		self.add_child(new_obstacle)
