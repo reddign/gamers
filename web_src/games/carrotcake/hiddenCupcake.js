@@ -1,4 +1,3 @@
-//Task Description: Place cupcakes hidden on the board and work to allow the actor to find and remove cupcakes and add to the score.
 const rows = board.length;
 const cols = board[0].length;
 let score = 0;
