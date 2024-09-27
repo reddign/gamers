@@ -1,8 +1,8 @@
 <?php
 
 
-require_once "../includes/db_config.php";
-require_once "../wordsearch/word.php";
+require_once "../../../data_src/api/includes/db_config.php";
+require_once "../../../data_src/api/wordsearch/word.php";
 
 // this should read the words from the database and provide the words in the format we need
 
