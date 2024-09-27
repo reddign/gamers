@@ -89,7 +89,7 @@ export class Input{
         return this.heldDirections[0]; //undefined
     }
     onArrowPressed(direction){
-        //add this arrow to the queue if it's new
+       //add this arrow to the queue if it's new
         if(this.heldDirections.indexOf(direction)== -1){
             this.heldDirections.unshift(direction);
         }
@@ -99,7 +99,7 @@ export class Input{
         if(index == -1){
             return;
         }
-        //removing this key from the list
+        //removing this key from the list.
         this.heldDirectons.splice(index,1);
     }
 }
