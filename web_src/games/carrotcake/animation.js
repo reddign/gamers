@@ -103,10 +103,11 @@ export class Input{
         this.heldDirectons.splice(index,1);
     }
 }
+
 function start(){
     if(!this.isRunning){
         this.isRunning = true;
-        this.rafId = requestAnimationFrame(this.mainloop);
+        this.rafID - requestAnimationFrame(this.mainloop);
     }
 }
 
