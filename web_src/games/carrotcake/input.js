@@ -1,6 +1,5 @@
 const studentPos = new Vector2(16 *6, 16 *5);
 const input = new Input();
-
 const update = () =>{
     if(input.direction == DOWN){
         studentPos.y += 1;
