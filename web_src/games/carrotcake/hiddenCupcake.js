@@ -1,7 +1,5 @@
-//Task Description: Place cupcakes hidden on the board and work to allow the actor to find and remove cupcakes and add to the score.
 const rows = board.length;
 const cols = board[0].length;
-
 let cupcakes = 0;
 // hiddenCupcake() function will allow me to place hidden cupcakes on the board for the user to collect:
 function hiddenCupcake(board, numCupcakes) {
