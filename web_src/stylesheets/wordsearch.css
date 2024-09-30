@@ -39,6 +39,10 @@ main {
     font-family: "Orbitron",sans-serif;
 }
 
+#Difficulty{
+    display:none;
+}
+
 #timerBox{
     color:white;
     float:right;
@@ -47,6 +51,10 @@ main {
     background-color: #004B98;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#rand{
+    display:none;
 }
 
 #rand:hover{
@@ -63,10 +71,6 @@ main {
     height:100px;
     width:300px;
     margin: auto;
-}
-
-.formHeader{
-    display:inline;
 }
 
 .container label{

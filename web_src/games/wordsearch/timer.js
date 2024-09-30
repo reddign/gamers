@@ -16,9 +16,11 @@ function updateTimer(){
     let mins=parseInt(timeArr[0]);
     let secs=parseInt(timeArr[1]);
     let totalSecs=secs+(mins*60);
-    if(totalSecs<=1)
+    if(totalSecs<=0)
         window.clearInterval(interval);
-    totalSecs-=1;
+    else{
+        totalSecs-=1;
+    }
     if(totalSecs%60<10){
         timer.innerHTML=(Math.floor(totalSecs/60))+":0"+(totalSecs%60);
     }
@@ -32,3 +34,9 @@ function stopTimer(){
 }
 
 //})();
+
+// comment 1
+// comment 2
+// git add comment 3
+// c4
+// Comments

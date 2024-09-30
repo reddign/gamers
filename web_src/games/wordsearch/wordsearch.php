@@ -70,9 +70,11 @@ session_start();
     
     <main>
         <h1>Welcome to Jay to Z!</h1>
-        <p>Please select Difficulty and Categories before starting</p>
+        <p>Please select Categories before starting</p>
     <form action="pagegen.php" method="post">
-    <div class="container">
+    
+
+    <div class="container" id="Difficulty">
         <h3 class="formHeader">Difficulty</h3>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="Diff" id="easyDiff" value="easy" checked>
@@ -94,7 +96,9 @@ session_start();
         </div>
     </div>
     <br>
+
     <div class="container">
+
         <h3 class="formHeader">Category</h3>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="dormsCat" value="dorms">
@@ -117,9 +121,10 @@ session_start();
     </div>
     <br>
 
-    <input class="btn btn-primary btn-lg" type="submit" id="start" value="Start"></input>
+    <input class="btn btn-primary btn-lg" type="submit" id="start" value="Start">
     </form>
-    <button class="btn btn-secondary btn-lg" id="rand" onclick="location.href='pagegen.php';">Random</button>
+    <br>
+    <input type="button" class="btn btn-secondary btn-lg" id="rand" onclick="location.href='pagegen.php';" value="Random">
     
     </main>
 </body>
