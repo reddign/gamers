@@ -1,4 +1,4 @@
-import { insertScore } from 'C:\\xampp\\htdocs\\gamers\\web_src\\games\\high_scores_functions.js';
+import { insertScore } from '/gamers/web_src/games/high_scores_functions.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     const bird = document.getElementById('bird');
