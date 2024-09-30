@@ -1,88 +1,139 @@
--- highscores.sql
+create database triviagames;
 
 use triviagames;
 
--- TSK-8.1 Create a table to store the user, the date, the score, and the game played. (create table)
-CREATE TABLE IF NOT EXISTS highscores (
-    user_id INT NOT NULL,                 	 -- Unique ID for each user (auto-incremented)
-    game_played VARCHAR(100) NOT NULL,       -- Name of the game played
-    score INT NOT NULL,                      -- Score achieved in the game
-    time_played DATETIME NOT NULL,           -- Date the game was played
-    username VARCHAR(100) NOT NULL,          -- Username for each user (picked)
-    FOREIGN KEY (user_id) REFERENCES user(userID)
+CREATE TABLE IF NOT EXISTS user (
+    userID INT AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    date DATE,
+    firstname VARCHAR(255) NOT NULL,
+    PRIMARY KEY (userID)
 );
 
---Dummy Players:
-INSERT INTO user VALUES(100, 'User0', 'User0@etown.edu', NOW(), 'Dummy0');
-INSERT INTO user VALUES(101, 'User1', 'User1@etown.edu', NOW(), 'Dummy1');
-INSERT INTO user VALUES(102, 'User2', 'User2@etown.edu', NOW(), 'Dummy2');
-INSERT INTO user VALUES(103, 'User3', 'User3@etown.edu', NOW(), 'Dummy3');
 
---Dummy Scores:
-INSERT INTO highscores VALUES (100, 'Pong', 20, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Pong', 47, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Pong', 14, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Pong', 51, NOW(), 'Dummy0');
+CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
+	questionID INT AUTO_INCREMENT,
+    question VARCHAR(255) NOT NULL,
+    PRIMARY KEY (questionID)
+);
+CREATE TABLE IF NOT EXISTS answer (
+	answerID INT NOT NULL AUTO_INCREMENT,
+    questionID INT NOT NULL,
+    triv_answer varchar(255) DEFAULT ("Google it"),
+    is_Correct boolean NOT NULL,
+    PRIMARY KEY (answerID),
+    FOREIGN KEY (questionID) REFERENCES trivia (questionID)
+);
+CREATE TABLE IF NOT EXISTS hangman (
+	wordID INT NOT NULL AUTO_INCREMENT,
+    word varchar(50) NOT NULL,
+    PRIMARY KEY (wordID)
+);
 
-INSERT INTO highscores VALUES (101, 'Pong', 6, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Pong', 11, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Pong', 15, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Pong', 60, NOW(), 'Dummy1');
+CREATE TABLE IF NOT EXISTS admin (
+    adminID INT NOT NULL AUTO_INCREMENT,
+    username varchar(50) NOT NULL,
+    password varchar(250) NOT NULL,
+    PRIMARY KEY (adminID)
+);
 
-INSERT INTO highscores VALUES (102, 'Pong', 32, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Pong', 37, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Pong', 24, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Pong', 30, NOW(), 'Dummy2');
+INSERT INTO admin (username, password) VALUES ("jays", "ninja");
 
-INSERT INTO highscores VALUES (103, 'Pong', 64, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Pong', 27, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Pong', 31, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Pong', 17, NOW(), 'Dummy3');
+# Question 1 and answers
+INSERT INTO trivia (question) VALUES ("What year was Etown founded?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1899", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1901", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1874", FALSE);
 
-INSERT INTO highscores VALUES (100, 'Tetris', 25, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Tetris', 47, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Tetris', 24, NOW(), 'Dummy0');
-INSERT INTO highscores VALUES (100, 'Tetris', 71, NOW(), 'Dummy0');
+# Question 2 and answers
+INSERT INTO trivia (question) VALUES ("What is the mascot's name?"); 
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Conrad", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Blue", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Truman", FALSE);
 
-INSERT INTO highscores VALUES (101, 'Tetris', 60, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Tetris', 11, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Tetris', 45, NOW(), 'Dummy1');
-INSERT INTO highscores VALUES (101, 'Tetris', 65, NOW(), 'Dummy1');
+# Question 3 and answers
+INSERT INTO trivia (question) VALUES ("What is the name of the Bluejay?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Blue", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Conrad", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Truman", FALSE);
 
-INSERT INTO highscores VALUES (102, 'Tetris', 49, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Tetris', 75, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Tetris', 74, NOW(), 'Dummy2');
-INSERT INTO highscores VALUES (102, 'Tetris', 30, NOW(), 'Dummy2');
+# Question 4 and answers
+INSERT INTO trivia (question) VALUES ("What is the campus support dog's name?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Truman", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Conrad", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Blue", FALSE);
 
-INSERT INTO highscores VALUES (103, 'Tetris', 67, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Tetris', 27, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Tetris', 31, NOW(), 'Dummy3');
-INSERT INTO highscores VALUES (103, 'Tetris', 17, NOW(), 'Dummy3');
+# Question 5 and answers
+INSERT INTO trivia (question) VALUES ("Who is the president of etown?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Betty Rider", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Cecilia McCormick", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Thomas Leap", FALSE);
 
-describe user;
-select * from user;
-select * from highscores;
+# Question 6 and answers
+INSERT INTO trivia (question) VALUES ("What sport plays the marshmallow game?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Soccer", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Lacrosse", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Baseball", FALSE);
 
--- TSK-8.2	Create a screen to show the top 10 players for each game.
-    -- high_scores.php which has a filepath of gamers/web_src/games/high_scores.php (R: Read for 8.3)
+# Question 7 and answers
+INSERT INTO trivia (question) VALUES ("What sport does etown not have?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Football", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Golf", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Tennis", FALSE);
 
--- TSK-8.3 Make sure that there are CRUD methods for this data
--- TSK-8.4	Update the documentation for these new CRUD methods.
-    -- Create (add data to the table) 
-        -- INSERT INTO highscores (user_id, game_played, score, time_played, username)
-        -- VALUES (user_id, game_played, score, time_played, username);
+# Question 8 and answers
+INSERT INTO trivia (question) VALUES ("What dessert is etown known for?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Carrot cake", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Cheesecake", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Chocolate cake", FALSE);
 
-    -- Read (read data from table)
-        -- Select username, game_played, score, time_played
-        -- From highscores
-        -- *** Filter by username, game_played, time_played ***
-        -- Always show by DESC
-         
-        -- Run Onto Highscores Page (whole table)
-        -- After game played, automatically filter by game_played (show top 10 DESC ... you) 
-        -- Be able to cgo to high scores page by click button from high scores showed after games
+# Question 9 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Fresh Nest located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "Bowers Center", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "The BSC", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "Esbenshade", FALSE);
 
--- Notes:
-    -- 1) Have separate leaderboard page which can be filtered by game, player, date, etc
-    -- 2) Show leaderboard after each game, to show top 10 for the game just played
-    -- 3) (CURRENTLY) Foreign Key Constraint not matched due to no current users
+# Question 10 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Blue Bean located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "The BSC", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "Bowers Center", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "Esbenshade", FALSE);
+
+# Question 11 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Jay's Nest located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "The BSC", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "Bowers Center", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "Esbenshade", FALSE);
+
+# Question 12 and answers
+INSERT INTO trivia (question) VALUES ("What is Etown's most popular sport?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Lacrosse", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Baseball", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Cross Country", FALSE);
+
+# Question 13 and answers
+INSERT INTO trivia (question) VALUES ("What is Etown's most popular program?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Occupational Therapy", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Computer Science", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Business", FALSE);
+
+# Question 14 and answers
+INSERT INTO trivia (question) VALUES ("Who's the first Pantry Coordinator?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Ariea O'Krepka", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Professor Reddig", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Thomas Leap", FALSE);
+
+# Populating hangman with words
+INSERT INTO hangman (word) VALUES ("TRUMAN");
+INSERT INTO hangman (word) VALUES ("CONRAD");
+INSERT INTO hangman (word) VALUES ("BLUEJAY");
+INSERT INTO hangman (word) VALUES ("BOWERS");
+INSERT INTO hangman (word) VALUES ("FOUNDERS");
+INSERT INTO hangman (word) VALUES ("SCHLOSSER");
+INSERT INTO hangman (word) VALUES ("ELIZABETHTOWN");
+INSERT INTO hangman (word) VALUES ("JAYNEST");
+INSERT INTO hangman (word) VALUES ("THOMPSON");
+INSERT INTO hangman (word) VALUES ("BRINSER");
+
+INSERT INTO user (username, email, date) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'));
