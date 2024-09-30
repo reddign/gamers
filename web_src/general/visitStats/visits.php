@@ -1,43 +1,12 @@
 <?php
     session_start();
 
-    // $host = "localhost";
-    // $dbUsername = "root";
-    // $dbPassword = "";
-    // $database = "triviagames";
-
     // Connect to database
     require_once "../../../data_src/api/includes/db_connect.php";
 
     $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
     require "../../includes/functions.php";
-?>
 
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visits Stats</title>
-    
-
-    <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/index.css">
-    <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/about.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-    <!-- Page Navbar -->
-    <?php
-     require "../../includes/navbar.php";
-    ?>
-<section id="main_body">
-    <h1 id="nameOfPage">Visit Statistics</h1>
-
-    <?php
     $sql = "SELECT visitor, COUNT(*) AS visit_count FROM visit GROUP BY visitor";
     $result = $connection->query($sql);
 
@@ -60,7 +29,74 @@
             }
         }
     }
+    $visitOnceCount = count($visitOnce);
+    $visit2To5Count = count($visit2To5);
+    $visit6PlusCount = count($visit6Plus);
+
+    $connection->close();
+
+
+
+?>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visits Stats</title>
+
+    <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="<?PHP echo url(); ?>/stylesheets/about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Visit Type', 'Number of Visitors'],
+          ['Visited Once',  <?php echo $visitOnceCount; ?>],
+          ['Visited 2-5 Times', <?php echo $visit2To5Count; ?>],
+          ['Visited 6+ Times', <?php echo $visit6PlusCount; ?>]
+        ]);
+
+        var options = {
+          title: 'Visitor Statistics',
+          chartArea: {width: '50%'},
+          hAxis: {
+            title: 'Visit Frequency'
+          },
+          vAxis: {
+            title: 'Number of Visitors',
+            minValue: 0
+          },
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+
+   
+    
+</head>
+<body>
+    <!-- Page Navbar -->
+    <?php
+     require "../../includes/navbar.php";
     ?>
+<section id="main_body">
+    <h1 id="nameOfPage">Visit Statistics</h1>
+
     <section id="table">
         <table border="1" id="main_table">
             <tr class="tr">
@@ -76,7 +112,6 @@
                     } else {
                         echo "Loading...";
                     }
-
                     ?>
                 </td>
 
@@ -87,7 +122,6 @@
                     } else {
                         echo "Loading...";
                     }
-
                     ?>
                 </td>
 
@@ -98,15 +132,18 @@
                     } else {
                         echo "Loading...";
                     }
-
                     ?>
                 </td>
             </tr>
         </table>
     </section>
     </section>
+
+    <!-- Chart Display -->
+    <div id="chart_div" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+
     <!-- putting the footer at the bottom of the page -->
-   <br><br><br><br><br><br><br><br><br>
+   <br><br><br><br><br>
 </body>
 
     <!-- Page Footer -->
