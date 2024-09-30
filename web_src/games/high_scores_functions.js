@@ -40,13 +40,30 @@ function insertScore(ID, game, score, date, username) {
   
 
 
-function getTopScores(game){
-    ```
-    Function to get the top 10 scores from a game.
-    game: Name of the game played
-    ```
 
-    const query = 'SELECT top 10 * FROM highscores WHERE game_played = (?) ORDER BY highscore desc'
-    connection.execute(query, [game], (err, results))
-    return results;
+async function getTopScores(game) {
+  const url = 'path/to/your/php/file.php'; // Replace with the actual path to your PHP file
+
+  try {
+      // Make a POST request to the PHP file with the game name as a parameter
+      const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: `game=${encodeURIComponent(game)}` // Send the game parameter in the request body
+      });
+
+      // Check if the request was successful
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Parse the JSON response
+      const results = await response.json();
+      return results; // Return the top scores
+
+  } catch (error) {
+      console.error('Error fetching top scores:', error);
+  }
 }
