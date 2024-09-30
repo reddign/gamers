@@ -103,6 +103,6 @@ function generateMap($size){
         }
         $map[$i] = $innerList;
     }
-    
+    return $map, $words;
 }
 ?>
