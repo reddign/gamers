@@ -7,7 +7,7 @@ Using results return variable:
     results.xxxx will show that part of the response.
 ```
 
-function insertScore(ID, game, score, date, username) {
+export function insertScore(ID, game, score, date, username) {
     ```
     Function to insert scores into database.
     ID: Unique ID for each user (auto-incremented)
@@ -41,7 +41,7 @@ function insertScore(ID, game, score, date, username) {
 
 
 
-async function getTopScores(game) {
+export async function getTopScores(game) {
   const url = 'path/to/your/php/file.php'; // Replace with the actual path to your PHP file
 
   try {
