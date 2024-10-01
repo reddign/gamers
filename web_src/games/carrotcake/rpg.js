@@ -124,7 +124,7 @@ function animateCupcake() {
 animateCupcake();
 
 
-function detectCOllision(){
+function detectCollision(){
     //add collision to the map
 }
 
