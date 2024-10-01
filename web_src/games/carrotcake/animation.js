@@ -1,6 +1,6 @@
-export class student{
+export class Student{
     constructor(
-        resourse, //the image we want to draw
+        resource, //the image we want to draw
         frameSize, // size of the crop of the image
         frameWidth, // how the sprite is arranged horizontally
         frameHeight, //how the sprite is arranged vertically
@@ -10,6 +10,12 @@ export class student{
 
     ){
         this.resource = resource;
+        this.frameSize = frameSize;
+        this.frameWidth = frameWidth;
+        this.frameHeight = frameHeight;
+        this.total = total;
+        this.scale = scale;
+        this.position = position;
     }
 }
 
@@ -24,26 +30,42 @@ export class GameLoop{
 
         this.rafID = null;
         this.isRunning = false;
+
+        this.mainLoop = this.mainLoop.bind(this); //this binds the function to the specific instance.
+    }
+    mainLoop(timestamp){
+        if(!this.isRunning) return;
+        let deltaTime = timestamp - this.lastFrameTime;
+        this.lastFrameTime = timestamp;
+    
+        //accumulating all the time since the last frame.
+        this.accumulatedTime += deltaTime;
+    
+        //if there's enough accumulated time to run one or more fixed updates
+        while(this.accumulatedTime >= this.timeStep){
+            this.update(this.timeStep); //we pass the fixed time step here
+            this.accumulatedTime -= this.timeStep;
+        }
+    
+        this.render();
+        this.rafID = requestAnimationFrame(this.mainLoop);
+    
+        start() {
+            if (!this.isRunning) {
+                this.isRunning = true;
+                this.rafID = requestAnimationFrame(this.mainLoop); // Fix assignment
+            }
+        }
+        
+        stop() {
+            if(this.rafID){
+                cancelAnimationFrame(this.rafID);
+            }
+            this.isRunning = false;
+        }
     }
 }
 
-mainLoop = (timestamp) => {
-    if(!this.isRunning) return;
-    let deltaTime = timestamp - this.lastFrameTime;
-    this.lastFrameTime = timestamp;
-
-    //accumulating all the time since the last frame.
-    this.accumulateTime += deltaTime;
-
-    //if there's enough accumulated time to run one or more fixed updates
-    while(this.accumulateTime >= this.timeStep){
-        this.update(this.timestamp); //we pass the fixed time step here
-        this.accumulateTime -= this.timeStep;
-    }
-
-    this.render();
-    this.rafID = requestAnimationFrame(this.mainLoop);
-}
 
 export const LEFT =  "LEFT";
 export const RIGHT = "RIGHT";
@@ -52,7 +74,9 @@ export const DOWN = "DOWN";
 
 export class Input{
     constructor(){
-        this.heldDirectons = [];
+        this.heldDirections = []; //this is initializing the directions array
+
+        //a lot of event listeners :p
         document.addEventListener("keydown", (e) =>{
             //check for dedicated direction list
             if(e.code == "ArrowUp" || e.code === "KeyW"){
@@ -67,7 +91,7 @@ export class Input{
             if(e.code == "ArrowRight" || e.code === "KeyD"){
                 this.onArrowPressed(RIGHT);
             }
-        })
+        });
         document.addEventListener("keyup", (e) =>{
             //check for dedicated direction list
             if(e.code == "ArrowUp" || e.code === "KeyW"){
@@ -82,46 +106,23 @@ export class Input{
             if(e.code == "ArrowRight" || e.code === "KeyD"){
                 this.onArrowReleased(RIGHT);
             }
-        })
-        input.direction
+        });
     }
     get direction(){
-        return this.heldDirections[0]; //undefined
+        return this.heldDirections[0]; //getting the first held direction or undefined.
     }
     onArrowPressed(direction){
-       //add this arrow to the queue if it's new
-        if(this.heldDirections.indexOf(direction)== -1){
-            this.heldDirections.unshift(direction);
-        }
+       if(this.heldDirections.indedxOf(direction) === -1){
+        this.heldDirections.unshift(direction); //this is adding a new direction to the front of the queue
+       }
     }
     onArrowReleased(direction){
-        const index = this.heldDirections.indexOf(direction);
-        if(index == -1){
-            return;
-        }
-        //removing this key from the list.
-        this.heldDirectons.splice(index,1);
+       const index = this.heldDirections.indexOf(direction);
+       if(index !== -1){
+        this.heldDirections.splice(index,1);
+       }
     }
 }
-
-function start(){
-    if(!this.isRunning){
-        this.isRunning = true;
-        this.rafID - requestAnimationFrame(this.mainloop);
-    }
-}
-
-function stop(){
-    if(this.rafId){
-        cancelAnimationFrame(this.rafId);
-    }
-    this.isRunning = false;
-}
-
-
-
-
-
 
 
 
