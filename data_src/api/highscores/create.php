@@ -38,6 +38,8 @@ if ($result) {
     echo json_encode(["status" => "error", "message" => "Error preparing statement: " . $connection->error]);
 }
 
+AfterScores($game, $connection);
+
 // Close the database connection
 $connection->close();
 ?>

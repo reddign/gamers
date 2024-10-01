@@ -1,5 +1,5 @@
 <?php
-require "../includes/db_config.php";
+require_once "../includes/db_config.php";
 session_start();
 
 // Create database connection
@@ -63,20 +63,28 @@ function dropdown($conn){
   }
 }
 
+function AfterScores($game, $connection){
 
-function AfterScores($game){
-
-$information = file_get_contents('php://input');
-$data = json_decode($information);
     // SQL query to get the top 10 scores for the specific game
-    $query = 'SELECT username, score FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10';
+    $sql =  $connection -> prepare("SELECT username, score FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10");
+    $sql -> bind_param("s", $game);
+    $sql -> execute();
+    $result = $sql -> get_result();
 
-    // Prepare and execute the SQL statement
-    $stmt = $connection->prepare($query);
-    $stmt->execute([$game]);
-
-    // Fetch the results
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Display the results
+    $if($result -> num_rows > 0){
+      echo '<table style="width:100%">';
+      echo '<tr>';
+      echo '<th> -Username- </th> <th> -Score- </th>';
+      echo '</tr>';
+      while($row = $result -> fetch_assoc()){
+        echo '<tr>';
+        echo '<td> ' . $row['username'] . ' </td>';
+        echo '<td> ' . $row['score'] . ' </td>';
+        echo '</tr>';
+      }
+      echo '</table>';
+    }
 
     return $results;  // Return the top 10 scores
 }
