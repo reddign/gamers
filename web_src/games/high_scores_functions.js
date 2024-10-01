@@ -53,7 +53,6 @@ export async function getTopScores(game) {
       "Content-type": "application/json; charset=UTF-8"
     }
   })
-
-
-
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 }
