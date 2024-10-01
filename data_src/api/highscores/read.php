@@ -79,10 +79,6 @@ $data = json_decode($information);
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     return $results;  // Return the top 10 scores
-
-} catch (PDOException $e) {
-    // Handle any errors
-    echo 'Error: ' . $e->getMessage();
 }
 
 //Actually calls the dropdown menu
