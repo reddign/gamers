@@ -15,7 +15,7 @@ $visitedPage2 = isset($_COOKIE['visitedPage2']) ? $_COOKIE['visitedPage2'] : "No
         body {
             /* image directory: ".." in front takes it back a folder:*/
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/640px-Smiley.svg.png');
-            background-size: cover;  /*This makes sure the image covers the entire page */
+            background-size: cover 70%;  /*This makes sure the image covers the entire page */
             background-position: center 60px; /*  vertical adjustment in pixels */
             background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
         }
