@@ -24,7 +24,7 @@ require "../../includes/head.php";
             <h1>JayRunner</h1>
             <h2>Team Omacron</h2>
             <button id="startButton">Start Game</button>
-            <button id="leaderboard">View Highscores</button>
+            <button class="leaderboard">View Highscores</button>
         </div>
     </div>
 

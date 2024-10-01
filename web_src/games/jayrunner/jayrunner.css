@@ -27,7 +27,7 @@
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-#startButton, #leaderboard {
+#startButton, #playAgainButton, .leaderboard {
   align-items: center;
   background-color: #FCFCFD;
   border-radius: 4px;
@@ -56,6 +56,10 @@
   font-size: 18px;
 }
 
+#startButton:hover, #playAgainButton:hover, .leaderboard:hover {
+  background-color: lightblue;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+}
 .bottom-nav{
   background-color: #333;
   overflow: hidden;

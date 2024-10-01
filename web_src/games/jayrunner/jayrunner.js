@@ -44,6 +44,7 @@
                         <p><strong>Score:</strong> ${data.score}</p>
                         <p><strong>Time Played:</strong> ${data.timePlayed}</p>
                         <button id="playAgainButton">Play Again</button>
+                        <button class="leaderboard">View Highscores</button>
                     </div>
                 `;
                 document.getElementById('playAgainButton').addEventListener('click', startGame);
