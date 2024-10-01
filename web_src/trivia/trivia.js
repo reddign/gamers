@@ -7,6 +7,9 @@ let correctCount = 0;
 
 // TODO: Prevent repeat questions
 // TODO: Position of answers
+function displayRandomQuestion2() {
+    console.log(triviaQuestions)
+}
 
 function displayRandomQuestion() {
     if (triviaQuestions.length > 0 && currentQuestionIndex < triviaQuestions.length) { // Explain
