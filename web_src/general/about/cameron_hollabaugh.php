@@ -19,8 +19,6 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> Cameron is n̶o̶t̶ a student in this class. He is majoring in Japanese and Information Systems,
                 plus several minors and intends to graduate in 2025.</div>
-            <br>
-            <div class="Kevin-was-here">Stop trying to make 'git fetch' happen. It's not going to happen!</div>
         </section>
     </main>
 </body>
