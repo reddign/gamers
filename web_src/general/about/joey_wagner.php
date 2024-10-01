@@ -8,13 +8,6 @@ require "../../includes/head.php";
 <?php
      require "../../includes/navbar.php";
 ?>
-
-
-
-
-
-
-
     <div class="buttons">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="button button2">Go Back!</button></a> 
     </div>
