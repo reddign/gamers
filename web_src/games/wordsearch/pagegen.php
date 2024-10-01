@@ -83,89 +83,1876 @@ session_start();
         </div>
         <break>
         <h6>Word Search</h6>
-            <p>placeholder text</p>
+            <p>How many words can you find in the time limit?</p>
         
         <ul>
-            <div class="divv" id="row8">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row7">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row6">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row5">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row4">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row3">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row2">
-                <li class="box" id="b801">hello</li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-            <div class="divv" id="row1">
-                <li class="box" id="b801"></li>
-                <li class="box" id="b802"></li>
-                <li class="box" id="b803"></li>
-                <li class="box" id="b804"></li>
-                <li class="box" id="b805"></li>
-                <li class="box" id="b806"></li>
-                <li class="box" id="b807"></li>
-                <li class="box" id="b808"></li>
-                </div>
-                    </ul>
-</body>
-</html>
+        <div class="container"> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+<div class="row justify-content-center"> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">1</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">2</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">3</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">4</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">5</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">6</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+     <button type="button" class="btn btn-outline-primary">7</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">8</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">9</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">10</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">11</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">12</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">13</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">14</button> 
+
+  </div> 
+
+  <div class="col-auto p-0"> 
+
+    <!-- To hold what letter will be placed in this box. --> 
+
+    <button type="button" class="btn btn-outline-primary">15</button> 
+
+  </div> 
+
+</div> 
+
+</div> 
+
+      </ul> 
+
+</body> 
+
+</html> 
+
