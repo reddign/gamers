@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="../commands.js" defer></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,12 +24,6 @@
             font-size: 16px; /* Adjust font size if needed */
             padding: 5px; /* Add padding for better look */
         }
-        #Button1 {
-            width: 200px; /* Set desired width */
-            height: 35px; /* Set desired height */
-            font-size: 16px; /* Adjust font size if needed */
-            padding: 5px; /* Add padding for better look */
-        }
         #Button2 {
             width: 200px; /* Set desired width */
             height: 35px; /* Set desired height */
@@ -37,7 +32,6 @@
         }
         </style>
             <input type="text" id="Text_Input" placeholder="Where would you like to go?">
-            <button id ="Button1" onclick="window.location.href='locations/bowers.php'";>BowersTest</button>
             <button id ="Button2">DynamicTest</button>
             
 </head>

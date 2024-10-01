@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
             goto("bowers");
             current_location = "bowers"
         }
+        if(command.value == "gotobsc"){
+            goto("bsc");
+            current_location = "bsc"
+        }
     });
 
     function help(){
@@ -59,11 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function goto(location){
-        //Test location change to Bowers
-        if (location == "bowers"){
+        //Changes location based on input
+        if (window.location.pathname == '/gamers/web_src/games/ESA/ESA.php'){
             window.location.replace('locations/'+location+'.php')
+        } else{
+            window.location.replace('../locations/'+location+'.php')
         }
-
     }
 
 
