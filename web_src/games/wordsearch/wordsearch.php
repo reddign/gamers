@@ -73,11 +73,10 @@ session_start();
         <p>Please select Categories before starting</p>
     <form action="pagegen.php" method="post">
     
-
     <div class="container" id="Difficulty">
         <h3 class="formHeader">Difficulty</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="Diff" id="easyDiff" value="easy" checked>
+            <input class="form-check-input" type="radio" name="Diff" id="easyDiff" value="easy">
             <label class="form-check-label" for="easyDiff">
             Easy
             </label>
@@ -101,21 +100,21 @@ session_start();
 
         <h3 class="formHeader">Category</h3>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="dormsCat" value="dorms">
+            <input class="form-check-input" type="checkbox" id="dormsCat" value="DORMS" name="Cat1">
             <label class="form-check-label" for="dormsCat">Dorms</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="toolsCat" value="tools">
+            <input class="form-check-input" type="checkbox" id="toolsCat" value="TOOLS" name="Cat2">
             <label class="form-check-label" for="toolsCat">Tools</label>
         </div>
         
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="expertiseCat" value="expertise">
+            <input class="form-check-input" type="checkbox" id="expertiseCat" value="EXPERTISE" name="Cat3">
             <label class="form-check-label" for="expertiseCat">Expertise</label>
         </div>
 
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="languagesCat" value="languages">
+            <input class="form-check-input" type="checkbox" id="languagesCat" value="LANGUAGES" name="Cat4">
             <label class="form-check-label" for="languagesCat">Languages</label>
         </div>
     </div>

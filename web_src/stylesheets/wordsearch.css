@@ -80,3 +80,16 @@ main {
 .container input:checked ~ label{
     color:rgb(0, 163, 188);
 }
+
+.activeButton{
+    background-color: grey;
+    color:white;
+}
+
+.found{
+    text-decoration: line-through;
+}
+
+.foundWord{
+    background-color: yellow;
+}

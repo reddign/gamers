@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "../../../web_src/games/wordsearch/mapGen.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +10,18 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../../stylesheets/wordsearch.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
+    <!-- get function -->
+    <?php
+    $formVars=array();
+        foreach ($_POST as $key => $value) {
+            $formVars[]=$value;
+        }
+        $results=generateMap(15,8,$formVars);
+    print_r($results[1]);
+    ?>
     <!-- Script Code -->
     <script src="timer.js"></script>
+    <script src="mapLogic.js"></script>
 
     <!-- Clock Font: from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,6 +93,36 @@ session_start();
         </div>
         <break>
         <h6>Word Search</h6>
+
+        <!--   This is some testing stuff
+        <table style="margin:auto;border:1px solid;display:inline-block;">
+        <?php
+        $board=$results[0];
+        /* Stuff for testing, Not final Product
+        for($i=0;$i<sizeof($board);$i++){
+            echo "<tr>";
+            for($j=0;$j<sizeof($board[$i]);$j++){
+                $value="";
+                for($iter=0;$iter<sizeof($results[1]);$iter++){
+                    if(($results[1][$iter]->start[0]==$i & $results[1][$iter]->start[1]==$j) | ($results[1][$iter]->end[0]==$i & $results[1][$iter]->end[1]==$j))
+                        $value= $results[1][$iter]->name;
+                }
+                echo "<td style='border:1px solid'><button class='letterButton' style='height:50px;width:50px;' value='".$value."'>".$board[$i][$j]."</button></td>";
+            }
+            echo "</tr>";
+        }*/
+        ?>
+        </table>
+        <ul style="position:absolute;top:400px;right:300px;list-style-type: none;">
+            <?php
+                /* Wordbank Testing
+                for($i=0;$i<sizeof($results[1]);$i++)
+                    echo "<li class='wordBank' id='".$results[1][$i]->name."'>".$results[1][$i]->name."</li>";
+                    */
+            ?>
+
+        </ul>
+    -->
             <p>How many words can you find in the time limit?</p>
         
         <ul>

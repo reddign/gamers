@@ -1,5 +1,6 @@
 
 //(function(){
+
 let interval=null;
 window.addEventListener('load',init);
 
@@ -7,6 +8,7 @@ async function init(){
     const delay = ms => new Promise(res => setTimeout(res, ms));
     await delay(5000);
     interval=window.setInterval(updateTimer,1000);
+
 }
 
 function updateTimer(){
@@ -34,9 +36,3 @@ function stopTimer(){
 }
 
 //})();
-
-// comment 1
-// comment 2
-// git add comment 3
-// c4
-// Comments
