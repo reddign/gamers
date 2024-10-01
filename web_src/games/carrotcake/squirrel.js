@@ -30,13 +30,14 @@ class Squirrel {
         //update target tile if it is reached (will later be updated every movement tick instead)
         //stub code for different methods
 
-        //these values would have to be grabbed in some way
-        let playerX = 0;
-        let playerY = 0;
-        let playerDir = "left";
+        let playerX = characterPos[0]; //global var from rpg.json
+        let playerY = characterPos[1];
+        let playerDir = "left"; //this value would have to be grabbed in some way
         
-        let player_dist = 35; //placeholder numbers (calculate later), squirrels will not pathfind directly to player when past a certain distance
-        let dist_thresh = 30; //helps with reducing difficulty since otherwise squirrels will always be able to follow and corner the player
+        //squirrels will not pathfind directly to player when past a certain distance
+        //helps with reducing difficulty since otherwise squirrels will always be able to follow and corner the player
+        let player_dist = Math.sqrt(((playerX - self.xPos) ** 2) + ((playerY - self.yPos) ** 2)); 
+        let dist_thresh = 30.0;
 
         if(player_dist < dist_thresh) {
         
@@ -123,15 +124,11 @@ class Squirrel {
 
         }
 
-        if(self.xTar < 0 || self.xTar >= board.length) {
-
-            self.xTar = self.xTar % board.length;
-
-        } else if(self.yTar < 0 || self.yTar >= board[self.xTar].length) {
-
-            self.yTar = self.xTar % board[self.xTar].length;
-
-        }
+        //prevent targetting an out of bounds tile, just set it to the edge instead
+        if(self.xTar < 0) self.xTar = 0;
+        if(self.xTar >= board.length) self.xTar = board.length - 1;
+        if(self.yTar < 0) self.yTar = 0;
+        if(self.yTar >= board[self.xPos].length) self.yTar = board[self.xPos].length - 1;
 
     }
 
@@ -142,7 +139,7 @@ class Squirrel {
         //will have pathfinding code to help with naviagation and will hopefully have checks in place to prevent the squirrels from getting stuck
 
         //initial pathfinding (0 is empty, 1 is cupcake, 2 is wall, 3 is player, 4 is a squirrel)
-        //this is not meant to stay or be definitive code, just temporary until further development is done
+        //this is not meant to stay or be definitive code, just temporary until further development on game board is done
 
         this.target(board);
 
