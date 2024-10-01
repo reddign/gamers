@@ -59,4 +59,4 @@ window.onload = function() {
     let visitedPage2 = getCookie("visitedPage2");
 
     console.log("Visited Page Cookie: ", visitedPage);
-    console.log("Second Cookie: ", visitedPage2);
+    console.log("Second Cookie: ", visitedPage2)};
