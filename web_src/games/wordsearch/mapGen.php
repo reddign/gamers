@@ -106,6 +106,6 @@ function generateMap($size = -1, $num_words = -1, $categories = []){
         }
         $map[$i] = $innerList;
     }
-    return $map, $words;
+    return [$map, $words];
 }
 ?>
