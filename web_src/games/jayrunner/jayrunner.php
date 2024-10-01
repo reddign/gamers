@@ -41,6 +41,15 @@ require "../../includes/head.php";
     <!-- //intially hidden -->
     <div id="gameOverOverlay" style="display: none;">
     </div>
+        
+    <div id="HSOverlay" style="display:none;">
+        <!-- TODO: Link HS screen with HS database -->
+         <div class="display-container">
+            <h1>Highscores</h1>
+            <button id="returnButton"href="jayrunner.php">Return</button>
+        </div>
+    </div>
+
 
     <script>
         // Initialize username from PHP session

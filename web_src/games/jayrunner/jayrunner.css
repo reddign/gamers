@@ -7,7 +7,7 @@
     margin: auto;
 }
 
-#startScreen, #gameOverOverlay {
+#startScreen, #gameOverOverlay, #HSOverlay {
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -27,7 +27,7 @@
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-#startButton, #playAgainButton, .leaderboard {
+#startButton, #playAgainButton, .leaderboard, #returnButton{
   align-items: center;
   background-color: #FCFCFD;
   border-radius: 4px;
@@ -56,7 +56,7 @@
   font-size: 18px;
 }
 
-#startButton:hover, #playAgainButton:hover, .leaderboard:hover {
+#startButton:hover, #playAgainButton:hover, .leaderboard:hover ,#returnButton:hover{
   background-color: lightblue;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
 }

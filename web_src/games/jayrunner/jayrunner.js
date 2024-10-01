@@ -79,4 +79,15 @@
     }, false);
 
     document.getElementById('startButton').addEventListener('click', startGame);
+
+    function HSDisplay(){
+        document.getElementById('startScreen').style.display = 'none';
+        document.getElementById('gameOverOverlay').style.display = 'none';
+        document.getElementById('HSOverlay').style.display = 'block';
+    }
+    
+    let leaderboard = document.getElementsByClassName('leaderboard')
+    for (let i = 0; i < leaderboard.length; i++) {
+        leaderboard[i].addEventListener('click', HSDisplay);
+    }
 })();
