@@ -26,7 +26,7 @@
             }
         }
 
-        fetch('create_score.php', {
+        fetch('data/create_score.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -48,6 +48,10 @@
                     </div>
                 `;
                 document.getElementById('playAgainButton').addEventListener('click', startGame);
+                let leaderboard = document.getElementsByClassName('leaderboard')
+                for (let i = 0; i < leaderboard.length; i++) {
+                    leaderboard[i].addEventListener('click', HSDisplay);
+                }
             } else {
                 console.error('Error submitting score:', data.message);
             }
@@ -84,6 +88,55 @@
         document.getElementById('startScreen').style.display = 'none';
         document.getElementById('gameOverOverlay').style.display = 'none';
         document.getElementById('HSOverlay').style.display = 'block';
+    
+        // Fetch high scores
+        fetch('data/read_score.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    let highscoresTable = `
+                        <div class="display-container">
+                            <h1>Highscores</h1>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Name</th>
+                                        <th>Score</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    data.scores.forEach((score, index) => {
+                        highscoresTable += `
+                            <tr>
+                                <td>${index + 1}</td>
+                                <td>${score.username}</td>
+                                <td>${score.score}</td>
+                                <td>${score.timePlayed}</td>
+                            </tr>
+                        `;
+                    });
+                    highscoresTable += `
+                                </tbody>
+                            </table>
+                            <button id="returnButton">Return</button>
+                        </div>
+                    `;
+    
+                    document.getElementById('HSOverlay').innerHTML = highscoresTable;
+                    document.getElementById('returnButton').addEventListener('click', () => {
+                        document.getElementById('HSOverlay').style.display = 'none';
+                        document.getElementById('startScreen').style.display = 'block';
+                    });
+                } else {
+                    console.error('Error fetching high scores:', data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });    
     }
     
     let leaderboard = document.getElementsByClassName('leaderboard')

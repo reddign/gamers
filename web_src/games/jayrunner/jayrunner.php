@@ -43,11 +43,6 @@ require "../../includes/head.php";
     </div>
         
     <div id="HSOverlay" style="display:none;">
-        <!-- TODO: Link HS screen with HS database -->
-         <div class="display-container">
-            <h1>Highscores</h1>
-            <button id="returnButton"href="jayrunner.php">Return</button>
-        </div>
     </div>
 
 

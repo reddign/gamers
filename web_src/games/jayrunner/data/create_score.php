@@ -1,5 +1,5 @@
 <?php
-require_once "../../../data_src/api/includes/db_config.php";
+require_once "../../../../data_src/api/includes/db_config.php";
 
 header('Content-Type: application/json');
 
