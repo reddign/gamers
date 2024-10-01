@@ -17,11 +17,11 @@ echo '<br>';
 
 function dropdown($conn){
 
-  //SQL query
+  // SQL query
   $sql = "SELECT DISTINCT game_played FROM highscores;";
   $result = $conn->query($sql);
 
-  //Dropdown
+  // Dropdown
   $selectGame = isset($_POST['game']) ? $_POST['game'] : '';
   echo '<form method="POST" action="">';
   echo '<select name="game" onchange="this.form.submit()">';
@@ -69,7 +69,7 @@ function AfterScores($game){
 $information = file_get_contents('php://input');
 $data = json_decode($information);
     // SQL query to get the top 10 scores for the specific game
-    $query = 'SELECT username, score FROM highscores WHERE game_played = ? ORDER BY highscore DESC LIMIT 10';
+    $query = 'SELECT username, score FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10';
 
     // Prepare and execute the SQL statement
     $stmt = $connection->prepare($query);
@@ -81,7 +81,7 @@ $data = json_decode($information);
     return $results;  // Return the top 10 scores
 }
 
-//Actually calls the dropdown menu
+// Actually calls the dropdown menu
 dropdown($connection);
 
 $connection->close();
