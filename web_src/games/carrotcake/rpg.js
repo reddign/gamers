@@ -11,9 +11,7 @@ let score = 0;
 
 // Player settings
 const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Position centered in canvas
-// const playerSize = 32;
-// let playerX = 400;
-// let playerY = 400;
+
 const input = new Input();
 const update = () => {
  // TODO: updating assets in game
