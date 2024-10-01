@@ -24,7 +24,15 @@ require "../../includes/head.php";
             <h1>JayRunner</h1>
             <h2>Team Omacron</h2>
             <button id="startButton">Start Game</button>
+            <button id="leaderboard">View Highscores</button>
         </div>
+    </div>
+
+    <div class="bottom-nav">
+            Created by: <a href="../../../web_src\general\about\muzahidul_islam.php">Muzahidul</a>, <a href="../../../web_src\general\about\OwenWertzberger.php">Owen</a>, <a href="../../../web_src\general\about\vincent_liu.php">Vincent</a>
+        <span style="float: right">
+            Crashed? <a href="jayrunner.php">Refresh Page</a>
+        </span>
     </div>
 
     <!-- //intially hidden -->
