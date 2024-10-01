@@ -2,8 +2,8 @@
  * Creation Date: 9/15/24
  * Author: Wes J. Ryan
  * 
- * Last Edited: N/A
- * Last Edited by: N/A
+ * Last Edited: 9/26/24
+ * Last Edited by: Wes J. Ryan
  */
 
 /*
@@ -15,17 +15,32 @@
  * demonstrate logical flow.
  */
 
+let secsRem = 420;
+let secsA = secsRem;
+let secsB;
+let totalScore = 0;
+
+
 /*
  * The following statement determines the multiplier of any given word's score, to be called as
  * setMulti(), to be called every second (or perhaps 5) so that the player can see their multiplier.
  */
-
 function setMulti() {
     if(secRemain >= 390) {
         multiplier = 1024;
     } else {
         multiplier = multiLog();
     }
+    return multiplier;
+}
+
+function callTimer() {
+    let timeGrab = document.getElementById("timer").innerHTML;
+    let timeArr = timeGrab.split(":");
+    let mins = parseInt(timeArr[0]);
+    let secs = parseInt(timeArr[1]);
+    let totSecs = secs+(mins*60);
+    return totSecs;
 }
 
 function multiLog() {
@@ -43,14 +58,22 @@ function multiLog() {
      */
 }
 
-function wordScore() {
+function wordScore(start, end) {
     /*
      * Takes the time difference between the start/last word's time and the time of the current word
      * found and then plugs that into a logarithmic function to determine the base point value of a 
      * found word.
-     * 
-     * Returns an integer score value.
      */
+    let timeDiff = start - end;
+    let x = timeDiff;
+    if (timeDiff < 5) {
+        return 256;
+    } else {
+        timeDiff -= 5;
+        x = timeDiff/5;
+        // Returns an integer score value.
+        return Math.round((2 ** (8 - (x/2))));
+    }
 }
 
 // Whenever word found call wordScore();
