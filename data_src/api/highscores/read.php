@@ -1,18 +1,18 @@
 <?php
+require "../includes/db_config.php"
 function getTopScores($game) {
-    // Database connection parameters
-    $host = 'your_host';         // e.g., localhost
-    $dbname = 'your_db_name';
-    $username = 'your_db_user';
-    $password = 'your_db_password';
 
     try {
-        // Establish the database connection using PDO
-        $connection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
 
+    if($connection->connect_error) {
+        die("Connection failed: ".$connection->connect_error);
+    }
+
+    $information = file_get_contents('php://input');
+    $data = json_decode($information);
         // SQL query to get the top 10 scores for the specific game
-        $query = 'SELECT * FROM highscores WHERE game_played = ? ORDER BY highscore DESC LIMIT 10';
+        $query = 'SELECT username, score FROM highscores WHERE game_played = ? ORDER BY highscore DESC LIMIT 10';
 
         // Prepare and execute the SQL statement
         $stmt = $connection->prepare($query);
