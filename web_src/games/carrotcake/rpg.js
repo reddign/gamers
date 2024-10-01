@@ -80,9 +80,51 @@ const hero = new Sprite({
     frame: 1
 })
 
-function animate(){
-    //add  selection through character spritesheet for animation
+function animateCupcake() {
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+    const spriteSheet = new Image();
+    spriteSheet.src = "cupcake.png";
+
+    const spriteWidth = 16;
+    const spriteHeight = 16;
+    const spritesPerRow = 3; // There are 3 sprites per row
+    const totalSprites = 7; // Total of 7 sprites in the sheet
+
+    let currentFrame = 0;
+
+    function drawFrame() {
+        // Calculate the x and y position of the current sprite in the sheet
+        const column = currentFrame % spritesPerRow;
+        const row = Math.floor(currentFrame / spritesPerRow);
+
+        context.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas before drawing
+
+        // Draw the current frame
+        context.drawImage(
+            spriteSheet, 
+            column * spriteWidth,   // Source x in the sprite sheet
+            row * spriteHeight,     // Source y in the sprite sheet
+            spriteWidth, spriteHeight, // Width and height of the sprite
+            0, 0,                  // Destination on the canvas
+            spriteWidth, spriteHeight // Draw at original size
+        );
+
+        // Move to the next frame
+        currentFrame = (currentFrame + 1) % totalSprites;
+
+        // Loop animation
+        setTimeout(drawFrame, 100); // Adjust the delay to control speed
+    }
+
+    spriteSheet.onload = function() {
+        drawFrame(); // Start the animation once the image is loaded
+    };
 }
+
+// Call the function to start the animation
+animateCupcake();
+
 
 function detectCOllision(){
     //add collision to the map
