@@ -1,22 +1,10 @@
 
-<!-- page2.php -->
-<!-- Checking if cookies went though and setting local variables -->
-
 <?php
-// Check if the "visitedPage" cookie exists
-if (isset($_COOKIE['visitedPage'])) {
-    $visitedPage = $_COOKIE['visitedPage'];
-} else {
-    $visitedPage = "No page visited yet.";
-}
-
-// Check if the "visitedPage2" cookie exists
-if (isset($_COOKIE['visitedPage2'])) {
-    $visitedPage2 = $_COOKIE['visitedPage2'];
-} else {
-    $visitedPage2 = "No page visited yet.";
-}
+// Check if the cookies are set
+$visitedPage = isset($_COOKIE['visitedPage']) ? $_COOKIE['visitedPage'] : "No cookie found";
+$visitedPage2 = isset($_COOKIE['visitedPage2']) ? $_COOKIE['visitedPage2'] : "No second cookie found";
 ?>
+
 <!-- HTML to show cookie values -->
 
 <!DOCTYPE html>
@@ -35,11 +23,15 @@ if (isset($_COOKIE['visitedPage2'])) {
 </head>
 <body>
     <h1>Page 2</h1>
-    <p>This is the second page.</p>
+    <h2>Reading Cookies on the Next Page (cookieTest2.php)</h2>
 
-    <p>Cookie Value: <?php echo $visitedPage; ?></p>
-    <p>Cookie Value: <?php echo $visitedPage2; ?></p>
+    <!-- Display the cookie values -->
+    <p>Visited Page: <?php echo htmlspecialchars($visitedPage); ?></p>
+    <p>Second Cookie: <?php echo htmlspecialchars($visitedPage2); ?></p>
 
+    <button onclick="window.location.href='ctSend.php';">Go Back</button>
+    <script src="../cookies.js"></script>
 </body>
+
 </html>
 

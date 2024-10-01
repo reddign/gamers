@@ -19,21 +19,8 @@
     </style>
 </head>
 <body>
-    <script>
-    function setCookie(name, value, days) {
-            const d = new Date();
-            d.setTime(d.getTime() + (days*24*60*60*1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = name + "=" + value + ";" + expires + ";path=/";
-        }
-
-        // Set cookie when the user leaves the page
-        window.onbeforeunload = function() {
-            setCookie("visitedPage", "page1", 1);  // Set cookie "visitedPage" to "page1"
-            setCookie("visitedPage2", "Congrats! retrieved cookies successfully", 2); //Cookie visitedpage2 to conrgats
-        };
-    </script>
-    <h2>Test page for sending and reciving cookies</h2>
+    <script src="../cookies.js"></script>
+<h2>Test page for sending and reciving cookies</h2>
 </body>
 <button id ="Button1" onclick="window.location.href='../locations/ctRecieve.php'";>CookieTest</button>
 </html>
