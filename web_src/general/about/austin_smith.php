@@ -15,6 +15,13 @@ require "../../includes/head.php";
         #THIS IS A COMMENT 
         # Austin likes pizza
         # Mangoes are better
+
+        #   Change 1
+        #   Change 2
+        #   Change 3
+        #   Change 4
+        #   Change 5
+        #   Change 6
     <main>
         <section id="Austin Smith's Bio">
             <div class="bio-title">Austin Smith</div>
