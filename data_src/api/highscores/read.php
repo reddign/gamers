@@ -66,13 +66,6 @@ function dropdown($conn){
 
 function AfterScores($game){
 
-  try {
-    $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
-
-if($connection->connect_error) {
-    die("Connection failed: ".$connection->connect_error);
-}
-
 $information = file_get_contents('php://input');
 $data = json_decode($information);
     // SQL query to get the top 10 scores for the specific game
@@ -90,8 +83,6 @@ $data = json_decode($information);
 } catch (PDOException $e) {
     // Handle any errors
     echo 'Error: ' . $e->getMessage();
-}
-
 }
 
 //Actually calls the dropdown menu
