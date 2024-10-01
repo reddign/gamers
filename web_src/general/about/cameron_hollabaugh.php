@@ -18,7 +18,7 @@ require "../../includes/head.php";
             <div class="bio-title">Cameron</div>
             <br>
             <div id="bio"> Cameron is n̶o̶t̶ a student in this class. He is majoring in Japanese and Information Systems,
-                plus several minors and intends to graduate in 2025. Plus, he is great at
+                plus several minors and intends to graduate in 2025. Plus, he is great at Squashing.
         </section>
     </main>
 </body>
