@@ -1,14 +1,5 @@
 export class Student{
-    constructor(
-        resource, //the image we want to draw
-        frameSize, // size of the crop of the image
-        frameWidth, // how the sprite is arranged horizontally
-        frameHeight, //how the sprite is arranged vertically
-        total, // which frame we want to show
-        scale, //how large to draw the image
-        position, //where to draw it (top left)
-
-    ){
+    constructor(resource, frameSize, frameWidth, frameHeight, total, scale, position){
         this.resource = resource;
         this.frameSize = frameSize;
         this.frameWidth = frameWidth;
@@ -20,10 +11,10 @@ export class Student{
 }
 
 export class GameLoop{
-    constructor(update, render){
+    constructor(update,render){
         this.lastFrameTime = 0;
         this.accumulatedTime = 0;
-        this.timeStep = 1000/60; //60 frames per second
+        this.timeStep = 1000/60; //60 frames a second
 
         this.update = update;
         this.render = render;
@@ -31,191 +22,170 @@ export class GameLoop{
         this.rafID = null;
         this.isRunning = false;
 
-        this.mainLoop = this.mainLoop.bind(this); //this binds the function to the specific instance.
+        this.mainLoop = this.mainLoop.bind(this);
     }
     mainLoop(timestamp){
         if(!this.isRunning) return;
-        let deltaTime = timestamp - this.lastFrameTime;
+        let deltaTime = timestampe - this.lastFrameTime;
         this.lastFrameTime = timestamp;
-    
-        //accumulating all the time since the last frame.
-        this.accumulatedTime += deltaTime;
-    
-        //if there's enough accumulated time to run one or more fixed updates
-        while(this.accumulatedTime >= this.timeStep){
-            this.update(this.timeStep); //we pass the fixed time step here
+
+        this.accumulateTime += deltaTime;
+
+        while(this.accumulateTime >= this.timeStep) {
+            this.update(this.timeStep); //pass the fixed time step here
             this.accumulatedTime -= this.timeStep;
         }
-    
         this.render();
         this.rafID = requestAnimationFrame(this.mainLoop);
-    
-        start() {
-            if (!this.isRunning) {
-                this.isRunning = true;
-                this.rafID = requestAnimationFrame(this.mainLoop); // Fix assignment
-            }
+    }
+    start(){
+        if(!this.isRunning){
+            this.isRunning = true;
+            this.rafID = requestAnimationFrame(this.mainLoop);
         }
-        
-        stop() {
-            if(this.rafID){
-                cancelAnimationFrame(this.rafID);
-            }
-            this.isRunning = false;
+    }
+
+    stop(){
+        if(this.rafID){
+            cancelAnimationFrame(this.rafID);
         }
+        this.isRunning = false;
     }
 }
 
-
-export const LEFT =  "LEFT";
+export const LEFT = "LEFT";
 export const RIGHT = "RIGHT";
 export const UP = "UP";
 export const DOWN = "DOWN";
 
 export class Input{
     constructor(){
-        this.heldDirections = []; //this is initializing the directions array
+        this.heldDirections = [];
 
-        //a lot of event listeners :p
-        document.addEventListener("keydown", (e) =>{
-            //check for dedicated direction list
-            if(e.code == "ArrowUp" || e.code === "KeyW"){
+        document.addEventListener("keydown",(e) => {
+            if(e.code === "ArrowUp" || e.code = "KeyW"){
                 this.onArrowPressed(UP);
             }
-            if(e.code == "ArrowDown" || e.code === "KeyS"){
+            if(e.code === "ArrowDown" || e.code = "KeyS"){
                 this.onArrowPressed(DOWN);
             }
-            if(e.code == "ArrowLeft" || e.code === "KeyA"){
-                this.onArrowPressed(LEFT); 
+            if(e.code === "ArrowLeft" || e.code = "KeyA"){
+                this.onArrowPressed(LEFT);
             }
-            if(e.code == "ArrowRight" || e.code === "KeyD"){
+            if(e.code === "ArrowRight" || e.code = "KeyD"){
                 this.onArrowPressed(RIGHT);
             }
         });
-        document.addEventListener("keyup", (e) =>{
-            //check for dedicated direction list
-            if(e.code == "ArrowUp" || e.code === "KeyW"){
+
+        document.addEventListener("keyup", (e) => {
+            if(e.code === "ArrowUp" || e.code === "KeyW"){
                 this.onArrowReleased(UP);
             }
-            if(e.code == "ArrowDown" || e.code === "KeyS"){
+            if(e.code === "ArrowDown" || e.code === "KeyS"){
                 this.onArrowReleased(DOWN);
             }
-            if(e.code == "ArrowLeft" || e.code === "KeyA"){
-                this.onArrowReleased(LEFT); 
+            if(e.code === "ArrowLeft" || e.code === "KeyA"){
+                this.onArrowReleased(LEFT);
             }
-            if(e.code == "ArrowRight" || e.code === "KeyD"){
+            if(e.code === "ArrowRight" || e.code === "KeyD"){
                 this.onArrowReleased(RIGHT);
             }
         });
     }
     get direction(){
-        return this.heldDirections[0]; //getting the first held direction or undefined.
+        return this.heldDirections[0]; //this gets the first held direction or this is undefined.
     }
+
     onArrowPressed(direction){
-       if(this.heldDirections.indedxOf(direction) === -1){
-        this.heldDirections.unshift(direction); //this is adding a new direction to the front of the queue
-       }
+        if(this.heldDirections.indexOf(direction) === -1){
+            this.heldDirections.unshift(directions);
+        }
     }
+
     onArrowReleased(direction){
-       const index = this.heldDirections.indexOf(direction);
-       if(index !== -1){
-        this.heldDirections.splice(index,1);
-       }
+        const index = this.heldDirections.indexOf(direction);
+        if(index !== -1){
+            this.heldDirections.splice(index,1);
+        }
     }
 }
 
+//this part is the animation frames
 
+const makeStandingFrame = (startingFrame = 0) => ({
+    duration: 400, 
+    frames: [
+        {time: 0, frame: startingFrame }
+    ]
+});
 
-
-
-
-
-
-
-//this is for all the animation
- 
-//loading the student image
-const student = new Image();
-student.src = 'gamers/web_src/games/carrotcake/sprites/student.png';
-const canvas = document.getElementById('gamers/web_src/games/carrotcake/sprites/betamap.png');
-const ctx = canvas.getContext('2d');
-
-// const makeStandingFrames =(rootFrame = 0) => {
-//     return{
-//         duration: 400,
-//         frames: {
-//             {
-//                 time: 0,
-//                 frame: startingFrame,
-//             }
-//         }
-//     }
-// }
-// const makeWalkingFrames =(rootFrame = 0) => {
-//     return{
-//         duration: 400,
-//         frame: {
-//             time: 0,
-//             frame: rootFrame + 1
-//         },
-//         {
-//             time: 100,
-//             frame: rootFrame
-//         },
-//         {
-//             time: 200,
-//             frame: rootFrame +1
-//         },
-//         {
-//             time: 300,
-//             frame: rootFrame+2
-//         }
-//     }
-// }
-
-
+const makeWalkingFrames = (startingFrame = 0) =>({
+    duration: 400,
+    frames: [
+        {time: 0, frame: startingFrame +1},
+        {time: 100, frame: startingFrame},
+        {time: 200, frame: startingFrame + 1},
+        {time: 300, frame: startingFrame + 2}
+    ]
+});
 
 export const walkDown = makeWalkingFrames(0);
 export const walkRight = makeWalkingFrames(3);
 export const walkUp = makeWalkingFrames(6);
-export const walkLeft = makeWalkingFrames(9);
+export const walkLeft = makeWalkingFrame(9);
 
 export const standDown = makeStandingFrame(1);
-export const standRight= makeStandingFrame(4);
+export const standRight = makeStandingFrame(4);
 export const standUp = makeStandingFrame(7);
 export const standLeft = makeStandingFrame(10);
 
-
-
-
-//variables
-let studentX = 0; //X position of the student
-let studentY = canvas.height - 100; //Y position of the student
-let frame = 0; //framing for the animation
+//Variables:
+const input = new Input();
+let lastDirection = DOWN;
+let studentX = 0;
+let studentY = canvas.height - 100;
+let frame = 0;
 let frameWidth = 64;
 let frameHeight = 64;
-let total = 4; //this is total amount of frames.
+let total = 4; //this is for the total amount of frames.
 
+//big ol update function
 function update(){
-    //update student's X position to move right
-    studentX += 2;
-    if (studentX > canvas.width){
-        studentX = -frameWidth; //looping back to the left side.
+    const direction = input.direction;
+    if(direction === DOWN){
+        studentY +=2;
+        frame = (frame +1) % walkDown.frames.length;
+    } else if (direction === UP){
+        studentY -= 2;
+        frame = (frame + 1) % walkUp.frames.length;
+    } else if (direction === LEFT){
+        studentX -= 2;
+        frame = (frame + 1) % walkLeft.frames.length;
+    } else {
+        if(lastDirection === DOWN){
+            frame = standDown.frames[0].frame;
+        } else if (lastDirection === UP){
+            frame = standUp.frames[0].frame;
+        } else if(lastDirection === LEFT){
+            frame = standLeft.frames[0].frame;
+        } else if (lastDirection === RIGHT){
+            frame = standRight.frames[0].frame;
+        }
     }
-    //updating the current frame to simulate the walking
-    frame = (frame + 1) % totalFrames;
+    if(studentX > canvas.width){
+        studentX = -frameWidth;
+    }
+    lastDirection = direction || lastDirection;
 }
+function draw() {
+    ctx.clearRect(0,0,canvas.width, canvas.height);
 
-//function draw() will draw the current frame of the student sprite
-function draw(){
-        ctx.clearRect(0,0,canvas.width, canvas.height);    
-
-        ctx.drawImage(
+    ctx.drawImage(
         student,
-        frame * frameWidth, 0, //this is source x and y for which frame to pick up from the sprite
-        frameWidth, frameHeight, //this is the source of the width and height
-        studentX, studentY, //this is destination x and y
-        frameWidth, frameHeight // this is the destination width and height.
+        frame  * frameWidth, 0, //this is source x and y for current frame
+        frameWidth, frameHeight,
+        studentX, studentY,
+        frameWidth, frameHeight
     );
 }
 
@@ -225,7 +195,6 @@ function loop(){
     requestAnimationFrame(loop);
 }
 
-//This is to start the loop when the image is loaded
-student.onload = function(){
+student.onload = function (){
     loop();
 }
