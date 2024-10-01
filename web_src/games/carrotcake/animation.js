@@ -1,4 +1,4 @@
-export class Sprite{
+export class student{
     constructor(
         resourse, //the image we want to draw
         frameSize, // size of the crop of the image
