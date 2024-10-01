@@ -71,8 +71,8 @@ function generateMap($size = -1, $num_words = -1, $categories = []){
         $isvalid = false;
         while(!$isvalid) {
             $isvalid = true;
-            for ($i = 0; $i < strlen($word->name); $i++) {
-                if($map[$col+($i*$ymod)][$row+($i*$xmod)] != '&nbsp;'){
+            for ($i = 0; $i < strlen($word->name); $i++) { 
+                if(!($map[$col+($i*$ymod)][$row+($i*$xmod)] == '&nbsp;'|| $map[$col+($i*$ymod)][$row+($i*$xmod)] == $word->name[$i])){ // logic used to be if($map[$col+($i*$ymod)][$row+($i*$xmod)] != '&nbsp;')
                     $isvalid = false;
                     $row = random_int(0,$size-1);
                     $col = random_int(0,$size-1);
