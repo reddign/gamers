@@ -8,7 +8,10 @@ const birdImage = new Image();
 birdImage.src = 'Images/bluejay.gif';
 
 const background = new Image();
-background.src = 'Images/Outside.jpg'; 
+background.src = 'Images/outdoor.jpg'; 
+
+const netImage = new Image();
+netImage.src = 'Images/net.png';
 
 let birdWidth = 100;  // 
 let birdHeight = 100;
@@ -42,8 +45,8 @@ function net(e){
 }
 
 function drawScoreboard(){
-    context.font = "16px serif";
-    context.fillStyle = "orange"
+    context.font = "20px serif";
+    context.fillStyle = "black"
     var scoreString = "Round: "+round+" Score: "+score+" Time:"+time;
     context.fillText(scoreString,20,200);
 }
@@ -148,7 +151,10 @@ function isDuckInCircle(x, y, xCenter, yCenter, radius1) {
     return distance <= radius1;
 }
 
+function drawnet(){
+    context.drawImage(netImage, mouse_x- birdWidth / 2, mouse_y- birdWidth / 2, birdWidth, birdHeight);
 
+}
 
 
 function capture(){
@@ -185,7 +191,7 @@ function clear() {
 function animate(){
     clear();
     document.addEventListener('click', capture);
-    
+    drawnet()
     fly();
     flybad();
     drawScoreboard();
