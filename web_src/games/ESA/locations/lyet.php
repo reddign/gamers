@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="../commands.js" defer></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
