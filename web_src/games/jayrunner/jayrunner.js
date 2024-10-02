@@ -14,18 +14,18 @@
     }
 
     function createScore(gamePlayed, score) {
-
         score = parseInt(score);
         
         // If username is empty, ask the user to enter a username
         if (!username) {
             username = prompt("Enter your username to submit your score:");
             if (!username) {
-                console.error('Username is required to submit score.');
+                console.log('Username submission cancelled or empty.');
+                showGameOverScreen(score, true);
                 return;
             }
         }
-
+    
         fetch('data/create_score.php', {
             method: 'POST',
             headers: {
@@ -37,28 +37,65 @@
         .then(data => {
             if (data.success) {
                 console.log('Score submitted:', data);
-                document.getElementById('gameOverOverlay').innerHTML = `
-                    <div class="display-container">
-                        <h2>Game Over</h2>
-                        <p><strong>Username:</strong> ${data.username}</p>
-                        <p><strong>Score:</strong> ${data.score}</p>
-                        <p><strong>Time Played:</strong> ${data.timePlayed}</p>
-                        <button id="playAgainButton">Play Again</button>
-                        <button class="leaderboard">View Highscores</button>
-                    </div>
-                `;
-                document.getElementById('playAgainButton').addEventListener('click', startGame);
-                let leaderboard = document.getElementsByClassName('leaderboard')
-                for (let i = 0; i < leaderboard.length; i++) {
-                    leaderboard[i].addEventListener('click', HSDisplay);
-                }
+                showGameOverScreen(score);
             } else {
                 console.error('Error submitting score:', data.message);
+                showGameOverScreen(score, true);
             }
         })
         .catch((error) => {
             console.error('Error:', error);
+            showGameOverScreen(score, true);
         });
+    }
+    
+    function showGameOverScreen(score, error = false) {
+        document.getElementById('gameWindow').style.display = 'none';
+        document.getElementById('gameOverOverlay').style.display = 'block';
+    
+        let content = `
+            <div class="display-container">
+                <h2>Game Over</h2>
+                <p><strong>Score:</strong> ${score}</p>
+        `;
+    
+        if (error) {
+            content += `
+                <p>There was an error submitting your score. Would you like to try again?</p>
+                <button id="retrySubmitButton">Submit Score</button>
+            `;
+        } else {
+            content += `
+                <p><strong>Username:</strong> ${username}</p>
+                <p><strong>Time Played:</strong> ${new Date().toLocaleTimeString()}</p>
+            `;
+        }
+    
+        content += `
+                <button id="playAgainButton">Play Again</button>
+                <button class="leaderboard">View Highscores</button>
+                <button id="returnToStartButton">Return to Start</button>
+            </div>
+        `;
+    
+        document.getElementById('gameOverOverlay').innerHTML = content;
+        
+        document.getElementById('playAgainButton').addEventListener('click', startGame);
+        document.getElementById('returnToStartButton').addEventListener('click', returnToStart);
+        
+        if (error) {
+            document.getElementById('retrySubmitButton').addEventListener('click', () => createScore("JayRunner", score));
+        }
+    
+        let leaderboard = document.getElementsByClassName('leaderboard');
+        for (let i = 0; i < leaderboard.length; i++) {
+            leaderboard[i].addEventListener('click', HSDisplay);
+        }
+    }
+    
+    function returnToStart() {
+        document.getElementById('gameOverOverlay').style.display = 'none';
+        document.getElementById('startScreen').style.display = 'block';
     }
 
     function startGame() {
@@ -70,9 +107,10 @@
 
         var iframe = document.createElement('iframe');
         iframe.src = "jayrunner_exports/jayrunner.html";
-        iframe.style.width = "100em";
-        iframe.style.height = "50em"; 
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
         iframe.style.border = "none";
+        iframe.style.flexGrow = "1";
         gameWindow.appendChild(iframe);
     }
 
@@ -121,7 +159,7 @@
                     highscoresTable += `
                                 </tbody>
                             </table>
-                            <button id="returnButton">Return</button>
+                            <button id="returnButton">Return To Start</button>
                         </div>
                     `;
     

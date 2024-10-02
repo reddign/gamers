@@ -6,7 +6,7 @@
     <title>JayRunner Game</title>
     
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="jayrunner.css">
+    <link rel="stylesheet" href="../../stylesheets/jayrunner.css">
 </head>
 <?php
 require "../../includes/functions.php";
