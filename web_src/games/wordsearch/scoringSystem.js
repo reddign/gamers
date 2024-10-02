@@ -2,7 +2,7 @@
  * Creation Date: 9/15/24
  * Author: Wes J. Ryan
  * 
- * Last Edited: 9/26/24
+ * Last Edited: 10/2/24 (12:39am)
  * Last Edited by: Wes J. Ryan
  */
 
@@ -15,25 +15,6 @@
  * demonstrate logical flow.
  */
 
-let secsRem = 420;
-let secsA = secsRem;
-let secsB;
-let totalScore = 0;
-
-
-/*
- * The following statement determines the multiplier of any given word's score, to be called as
- * setMulti(), to be called every second (or perhaps 5) so that the player can see their multiplier.
- */
-function setMulti() {
-    if(secRemain >= 390) {
-        multiplier = 1024;
-    } else {
-        multiplier = multiLog();
-    }
-    return multiplier;
-}
-
 function callTimer() {
     let timeGrab = document.getElementById("timer").innerHTML;
     let timeArr = timeGrab.split(":");
@@ -43,38 +24,35 @@ function callTimer() {
     return totSecs;
 }
 
-function multiLog() {
-    /*
-     * Takes current secRemaining, and uses it as the independent x variable in a logarithmic function
-     * the y-value of which will be rounded to the nearest hundreth and used as the multiplier.
-     * 
-     * The displayed multiplier will have 3 significant figures of data at least, such that the tenths
-     * place is only displayed once the multiplier has dipped below 100, and the same for hundreths and
-     * below 10.
-     * 
-     * The following value pairings will be placed along the curve:
-     * (390, 1024), (360, 512), (330, 256), (300, 128), (270, 64), (240, 32), (210, 16), (180, 8.0)
-     * (150, 4.0), (120, 2.0), (90, 1.0), (60, 0.5), (30, 0.25), (0, 0.125)
-     */
-}
-
-function wordScore(start, end) {
-    /*
-     * Takes the time difference between the start/last word's time and the time of the current word
-     * found and then plugs that into a logarithmic function to determine the base point value of a 
-     * found word.
-     */
-    let timeDiff = start - end;
-    let x = timeDiff;
-    if (timeDiff < 5) {
-        return 256;
+function setMulti(currSecs) {
+    if(currSecs >= 390) { // First thirty second grace period wherein
+        return 1024; // Maximum multiplier is given
     } else {
-        timeDiff -= 5;
-        x = timeDiff/5;
-        // Returns an integer score value.
-        return Math.round((2 ** (8 - (x/2))));
+        let x = (420 - currSecs) / 30; // X represents time remaining in units of 30 seconds since grace period ended
+        return Math.round(2 ** (10 - x)); // Time remaining, through x's representation scales logarithmically into multiplier
     }
 }
 
-// Whenever word found call wordScore();
-totalScore += wordPoints * multiplier;
+function wordScore(past, curr) {
+    let timeDiff = past - curr; // Gets time difference
+    if (timeDiff < 5) { // For first 5 seconds...
+        return 256; // you get max score for base
+    } else {
+        let x = (timeDiff - 5) / 5; // remove freebie 5 seconds from calculation, then turn time taken into units of 5
+        return Math.round(2 ** (8 - (x/2))); // Returns an integer score value according to logarithmic curve.
+    }
+}
+
+// Global Variables of this file
+let lastCalled = 420; // Last time the updateScore() function was called; defaults to start time.
+let totalScore = 0; // Total Score, initialized as 0 because that's how games work.
+
+// THE FOLLOWING FUNCTION IS ESSENTIAL .MAIN() OF THIS FILE
+function updateScore() {
+    let currTime = callTimer(); // Get current time
+    let multi = setMulti(currTime); // Set multiplier based on current time
+    let baseScore = wordScore(lastCalled, currTime); // get base points for the time taken
+    totalScore += baseScore * multi; // Multiply out and add them to the total points
+    lastCalled = currTime; // Make this the new "last time" for the wordScore function
+    return totalScore; // Returns new value of the total score
+}
