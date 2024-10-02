@@ -8,7 +8,6 @@ require "../../includes/head.php";
 <?php
      require "../../includes/navbar.php";
 ?>
-   
     <div class="buttons">
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>

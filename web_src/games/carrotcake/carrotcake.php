@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="/gamers/web_src/games/carrotcake/rpg.js"></script>
     <script src="/gamers/web_src/games/carrotcake/hiddenCupcake.js"></script>
+    <script src="/gamers/web_src/games/carrotcake/animation.js"></script>
 </head>
 <body>
 <?php 
