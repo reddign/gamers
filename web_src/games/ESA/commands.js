@@ -39,15 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function items(){
         //Displays current inventory of held items
 
-        // const items = [""];
+        const items = [""];
+
+        console.log(items);
         
-
-        // for (i = 0; i < array.length; i++)
-        //     console.log(items);
-
     }
 
-    function grab(){
+    function grab(item){
         //Requires input after command (Grab (item)) to function
         //Syntax example: Grab Key
         //Grabs chosen item and places it into the players inventory
