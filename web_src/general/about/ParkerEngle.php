@@ -20,7 +20,7 @@ require "../../includes/head.php";
             <div id="bio"> Parker Engle is a student in this class. They are majoring in Computer Science,
                 and intends to graduate in 2027.
 
-                prof reddig here.
+                prof reddig here.  He
         </section>
     </main>
 </body>
