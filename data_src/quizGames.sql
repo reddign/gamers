@@ -136,4 +136,4 @@ INSERT INTO hangman (word) VALUES ("JAYNEST");
 INSERT INTO hangman (word) VALUES ("THOMPSON");
 INSERT INTO hangman (word) VALUES ("BRINSER");
 
-INSERT INTO user (username, email, date) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'));
+INSERT INTO user (username, email, date,firstname) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'),'User');
