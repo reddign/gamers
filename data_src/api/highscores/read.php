@@ -46,9 +46,24 @@ function dropdown($conn) {
     }
 }
 
+<<<<<<< HEAD
 // High Scores
 function displayScores($connection, $game) {
     echo "<br>";
+=======
+
+function AfterScores($game){
+//Edit 1
+//Edit 2
+//Edit 3
+//Edit 4
+//Edit 5
+//Edit 6
+$information = file_get_contents('php://input');
+$data = json_decode($information);
+    // SQL query to get the top 10 scores for the specific game
+    $query = 'SELECT username, score FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10';
+>>>>>>> 1fc11e9 (Squash 1)
 
     // Prepare and execute the SQL statement
     $stmt = $connection->prepare("SELECT username, score, time_played FROM highscores WHERE game_played = ? ORDER BY score DESC LIMIT 10");
