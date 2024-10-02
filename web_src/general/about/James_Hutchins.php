@@ -19,7 +19,7 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> James is a Computer Engineering major at Eliabethtown College graduating in 2026.
                 He is the Vice President of the Robotics and Machine Intelegence club on campus,
-                and of of the first of Etown's Mindset Mentors. 
+                and of of the first of Etown's Mindset Mentors.
         </section>
     </main>
 </body>
