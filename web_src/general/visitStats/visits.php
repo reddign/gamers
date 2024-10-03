@@ -34,9 +34,6 @@
     $visit6PlusCount = count($visit6Plus);
 
     $connection->close();
-
-
-
 ?>
 
 
@@ -59,6 +56,7 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
@@ -83,12 +81,11 @@
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
-    </script>
-    
 
-   
-    
+      document.addEventListener('DOMContentLoaded', fetchMonthlyVisits);
+    </script>
 </head>
+
 <body>
     <!-- Page Navbar -->
     <?php
@@ -100,8 +97,6 @@
     <div id="chart_div" style="width: 900px; height: 500px; margin: 0 auto; margin-top: 10px"></div>
 
     <h1 class="nameOfPage">Visit Statistics</h1>
-
-
         <section id="table">
             <table border="1" id="main_table">
                 <tr class="tr">
