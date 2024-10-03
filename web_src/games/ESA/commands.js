@@ -4,24 +4,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let current_location;
 
     // Initial test for text commands
-    const command = document.getElementById("Text_Input");
+    var command_input = document.getElementById("Text_Input");
     const button = document.getElementById("Button2")
     const location_change = document.getElementById("location_change");
+    
 
     button.addEventListener("click", function () {
-        if(command.value == "help"){
+        var command = command_input.value.split(' ');
+        if(command[0] == "help"){
             help();
         }
-        if(command.value == "look"){
+        if(command[0] == "look"){
             look();
         }
-        if(command.value == "gotobowers"){
-            goto("bowers");
-            current_location = "bowers"
-        }
-        if(command.value == "gotobsc"){
-            goto("bsc");
-            current_location = "bsc"
+        if(command[0] == "goto"){
+            goto(command[1]);
         }
     });
 
