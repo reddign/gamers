@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial test for text commands
     var command_input = document.getElementById("Text_Input");
     const button = document.getElementById("Button2")
-    const location_change = document.getElementById("location_change");
     
 
     button.addEventListener("click", function () {
