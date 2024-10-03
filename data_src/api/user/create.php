@@ -19,6 +19,8 @@ $sql->close();
 $connection->close();
 
 // After adding the username to the database, redirect to trivia.php
-header("Location: ../../../web_src/trivia/trivia.php");
+// Actually, redirect to visitor first
+$_SESSION["username"] = $username;
+header("Location: ../visitor/create.php");
 exit();
 ?>

@@ -9,6 +9,9 @@
     $sql->bind_param("siii", $_SESSION["username"], $_SESSION["hangman"], $_SESSION["flappy"], $_SESSION["twozerofoureight"]);
     $sql->execute();
 
+    $sql->close();
+    $connection->close();
+
     header("Location: ../../../web_src/trivia/trivia.php");
 
 ?>
