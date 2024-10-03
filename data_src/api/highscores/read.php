@@ -74,7 +74,7 @@ function displayScores($connection, $game) {
 }
 
 
-function dropdown($conn){
+function dropdown($conn) {
     // SQL Query
     $sql = "SELECT DISTINCT game_played FROM highscores;";
     $result = $conn->query($sql);
@@ -88,7 +88,7 @@ function dropdown($conn){
     if($result->num_rows > 0){
         while ($row = $result->fetch_assoc()) {
             $selected = ($row['game_played'] == $selectGame) ? 'selected' : '';
-            echo '<option value="' . $row['game_played'] . '"' . $selected . '>' . $row['game_played'] . '</option>';
+            echo '<option value="' . htmlspecialchars($row['game_played']) . '"' . $selected . '>' . htmlspecialchars($row['game_played']) . '</option>';
         } 
     }
     echo '</select>';
@@ -112,22 +112,24 @@ function displayScores($connection, $game) {
 
     // Display results in a table
     if ($result->num_rows > 0) {
-        echo '<table class="score-table">';
+        echo '<table style="width:100%; border-collapse: collapse;">';
         echo '<tr>';
-        echo '<th> Username </th><th> Score </th> <th> Time </th>';
+        echo '<th>Username</th> <th>Score</th> <th>Time</th>';
         echo '</tr>';
 
         while ($row = $result->fetch_assoc()) {
-            echo '<tr>';    // Use htmlspecialchars to avoid XSS
-            echo '<td> ' . htmlspecialchars($row['username']) . ' </td>';
-            echo '<td> ' . htmlspecialchars($row['score']) . ' </td>';
-            echo '<td> ' . htmlspecialchars($row['time_played']) . ' </td>';
+            echo '<tr>';    
+            echo '<td>' . htmlspecialchars($row['username']) . '</td>';
+            echo '<td>' . htmlspecialchars($row['score']) . '</td>';
+            echo '<td>' . htmlspecialchars($row['time_played']) . '</td>';
             echo '</tr>';
         }
         echo '</table>';
     } else {
         echo "No scores available for the selected game.";
     }
+
+    $stmt->close(); // Close the statement
 }
 
 $connection->close();
