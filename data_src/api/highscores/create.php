@@ -1,13 +1,17 @@
 <?php
 require_once "../includes/db_config.php";
 
-$game = "test";
-$score = 666;
-$name = "Dummy0"
-echo '<script>sendScores('.$game.','.$score.','.$name.');</script>';
-
 session_start();
 
+?>
+
+<!DOCTYPE html>
+
+<a href="./temp.js"><button>Add Score</button></a>"
+
+</html>
+
+<?php
 require "../db_config.php";
 $information = file_get_contents('php://input');
 $data = json_decode($information);
@@ -35,7 +39,5 @@ $stmt = $mysqli->prepare($sql);
 $stmt->execute();
 $stmt->close();
 $mysqli->close();
-
-
 
 ?>
