@@ -14,20 +14,20 @@ function sendScores(){
         .then((json) => console.log(json));
 }
 
-let gameName = "test";
-let score = 666;
-let user = "Dummy0"
+// let gameName = "test";
+// let score = 666;
+// let user = "Dummy0"
 
-sendScores();
+// sendScores();
 
-gameName = "test";
-score = 777;
-user = "Dummy1"
+// gameName = "test";
+// score = 777;
+// user = "Dummy1"
 
-sendScores();
+// sendScores();
 
-gameName = "test";
-score = 555;
-user = "Dummy2"
+// gameName = "test";
+// score = 555;
+// user = "Dummy2"
 
-sendScores();
+// sendScores();
