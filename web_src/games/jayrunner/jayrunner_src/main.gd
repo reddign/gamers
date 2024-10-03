@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var obstacle:PackedScene = preload("res://Obstacles.tscn")
+@onready var obstacle:PackedScene = preload("res://Obstacles.tscn") # Preload scene to be spawned later
 var scrolling = true
 @export var SCROLL_SPEED = 300
 
@@ -8,12 +8,11 @@ var scrolling = true
 func _ready() -> void:
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous fram
-# TODO increase scrolling speed with time
+# Called every frame. 'delta' is the elapsed time since the previous frame
 func _process(delta: float) -> void:
 	if scrolling == true:
 		$ParallaxBackground.scroll_offset.x -= SCROLL_SPEED * delta
-		SCROLL_SPEED += 0.1
+		SCROLL_SPEED += 0.1 # Increase scroll speed each frame
 		get_tree().call_group("scrollers", "update_scrolling_speed", SCROLL_SPEED)
 
 func stop_scrolling():
@@ -21,7 +20,7 @@ func stop_scrolling():
 
 
 func _on_obstacle_timer_timeout() -> void:
-	if scrolling:
+	if scrolling: #Initialize obstacle properties when spawning obstacles
 		print("spawning a new obstacle!")
 		var new_obstacle = obstacle.instantiate()
 		new_obstacle.position.x = 1400
