@@ -1,37 +1,33 @@
-
-<?php
-// Check if the cookies are set
-$visitedPage = isset($_COOKIE['visitedPage']) ? $_COOKIE['visitedPage'] : "No cookie found";
-$visitedPage2 = isset($_COOKIE['visitedPage2']) ? $_COOKIE['visitedPage2'] : "No second cookie found";
-?>
-
-<!-- HTML to show cookie values -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Read Cookie on Page Load</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Values</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../stylesheets/ESA.css">
     <style>
         body {
-            /* image directory: ".." in front takes it back a folder:*/
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/640px-Smiley.svg.png');
-            background-size: cover 70%;  /*This makes sure the image covers the entire page */
-            background-position: center 60px; /*  vertical adjustment in pixels */
-            background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+            background-image: url('https://assets.bonappetit.com/photos/5ca534485e96521ff23b382b/1:1/w_1920,c_limit/chocolate-chip-cookie.jpg');
+            background-size: cover;  
+            background-position: center 60px; 
+            background-repeat: no-repeat; 
         }
     </style>
 </head>
 <body>
-    <h1>Page 2</h1>
-    <h2>Reading Cookies on the Next Page (cookieTest2.php)</h2>
-
-    <!-- Display the cookie values -->
-    <p>Visited Page: <?php echo htmlspecialchars($visitedPage); ?></p>
-    <p>Second Cookie: <?php echo htmlspecialchars($visitedPage2); ?></p>
-
-    <button onclick="window.location.href='ctSend.php';">Go Back</button>
-    <script src="../cookies.js"></script>
+    <h2>Cookie Values Received</h2>
+    <ul>
+        <?php
+        // Loop through cookies and display each cookie that was set
+        for ($i = 1; $i <= 10; $i++) { // Adjust the range if you expect more cookies
+            $cookieName = 'cookie' . $i;
+            if (isset($_COOKIE[$cookieName])) {
+                echo "<li>" . htmlspecialchars($cookieName) . ": " . htmlspecialchars($_COOKIE[$cookieName]) . "</li>";
+            }
+        }
+        ?>
+    </ul>
+    <button onclick="window.location.href='ctSend.php'";>Return</button>
 </body>
-
 </html>
-

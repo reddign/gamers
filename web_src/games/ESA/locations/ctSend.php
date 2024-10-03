@@ -1,29 +1,31 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie test 1</title>
+    <title>Cookie Input Test</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../stylesheets/ESA.css">
     <style>
         body {
-            /* image directory: ".." in front takes it back a folder:*/
             background-image: url('https://assets.bonappetit.com/photos/5ca534485e96521ff23b382b/1:1/w_1920,c_limit/chocolate-chip-cookie.jpg');
-            background-size: cover;  /*This makes sure the image covers the entire page */
-            background-position: center 60px; /*  vertical adjustment in pixels */
-            background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+            background-size: cover 85%;  
+            background-position: center 60px; 
+            background-repeat: no-repeat; 
         }
     </style>
 </head>
 <body>
-    <script src="../cookies.js"></script>
-<h2>Test page for sending and reciving cookies</h2>
+    <h2>Enter values to store in cookies</h2>
+
+    <!-- Form for input -->
+    <form id="cookieForm" action="ctRecieve.php" method="POST">
+        <label for="cookieValues">Enter Cookie Values (comma-separated):</label>
+        <input type="text" id="cookieValues" name="cookieValues" required style = "width:100px"> 
+        <button type="submit" id="submitBtn">Send Cookies</button>
+    </form>
+
+    <!-- Link to external JavaScript file for cookie processing -->
+    <script src="../actions.js"></script>
 </body>
-<button id ="Button1" onclick="window.location.href='../locations/ctRecieve.php'";>CookieTest</button>
 </html>
-
-
-

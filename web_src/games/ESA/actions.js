@@ -43,3 +43,35 @@ class Actions {
 const actions = new Actions();
 
 
+
+
+// Function to set a cookie
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); // Set expiry date
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Function to handle setting multiple cookies
+    function setCookiesFromList(cookieValues, days) {
+        let values = cookieValues.split(','); // Split input into an array
+        values.forEach(function(value, index) {
+            setCookie('cookie' + (index + 1), value.trim(), days); // Set cookies for each value
+        });
+    }
+
+    // Add event listener for form submission
+    document.getElementById('cookieForm').addEventListener('submit', function(event) {
+        let cookieValues = document.getElementById('cookieValues').value; // Get the comma-separated values from the text field
+
+        if (cookieValues) {
+            setCookiesFromList(cookieValues, 1); // Set multiple cookies from the list of values
+        }
+        // Let PHP handle the redirection, no need to block the form submission
+    });
+});
+
