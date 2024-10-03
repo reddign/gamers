@@ -1,7 +1,10 @@
 <?php
 require_once "../includes/db_config.php";
 
-echo '<script>sendScores();</script>';
+$game = "test";
+$score = 666;
+$name = "Dummy0"
+echo '<script>sendScores('.$game.','.$score.','.$name.');</script>';
 
 session_start();
 
