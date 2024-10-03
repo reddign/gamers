@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initial test for text commands
     var command_input = document.getElementById("Text_Input");
-    const button = document.getElementById("Button2")
+    const button = document.getElementById("Button2");
+    const description = document.getElementById("Description");
     
 
     button.addEventListener("click", function () {
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    function look(current_location){
+    function look(){
         //Describes current surroundings
+        console.log(description.value);
 
     }
 
