@@ -18,6 +18,17 @@ Guide for how to set up cookie transfers
     window.onload = readCookiesOnLoad; // Ensure this function exists in actions.js
 </script>
 
+// Predefined list of cookies
+    JAVASCRIPT
+const cookieList = [
+    { name: "cookie1", value: "value1", days: 1 },
+    { name: "cookie2", value: "value2", days: 2 },
+    { name: "cookie3", value: "value3", days: 3 },
+    etc
+];
+PHP
+const defaultCookies = <?php echo json_encode(['default1', 'default2', 'default3']); ?>;
+
 
 -------------------------------------EXAMPLE----------------------------------
 
@@ -27,11 +38,11 @@ Guide for how to set up cookie transfers
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Cookie Input Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="link" rel="stylesheet">
     <link rel="stylesheet" href="../../../stylesheets/ESA.css">
     <style>
         body {
-            background-image: url('https://assets.bonappetit.com/photos/5ca534485e96521ff23b382b/1:1/w_1920,c_limit/chocolate-chip-cookie.jpg');
+            background-image: url('image');
             background-size: cover;  
             background-position: center 60px; 
             background-repeat: no-repeat; 
