@@ -33,17 +33,16 @@
         </style>
             <input type="text" id="Text_Input" placeholder="Where would you like to go?">
             <button id ="Button2">Action</button>
-            
 </head>
 <body>
     <h2>Welcome to Bowers!</h2>
+
     <?php
-    $bowersDesc = "Welcome to the Bowers Center! This is your campus hub for relaxation and self-care, whether you’re focusing on physical fitness or emotional and mental well-being.
+    $Description = "Welcome to the Bowers Center! This is your campus hub for relaxation and self-care, whether you’re focusing on physical fitness or emotional and mental well-being.
             The Bowers Center features two floors. On the first floor, you'll find the Fresh Nest for smoothies and ramen, the Fieldhouse which has an inddor track, 
             and the Demo Kitchen where students can make some healthy recipies. The second floor is home to the fitness area (gym), group fitness rooms, relaxation rooms, and more.
             The second floor also houses the well which has sleep pods for relaxation!";
-    echo "<p id='Description'>$bowersDesc</p>";
     ?>
-
+    
 </body>
 </html>
