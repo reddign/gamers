@@ -1,5 +1,8 @@
 <?php
 require_once "../includes/db_config.php";
+
+echo '<script>sendScores();</script>';
+
 session_start();
 
 require "../db_config.php";
