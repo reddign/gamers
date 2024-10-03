@@ -1,4 +1,4 @@
-function sendScores(){
+function sendScores(gameName, score, userName){
     fetch("./create.php", {
         method: "POST",
         body: JSON.stringify({
