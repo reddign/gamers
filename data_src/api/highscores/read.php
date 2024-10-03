@@ -15,7 +15,6 @@ if($connection->connect_error) {
 $Url = "../../../web_src/games/menu.php";
 echo "<a href='$Url'><button id='menu_button'>Return to Menu</button></a>";
 
-<<<<<<< Updated upstream
 function dropdown($conn){
 
   // SQL query
@@ -91,9 +90,6 @@ function AfterScores($game, $connection){
 }
 
 // Actually calls the dropdown menu
-=======
-// Call the dropdown function to display it next to the button
->>>>>>> Stashed changes
 dropdown($connection);
 
 function dropdown($conn){
