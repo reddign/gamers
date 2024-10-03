@@ -8,14 +8,15 @@ $data = json_decode($information);
 //Get the posted data
 $score = $data->score;
 $game = $data->game;
-
-$username = $_SESSION["username"];
+$username = $data->user;
 
 //Prepare a SQL statement
 $sql = "INSERT INTO  highscores;
 (username,game_played,score,time_played)
 VALUES
-('".$username."','".$game."','".$score."',.NOW())";
+(?,?,?,.NOW())";
+
+$sql->bind_param("sss",$username, $game, $score);
 
 //Connect to a Database
 $mysqli = new mysqli($host,$database_user,$database_password,$database);
