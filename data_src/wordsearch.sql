@@ -47,7 +47,7 @@ insert into WordSearch_WordBank(word,category_id)
 VALUES
 ("ECLIPSE",3),
 ("VSCODE",3),
-("JJ",3),
+("JJTURTLE",3),
 ("PANDAS",3),
 ("MYSQL",3),
 ("XAMPP",3),

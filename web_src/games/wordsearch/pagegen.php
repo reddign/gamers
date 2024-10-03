@@ -17,7 +17,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
             $formVars[]=$value;
         }
         $results=generateMap(15,5,$formVars);
-    print_r($results[1]);
+    //print_r($results[1]);
     ?>
     <!-- Script Code -->
     <script src="timer.js"></script>
@@ -90,6 +90,9 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
         <h1 id='title'>Jay to Z</h1>
         <div id="timerBox">
             <span id="timer" width="100px" value="">7:00</span>
+            <br>
+            <span id="scoreLbl">score:</span>
+            <span id="score" width="100px">0</span>
         </div>
         <break>
         <h6>Word Search</h6>
@@ -107,7 +110,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
                     if(($results[1][$iter]->start[0]==$i & $results[1][$iter]->start[1]==$j) | ($results[1][$iter]->end[0]==$i & $results[1][$iter]->end[1]==$j))
                         $value= $results[1][$iter]->name;
                 }
-                echo "<td style='border:1px solid'><button class='letterButton' style='height:50px;width:50px;' value='".$value."'>".$board[$i][$j]."</button></td>";
+                echo "<td style='border:1px solid'><button class='letterButton' value='".$value."'>".$board[$i][$j]."</button></td>";
             }
             echo "</tr>";
         }

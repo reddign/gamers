@@ -39,6 +39,11 @@ main {
     font-family: "Orbitron",sans-serif;
 }
 
+#score, #scoreLbl{
+    font-size: large;
+    font-family: "Orbitron",sans-serif;
+}
+
 #Difficulty{
     display:none;
 }
@@ -46,7 +51,7 @@ main {
 #timerBox{
     color:white;
     float:right;
-    height: 80px;
+    height: 150px;
     width: 150px;
     background-color: #004B98;
     padding-left: 10px;
@@ -55,9 +60,12 @@ main {
 
 #wordbank{
     position:absolute;
-    top:200px;
-    right:150px;
+    top:300px;
+    right:0px;
     list-style-type: none;
+    background-color: #004B98;
+    color:white;
+    padding:10px;
 }
 
 #rand{
@@ -99,4 +107,9 @@ main {
 
 .foundWord{
     background-color: rgb(68, 0, 255);
+}
+
+.letterButton{
+    height:30px;
+    width:30px;
 }
