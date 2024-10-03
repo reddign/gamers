@@ -34,8 +34,6 @@ function pressButton(){
             document.getElementById(this.value).classList.add("found");
             updateScore();
             document.getElementById("score").innerHTML=totalScore;
-            this.classList.add("foundWord");
-            buttonPressed.classList.add("foundWord");
             let win=1;
             for(let i=0;i<wordBank.length;i++){
                 let wBank=document.getElementsByClassName("wordBank");
@@ -54,39 +52,63 @@ function pressButton(){
                 document.getElementById('timer').value="stop";
 
             }
-            /*
-            let thisRow;
-            let thisCol;
-            for(let i=0;i<buttons2D.length;i++){
-                if(buttons2D[i].includes(this)){
-                    thisRow=i;
-                    thisCol=buttons2D[i].includes(this);
+            let startButton;
+            let endButton;
+            console.log(this.getAttribute("angle"));
+            if(this.getAttribute("angle")==""){
+                endButton=this;
+                startButton=buttonPressed;
+            }
+            else{
+                endButton=buttonPressed;
+                startButton=this;
+            }
+                
+            let posX=parseInt(startButton.getAttribute("posX"));
+            let posY=parseInt(startButton.getAttribute("posY"));
+            let xmod;
+            let ymod;
+            switch(parseInt(startButton.getAttribute("angle"))) {
+                case 0:
+                    xmod = 1;
+                    ymod = 0;
                     break;
-                }
-            }
-            let pressRow;
-            let pressCol;
-            for(let i=0;i<buttons2D.length;i++){
-                if(buttons2D[i].includes(this)){
-                    pressRow=i;
-                    pressCol=buttons2D[i].includes(this);
+                case 1:
+                    xmod = 1;
+                    ymod = -1;
                     break;
-                }
+                case 2:
+                    xmod = 0;
+                    ymod = -1;
+                    break;
+                case 3:
+                    xmod = -1;
+                    ymod = -1;
+                    break;
+                case 4:
+                    xmod = -1;
+                    ymod = 0;
+                    break;
+                case 5:
+                    xmod = -1;
+                    ymod = 1;
+                    break;
+                case 6:
+                    xmod = 0;
+                    ymod = 1;
+                    break;
+                case 7:
+                    xmod = 1;
+                    ymod = 1;
+                    break;
             }
-            let activeButton;
-            if(thisRow==pressRow){
-                if(thisCol>pressCol){
-                    
-                    while(activeButton!=this){
-
-                    }
-
-                }
+            let i=0;
+            while(startButton!=endButton){
+                startButton=buttons2D[posX+(i*ymod)][posY+(i*xmod)];
+                startButton.classList.add("foundWord");
+                i++;
             }
-            else if(thisCol==pressCol){
-
-            }*/
-
+            
         }
         
         buttonPressed.classList.remove("activeButton");

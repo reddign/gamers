@@ -51,7 +51,10 @@ main {
 #timerBox{
     color:white;
     float:right;
-    height: 150px;
+    position:absolute;
+    top:140px;
+    right:0px;
+    height: 140px;
     width: 150px;
     background-color: #004B98;
     padding-left: 10px;
@@ -106,7 +109,8 @@ main {
 }
 
 .foundWord{
-    background-color: rgb(68, 0, 255);
+    background-color: #0A2240;
+    color:white;
 }
 
 .letterButton{
