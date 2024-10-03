@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visitStyle.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -95,52 +95,55 @@
      require "../../includes/navbar.php";
     ?>
 <section id="main_body">
-    <h1 id="nameOfPage">Visit Statistics</h1>
-
-    <section id="table">
-        <table border="1" id="main_table">
-            <tr class="tr">
-                <th># Visited Once</th>
-                <th># Visited 2-5 Times</th>
-                <th># Visited 6+ Times</th>
-            </tr>
-            <tr class="tr">
-                <td>
-                    <?php
-                    if (!empty($visitOnce)) {
-                        echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visitOnce);
-                    } else {
-                        echo "Loading...";
-                    }
-                    ?>
-                </td>
-
-                <td>
-                    <?php
-                    if (!empty($visit2To5)) {
-                        echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visit2To5);
-                    } else {
-                        echo "Loading...";
-                    }
-                    ?>
-                </td>
-
-                <td>
-                    <?php
-                    if (!empty($visit6Plus)) {
-                        echo implode('<br><hr style="height: 1px; background-color: darkgray;"><br>', $visit6Plus);
-                    } else {
-                        echo "Loading...";
-                    }
-                    ?>
-                </td>
-            </tr>
-        </table>
-    </section>
-    </section>
-
     <!-- Chart Display -->
-    <div id="chart_div" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+    <h1 class="nameOfPage">Stats Bar Chart</h1>
+    <div id="chart_div" style="width: 900px; height: 500px; margin: 0 auto; margin-top: 10px"></div>
+
+    <h1 class="nameOfPage">Visit Statistics</h1>
+
+
+        <section id="table">
+            <table border="1" id="main_table">
+                <tr class="tr">
+                    <th># Visited Once</th>
+                    <th># Visited 2-5 Times</th>
+                    <th># Visited 6+ Times</th>
+                </tr>
+                <tr class="tr">
+                    <td>
+                        <?php
+                        if (!empty($visitOnce)) {
+                            echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visitOnce);
+                        } else {
+                            echo "Loading...";
+                        }
+                        ?>
+                    </td>
+
+                    <td>
+                        <?php
+                        if (!empty($visit2To5)) {
+                            echo implode('<br><hr style="height: 1px; background-color: black;"><br>', $visit2To5);
+                        } else {
+                            echo "Loading...";
+                        }
+                        ?>
+                    </td>
+
+                    <td>
+                        <?php
+                        if (!empty($visit6Plus)) {
+                            echo implode('<br><hr style="height: 1px; background-color: darkgray;"><br>', $visit6Plus);
+                        } else {
+                            echo "Loading...";
+                        }
+                        ?>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+</section>
 
     <!-- putting the footer at the bottom of the page -->
    <br><br><br><br><br>
