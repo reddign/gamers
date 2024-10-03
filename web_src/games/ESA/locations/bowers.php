@@ -11,8 +11,8 @@
     <style>
         body {
             background-image: url('../images/bowers.jpg');
-            background-size: cover 50%;  /*This makes sure the image covers the entire page */
-            background-position: right 50px;
+            background-size: cover;  /*This makes sure the image covers the entire page */
+            background-position: center 50px;
             background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
         }
         
