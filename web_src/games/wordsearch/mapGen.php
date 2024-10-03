@@ -6,9 +6,9 @@ require_once '../../../data_src/api/wordsearch/word.php';
 generateMap(15);
 function generateMap($size = -1, $num_words = -1, $categories = []){
     if($size <= 0) $size = 15;
-    if($num_words <=0 ) $num_words = intval($size / 3 + .5); 
+    if($num_words <=0 ) $num_words = intval($size / 2 + .5); 
     if ($categories == []) $categories = ["DORMS","EXPERTISE","TOOLS","LANGUAGES"];
-    $words = Get_WordBank(5, $categories); // return 5 words from any of the categories 
+    $words = Get_WordBank($num_words, $categories); // return a number of words from any of the categories 
     $size = 15;
     $map = [];
     for ($i = 0; $i < $size; $i++) {
