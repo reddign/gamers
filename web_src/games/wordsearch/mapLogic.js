@@ -1,14 +1,18 @@
 "use strict"
 
 window.addEventListener('load',init);
-
 let buttonPressed=null;
 let wordBank=[];
-let letterButtons;
-
+let buttons2D=[];
 
 function init(){
-    letterButtons=document.getElementsByClassName("letterButton");
+    let letterButtons=document.getElementsByClassName("letterButton");
+    let rows= document.getElementsByClassName("row");
+    for(let i=0;i<rows.length;i++){
+        buttons2D[i] =rows[i].getElementsByClassName("letterButton");
+    }
+    //console.log(buttons2D);
+
     for(let i=0;i<letterButtons.length;i++){
         letterButtons[i].addEventListener('click',pressButton);
         letterButtons[i].addEventListener("dblclick",removePress);
@@ -30,9 +34,59 @@ function pressButton(){
             document.getElementById(this.value).classList.add("found");
             this.classList.add("foundWord");
             buttonPressed.classList.add("foundWord");
-            
+            let win=1;
+            for(let i=0;i<wordBank.length;i++){
+                let wBank=document.getElementsByClassName("wordBank");
+                if(!(wBank[i].classList.contains("found"))){
+                    win=0
+                }
+            }
+            if(win){
+                for(let i=0;i<buttons2D.length;i++){
+                    for(let j=0;j<buttons2D[i].length;j++){
+                        buttons2D[i][j].removeEventListener('click',pressButton);
+                        buttons2D[i][j].removeEventListener("dblclick",removePress);
+                    }
+                }
+                document.getElementById("title").innerHTML="You Win";
+                document.getElementById('timer').value="stop";
+
+            }
+            /*
+            let thisRow;
+            let thisCol;
+            for(let i=0;i<buttons2D.length;i++){
+                if(buttons2D[i].includes(this)){
+                    thisRow=i;
+                    thisCol=buttons2D[i].includes(this);
+                    break;
+                }
+            }
+            let pressRow;
+            let pressCol;
+            for(let i=0;i<buttons2D.length;i++){
+                if(buttons2D[i].includes(this)){
+                    pressRow=i;
+                    pressCol=buttons2D[i].includes(this);
+                    break;
+                }
+            }
+            let activeButton;
+            if(thisRow==pressRow){
+                if(thisCol>pressCol){
+                    
+                    while(activeButton!=this){
+
+                    }
+
+                }
+            }
+            else if(thisCol==pressCol){
+
+            }*/
+
         }
-        //logic to see if it is success.
+        
         buttonPressed.classList.remove("activeButton");
         buttonPressed=null;
     }

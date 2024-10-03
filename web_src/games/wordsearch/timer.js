@@ -13,13 +13,23 @@ async function init(){
 
 function updateTimer(){
     let timer=document.getElementById("timer");
+    if(timer.value=="stop"){
+        window.clearInterval(interval);
+        console.log("Bruh");
+    }
     let time=timer.innerHTML;
     let timeArr=time.split(":");
     let mins=parseInt(timeArr[0]);
     let secs=parseInt(timeArr[1]);
     let totalSecs=secs+(mins*60);
-    if(totalSecs<=0)
+    if(totalSecs<=0){
         window.clearInterval(interval);
+        let buttons=document.getElementsByClassName('letterButton');
+        for(let i=0;i<buttons.length;i++){
+            buttons[i].removeEventListener("dblclick",removePress);
+            buttons[i].removeEventListener('click',pressButton);
+        }
+    }
     else{
         totalSecs-=1;
     }
@@ -34,5 +44,6 @@ function updateTimer(){
 function stopTimer(){
     window.clearInterval(interval);
 }
+
 
 //})();

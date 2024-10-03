@@ -53,6 +53,13 @@ main {
     padding-right: 10px;
 }
 
+#wordbank{
+    position:absolute;
+    top:200px;
+    right:150px;
+    list-style-type: none;
+}
+
 #rand{
     display:none;
 }
@@ -91,5 +98,5 @@ main {
 }
 
 .foundWord{
-    background-color: yellow;
+    background-color: rgb(68, 0, 255);
 }

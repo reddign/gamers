@@ -16,7 +16,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
         foreach ($_POST as $key => $value) {
             $formVars[]=$value;
         }
-        $results=generateMap(15,8,$formVars);
+        $results=generateMap(15,5,$formVars);
     print_r($results[1]);
     ?>
     <!-- Script Code -->
@@ -87,20 +87,20 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
     
     <main>
         
-        <h1>Jay to Z</h1>
+        <h1 id='title'>Jay to Z</h1>
         <div id="timerBox">
-            <span id="timer" width="100px">7:00</span>
+            <span id="timer" width="100px" value="">7:00</span>
         </div>
         <break>
         <h6>Word Search</h6>
 
-        <!--   This is some testing stuff
+        
         <table style="margin:auto;border:1px solid;display:inline-block;">
         <?php
         $board=$results[0];
-        /* Stuff for testing, Not final Product
+        // Stuff for testing, Not final Product
         for($i=0;$i<sizeof($board);$i++){
-            echo "<tr>";
+            echo "<tr class='row'>";
             for($j=0;$j<sizeof($board[$i]);$j++){
                 $value="";
                 for($iter=0;$iter<sizeof($results[1]);$iter++){
@@ -110,19 +110,21 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
                 echo "<td style='border:1px solid'><button class='letterButton' style='height:50px;width:50px;' value='".$value."'>".$board[$i][$j]."</button></td>";
             }
             echo "</tr>";
-        }*/
+        }
         ?>
         </table>
-        <ul style="position:absolute;top:400px;right:300px;list-style-type: none;">
+        <ul id="wordbank">
             <?php
-                /* Wordbank Testing
+                // Wordbank Testing
                 for($i=0;$i<sizeof($results[1]);$i++)
                     echo "<li class='wordBank' id='".$results[1][$i]->name."'>".$results[1][$i]->name."</li>";
-                    */
+                    
             ?>
 
         </ul>
-    -->
+
+        <?php
+        /*
             <p>How many words can you find in the time limit?</p>
         
         <ul>
@@ -1991,7 +1993,8 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
 </div> 
 
       </ul> 
-
+      */
+?>
 </body> 
 
 </html> 
