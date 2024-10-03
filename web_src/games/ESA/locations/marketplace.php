@@ -16,6 +16,22 @@
         }
         
     </style>
+    <style>
+        #Text_Input{
+            width: 250px; /* Set desired width */
+            height: 40px; /* Set desired height */
+            font-size: 16px; /* Adjust font size if needed */
+            padding: 5px; /* Add padding for better look */
+        }
+        #Button2 {
+            width: 200px; /* Set desired width */
+            height: 35px; /* Set desired height */
+            font-size: 16px; /* Adjust font size if needed */
+            padding: 5px; /* Add padding for better look */
+        }
+        </style>
+            <input type="text" id="Text_Input" placeholder="Where would you like to go?">
+            <button id ="Button2">DynamicTest</button>
 </head>
 <body>
     <h2>Welcome to the Marketplace!</h2>
