@@ -75,4 +75,7 @@ if ($user_exists > 0) {
 }
 
 $mysqli->close();
+
+
+
 ?>
