@@ -44,7 +44,6 @@
             The second floor also houses the well which has sleep pods for relaxation!";
     echo "<p id='Description'>$bowersDesc</p>";
     ?>
-    <script src="commands.js"></script> <!-- Link to shared JS file -->
 
 </body>
 </html>
