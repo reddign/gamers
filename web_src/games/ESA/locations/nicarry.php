@@ -31,7 +31,7 @@
         }
         </style>
             <input type="text" id="Text_Input" placeholder="Where would you like to go?">
-            <button id ="Button2">DynamicTest</button>
+            <button id ="Button2">Action</button>
 </head>
 <body>
     <h2>Welcome to Nicarry!</h2>
