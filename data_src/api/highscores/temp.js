@@ -19,15 +19,3 @@ let score = 666;
 let user = "Dummy0"
 
 sendScores();
-
-gameName = "test";
-score = 777;
-user = "Dummy1"
-
-sendScores();
-
-gameName = "test";
-score = 555;
-user = "Dummy2"
-
-sendScores();
