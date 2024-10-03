@@ -11,7 +11,8 @@ function sendScores(gameName, score, userName){
         }
       })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => console.log(json))
+        .catch(error => console.error('Error: ',error));
 }
 
 let gameName = "test";
