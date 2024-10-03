@@ -1,7 +1,12 @@
 import { resources } from './resources.js';
 import { Sprite } from './sprite.js';
 import { Vector2 } from './Vector2.js';
-import { GameLoop } from './animation.js';
+import { GameLoop } from './GameLoop.js';
+import { Input } from './input.js';
+import { LEFT } from './input.js';
+import { RIGHT } from './input.js';
+import { UP } from './input.js';
+import { DOWN } from './input.js';
 
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
@@ -14,27 +19,19 @@ const characterPos = new Vector2(canvas.width/2, canvas.height/2); // Initial Po
 
 const input = new Input();
 const update = () => {
- // TODO: updating assets in game
- if(input.direction == DOWN){
-    studentPos.y += 1;
-    student.frame = 0;
- }
- if(input.direction == UP){
-    studentPos.y -= 1;
-    student.frame = 6;
- }
- if(input.direction == LEFT){
-    studentPos.y -= 1;
-    student.frame = 9;
- }
- if(input.direction == RIGHT){
-    studentPos.y += 1;
-    student.frame = 3;
- }
+    if (input.direction === DOWN) {
+        characterPos.y += 1;
+    }
+    if (input.direction === UP) {
+        characterPos.y -= 1;
+    }
+    if (input.direction === LEFT) {
+        characterPos.x -= 1;
+    }
+    if (input.direction === RIGHT) {
+        characterPos.x += 1;
+    }
 };
-
-const gameLoop = new GameLoop(update, draw);
-gameLoop.start();
 
 // Sprites
 const backgroundSprite = new Sprite({
@@ -67,61 +64,54 @@ function draw() {
 }
 
 // Starts the drawing
-setInterval(() => {
-    draw();
-}, 300)
+const gameLoop = new GameLoop(update, draw);
+gameLoop.start();
 
-const hero = new Sprite({
-    resource: resources.images.student,
-    hFrames: 10,
-    vFrames: 1,
-    frame: 1
-})
 
-function animateCupcake() {
-    const canvas = document.getElementById("canvas");
-    const context = canvas.getContext("2d");
-    const spriteSheet = new Image();
-    spriteSheet.src = "cupcake.png";
+// function animateCupcake() {
+//     const canvas = document.getElementById("canvas");
+//     const context = canvas.getContext("2d");
+//     const spriteSheet = new Image();
+//     spriteSheet.src = "cupcake.png";
 
-    const spriteWidth = 16;
-    const spriteHeight = 16;
-    const spritesPerRow = 3; // There are 3 sprites per row
-    const totalSprites = 7; // Total of 7 sprites in the sheet
+//     const spriteWidth = 16;
+//     const spriteHeight = 16;
+//     const spritesPerRow = 3; // There are 3 sprites per row
+//     const totalSprites = 7; // Total of 7 sprites in the sheet
 
-    let currentFrame = 0;
+//     let currentFrame = 0;
 
-    function drawFrame() {
-        // Calculate the x and y position of the current sprite in the sheet
-        const column = currentFrame % spritesPerRow;
-        const row = Math.floor(currentFrame / spritesPerRow);
+//     function drawFrame() {
+//         // Calculate the x and y position of the current sprite in the sheet
+//         const column = currentFrame % spritesPerRow;
+//         const row = Math.floor(currentFrame / spritesPerRow);
 
-        context.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas before drawing
+//         context.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas before drawing
 
-        // Draw the current frame
-        context.drawImage(
-            spriteSheet, 
-            column * spriteWidth,   // Source x in the sprite sheet
-            row * spriteHeight,     // Source y in the sprite sheet
-            spriteWidth, spriteHeight, // Width and height of the sprite
-            0, 0,                  // Destination on the canvas
-            spriteWidth, spriteHeight // Draw at original size
-        );
+//         // Draw the current frame
+//         context.drawImage(
+//             spriteSheet, 
+//             column * spriteWidth,   // Source x in the sprite sheet
+//             row * spriteHeight,     // Source y in the sprite sheet
+//             spriteWidth, spriteHeight, // Width and height of the sprite
+//             0, 0,                  // Destination on the canvas
+//             spriteWidth, spriteHeight // Draw at original size
+//         );
 
-        // Move to the next frame
-        currentFrame = (currentFrame + 1) % totalSprites;
+//         // Move to the next frame
+//         currentFrame = (currentFrame + 1) % totalSprites;
 
-        // Loop animation
-        setTimeout(drawFrame, 100); // Adjust the delay to control speed
-    }
+//         // Loop animation
+//         setTimeout(drawFrame, 100); // Adjust the delay to control speed
+//     }
 
-    spriteSheet.onload = function() {
-        drawFrame(); // Start the animation once the image is loaded
-    };
-}
+//     spriteSheet.onload = function() {
+//         drawFrame(); // Start the animation once the image is loaded
+//     };
+// }
 
-// Call the function to start the animation
-animateCupcake();
+// // Call the function to start the animation
+// animateCupcake();
 
 
 function detectCollision(){
