@@ -7,7 +7,7 @@ header('Content-Type: application/json');
 $gamePlayed = $_POST["gamePlayed"];
 $score = $_POST["score"];
 $username = $_POST["username"];
-$userId = 1;
+$userId = 1;    //userID is hardcoded for now. change to session variable later when login and databse people have it set up
 
 // Validate the data
 if (empty($username)) {

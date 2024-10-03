@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../../stylesheets/jayrunner.css">
 </head>
 <?php
+$cssFiles = []; 
+$jsFiles = [];
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
