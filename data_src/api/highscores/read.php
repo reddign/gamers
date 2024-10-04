@@ -112,7 +112,7 @@ function displayScores($connection, $game) {
 
     // Display results in a table
     if ($result->num_rows > 0) {
-        echo '<table style="width:100%; border-collapse: collapse;">';
+        echo '<table class="score-table">';
         echo '<tr>';
         echo '<th>Username</th> <th>Score</th> <th>Time</th>';
         echo '</tr>';
