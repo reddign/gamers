@@ -77,29 +77,29 @@
 //             }
 //         });
 
-//         //     if(e.code === "ArrowUp" || e.code === "KeyW"){
-//         //         this.onArrowReleased(UP);
-//         //     }
-//         //     if(e.code === "ArrowDown" || e.code === "KeyS"){
-//         //         this.onArrowReleased(DOWN);
-//         //     }
-//         //     if(e.code === "ArrowLeft" || e.code === "KeyA"){
-//         //         this.onArrowReleased(LEFT);
-//         //     }
-//         //     if(e.code === "ArrowRight" || e.code === "KeyD"){
-//         //         this.onArrowReleased(RIGHT);
-//         //     }
-//         // });
-//     }
-//     get direction(){
-//         return this.heldDirections[0]; //this gets the first held direction or this is undefined.
-//     }
+            if(e.code === "ArrowUp" || e.code === "KeyW"){
+                this.onArrowReleased(UP);
+            }
+            if(e.code === "ArrowDown" || e.code === "KeyS"){
+                this.onArrowReleased(DOWN);
+            }
+            if(e.code === "ArrowLeft" || e.code === "KeyA"){
+                this.onArrowReleased(LEFT);
+            }
+            if(e.code === "ArrowRight" || e.code === "KeyD"){
+                this.onArrowReleased(RIGHT);
+            }
+        });
+    }
+    get direction(){
+        return this.heldDirections[0]; //this gets the first held direction or this is undefined.
+    }
 
-//     onArrowPressed(direction){
-//         if(this.heldDirections.indexOf(direction) === -1){
-//             this.heldDirections.unshift(directions);
-//         }
-//     }
+    onArrowPressed(direction){
+        if(this.heldDirections.indexOf(direction) === -1){
+            this.heldDirections.unshift(directions);
+        }
+    }
 
 //     onArrowReleased(direction) {
 //         const index = this.heldDirections.indexOf(direction);
@@ -108,6 +108,12 @@
 //         }
 //     }
 // }
+    function onArrowReleased(direction) {
+        const index = this.heldDirections.indexOf(direction);
+        if(index !== -1){
+            this.heldDirections.splice(index,1);
+        }
+    }
 
 // //this part is the animation frames
 
