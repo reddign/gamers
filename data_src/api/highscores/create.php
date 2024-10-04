@@ -3,7 +3,7 @@ require "../includes/db_config.php";
 
 session_start();
 
-echo '<script src="./temp.js"></script>';
+//echo '<script src="./temp.js"></script>';
 
 $information = file_get_contents('php://input');
 error_log($information);
