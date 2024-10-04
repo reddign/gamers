@@ -2,11 +2,7 @@ import { resources } from './resources.js';
 import { Sprite } from './sprite.js';
 import { Vector2 } from './Vector2.js';
 import { GameLoop } from './GameLoop.js';
-import { Input } from './input.js';
-import { LEFT } from './input.js';
-import { RIGHT } from './input.js';
-import { UP } from './input.js';
-import { DOWN } from './input.js';
+import { Input, LEFT, RIGHT, UP, DOWN } from './input.js';
 
 // Canvas and context
 const canvas = document.querySelector("#game-canvas");
