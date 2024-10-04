@@ -2,7 +2,7 @@
 let userID = 1;
 let gameName = "test";
 let score = 666;
-let time = Date.now(); //trying to send an ineger to a datetime in the table
+let time = '2024-10-04 12:35:45';
 let user = "";
 
 
