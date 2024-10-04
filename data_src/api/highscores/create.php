@@ -27,16 +27,27 @@ if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: " . $mysqli->connect_error;
 }
 
-//Prepare and execute the SQL statement
-$stmt = $mysqli->prepare("INSERT INTO highscores
-(user_id,game_played,score,time_played,username)
-VALUES
-(?,?,?,?,?)");
-$stmt->bind_param("isiss",$ID,$game, $score, $timeplayed, $username);
-$stmt->execute();
-$stmt->close();
+// Check if the user ID exists in the user table
+$user_check = $mysqli->prepare("SELECT COUNT(*) FROM user WHERE userID = ?");
+$user_check->bind_param("i", $ID);
+$user_check->execute();
+$user_check->bind_result($user_exists);
+$user_check->fetch();
+$user_check->close();
+
+if ($user_exists > 0) {
+    // If the user exists, insert into highscores
+    $stmt = $mysqli->prepare("INSERT INTO highscores
+    (user_id, game_played, score, time_played, username)
+    VALUES (?,?,?,?,?)");
+    $stmt->bind_param("isiis", $ID, $game, $score, $timeplayed, $username);
+    $stmt->execute();
+    $stmt->close();
+    echo "Sent scores";
+
+} else {
+    echo "Error: The specified user does not exist.";
+}
+
 $mysqli->close();
-
-echo "Sent scores";
-
 ?>
