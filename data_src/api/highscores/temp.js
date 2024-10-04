@@ -1,8 +1,16 @@
+
+let userID = 1;
+let gameName = "test";
+let score = 666;
+let time = Date.now(); //trying to send an ineger to a datetime in the table
+let user = "";
+
+
 function sendScores(){
     fetch("./create.php", {
         method: "POST",
         body: JSON.stringify({
-            user_id: userid,
+            user_id: userID,
             game: gameName,
             score: score,
             timeplayed: time,
@@ -17,9 +25,4 @@ function sendScores(){
         .catch(error => console.error('Error: ',error));
 }
 
-let userid = 1;
-let gameName = "test";
-let score = 666;
-let time = Date.now();
-let user = "Dummy0";
 sendScores();
