@@ -34,24 +34,6 @@ function pressButton(){
             document.getElementById(this.value).classList.add("found");
             updateScore();
             document.getElementById("score").innerHTML=totalScore;
-            let win=1;
-            for(let i=0;i<wordBank.length;i++){
-                let wBank=document.getElementsByClassName("wordBank");
-                if(!(wBank[i].classList.contains("found"))){
-                    win=0
-                }
-            }
-            if(win){
-                for(let i=0;i<buttons2D.length;i++){
-                    for(let j=0;j<buttons2D[i].length;j++){
-                        buttons2D[i][j].removeEventListener('click',pressButton);
-                        buttons2D[i][j].removeEventListener("dblclick",removePress);
-                    }
-                }
-                document.getElementById("title").innerHTML="You Win";
-                document.getElementById('timer').value="stop";
-
-            }
             let startButton;
             let endButton;
             console.log(this.getAttribute("angle"));
@@ -113,6 +95,24 @@ function pressButton(){
         
         buttonPressed.classList.remove("activeButton");
         buttonPressed=null;
+        let win=1;
+            for(let i=0;i<wordBank.length;i++){
+                let wBank=document.getElementsByClassName("wordBank");
+                if(!(wBank[i].classList.contains("found"))){
+                    win=0
+                }
+            }
+            if(win){
+                for(let i=0;i<buttons2D.length;i++){
+                    for(let j=0;j<buttons2D[i].length;j++){
+                        buttons2D[i][j].removeEventListener('click',pressButton);
+                        buttons2D[i][j].removeEventListener("dblclick",removePress);
+                    }
+                }
+                document.getElementById("title").innerHTML="You Win";
+                document.getElementById('timer').value="stop";
+                rainbowBoard();
+            }
     }
 
 }
@@ -124,7 +124,72 @@ function removePress(){
     }
 }
 
-
+async function rainbowBoard(){
+    let timeMilis=1;
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("red");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("orange");
+            buttons2D[i][j].classList.remove("red");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("yellow");
+            buttons2D[i][j].classList.remove("orange");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("yellowgreen");
+            buttons2D[i][j].classList.remove("yellow");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("green");
+            buttons2D[i][j].classList.remove("yellowgreen");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("teal");
+            buttons2D[i][j].classList.remove("green");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("blue");
+            buttons2D[i][j].classList.remove("teal");
+        }
+    }
+    for(let i=0;i<buttons2D.length;i++){
+        for(let j=0;j<buttons2D[i].length;j++){
+            const delay = ms => new Promise(res => setTimeout(res, ms));
+            await delay(timeMilis);
+            buttons2D[i][j].classList.add("foundWord");
+            buttons2D[i][j].classList.remove("blue");
+        }
+    }
+}
 
 
 

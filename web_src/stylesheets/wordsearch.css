@@ -113,6 +113,35 @@ main {
     color:white;
 }
 
+.orange{
+    background-color: orange;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+    color: white;
+}
+
+.yellowgreen{
+    background-color: yellowgreen;
+    color:white;
+}
+
+.green{
+    background-color: green;
+    color:white;
+}
+
+.teal{
+    background-color: teal;
+    color:white;
+}
+.blue{
+    background-color: #004B98;
+    color:white;
+}
+
 .letterButton{
     height:30px;
     width:30px;

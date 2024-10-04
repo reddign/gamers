@@ -16,7 +16,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
         foreach ($_POST as $key => $value) {
             $formVars[]=$value;
         }
-        $results=generateMap(15,5,$formVars);
+        $results=generateMap(15,8,$formVars);
     //print_r($results[1]);
     ?>
     <!-- Script Code -->
