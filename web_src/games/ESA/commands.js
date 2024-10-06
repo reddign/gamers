@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const description = document.querySelector(`p[data-file="${fileName}"]`);
 
         if (description){
-            console.log(description.textContent);
+            console.log(description.textContent.replace(/\n   /g,""));
         }
         
 
