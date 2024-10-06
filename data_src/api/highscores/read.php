@@ -129,7 +129,7 @@ function displayScores($connection, $game) {
         echo "No scores available for the selected game.";
     }
 
-    $stmt->close(); // Close the statement
+    $stmt->close();
 }
 
 $connection->close();
