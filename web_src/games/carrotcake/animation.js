@@ -93,19 +93,17 @@ if(e.code == "ArrowDown" || e.code == "KeyS"){
 if(e.code == "ArrowLeft" || e.code == "KeyA"){
     this.onArrowPressed(LEFT);
 }       
+if(e.code == "ArrowRight"||e.code == "KeyD"){
+    this.onArrowPressed(RIGHT);
+}
 
 
 
 
 
            
-            if(e.code === "ArrowLeft" || e.code === "KeyA"){
-                this.onArrowReleased(LEFT);
-            }
-            if(e.code === "ArrowRight" || e.code === "KeyD"){
-                this.onArrowReleased(RIGHT);
-            }
-
+           
+       
     get direction(){
         return this.heldDirections[0]; //this gets the first held direction or this is undefined.
     }
