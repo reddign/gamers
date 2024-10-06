@@ -89,14 +89,16 @@ if(e.code == "ArrowUp"|| e.code == "KeyW"){
 }   
 if(e.code == "ArrowDown" || e.code == "KeyS"){
     this.onArrowPressed(DOWN);
-}         
+}  
+if(e.code == "ArrowLeft" || e.code == "KeyA"){
+    this.onArrowPressed(LEFT);
+}       
 
 
 
 
-            if(e.code === "ArrowDown" || e.code === "KeyS"){
-                this.onArrowReleased(DOWN);
-            }
+
+           
             if(e.code === "ArrowLeft" || e.code === "KeyA"){
                 this.onArrowReleased(LEFT);
             }
