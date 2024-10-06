@@ -85,11 +85,15 @@
 //         });
 
 if(e.code == "ArrowUp"|| e.code == "KeyW"){
-    this.onArrowPressed(UP)
-}            
-if(e.code === "ArrowUp" || e.code === "KeyW"){
-                this.onArrowReleased(UP);
-            }
+    this.onArrowPressed(UP);
+}   
+if(e.code == "ArrowDown" || e.code == "KeyS"){
+    this.onArrowPressed(DOWN);
+}         
+
+
+
+
             if(e.code === "ArrowDown" || e.code === "KeyS"){
                 this.onArrowReleased(DOWN);
             }
