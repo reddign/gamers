@@ -84,7 +84,10 @@
 //             }
 //         });
 
-            if(e.code === "ArrowUp" || e.code === "KeyW"){
+if(e.code == "ArrowUp"|| e.code == "KeyW"){
+    this.onArrowPressed(UP)
+}            
+if(e.code === "ArrowUp" || e.code === "KeyW"){
                 this.onArrowReleased(UP);
             }
             if(e.code === "ArrowDown" || e.code === "KeyS"){
