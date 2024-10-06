@@ -17,7 +17,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
             $formVars[]=$value;
         }
         $results=generateMap(15,8,$formVars);
-    //print_r($results[1]);
+    //print_r($results[1]); //added for testing purposes
     ?>
     <!-- Script Code -->
     <script src="timer.js"></script>
