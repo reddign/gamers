@@ -108,7 +108,7 @@ if(e.code == "ArrowRight"||e.code == "KeyD"){
         return this.heldDirections[0]; //this gets the first held direction or this is undefined.
     }
 
-    onArrowPressed(direction){
+    function onArrowPressed(direction){
         if(this.heldDirections.indexOf(direction) === -1){
             this.heldDirections.unshift(directions);
         }
