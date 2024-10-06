@@ -36,6 +36,11 @@ completing the trivia game. This calls read.php which is located in this folder.
 Future goals:
     1) Have a high score table show up after a game is finished.
     2) More filtering and accessibility of data. Be able to query/change what the table shows
+        A) per user (each result)
+        B) amount of top scores shown
+        C) by date
+        D) Multiple Games in Multiple Tables (same page)
+        E) Cumulative High Score per User (aggregated score)
 
 
 
@@ -58,11 +63,11 @@ Create.php:
     5) username
 
     Storing Posted Data
-    1) $ID (updated to $userID by Matt 10/06/2024)
+    1) $userID
     2) $game
     3) $score
     4) $timeplayed
     5) $username
 
-Before: function sendScores(userid,game,score,time,username)
-After: function sendScores(userID, game, score, timeplayed, username)
+
+function sendScores(userID, game, score, timeplayed, username)
