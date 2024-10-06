@@ -10,15 +10,19 @@ export class Input {
 
         document.addEventListener("keydown", (e) => {
             if (e.code === "ArrowUp" || e.code === "KeyW") {
+                e.preventDefault();
                 this.onArrowPressed(UP);
             }
             if (e.code === "ArrowDown" || e.code === "KeyS") {
+                e.preventDefault();
                 this.onArrowPressed(DOWN);
             }
             if (e.code === "ArrowLeft" || e.code === "KeyA") {
+                e.preventDefault();
                 this.onArrowPressed(LEFT);
             }
             if (e.code === "ArrowRight" || e.code === "KeyD") {
+                e.preventDefault();
                 this.onArrowPressed(RIGHT);
             }
         })
