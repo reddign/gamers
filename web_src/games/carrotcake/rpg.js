@@ -43,6 +43,16 @@ const characterSprite = new Sprite({
     frame: 1
 })
 
+// Function to draw the scoreboard
+function drawScoreboard() {
+    // Set font and color for the scoreboard
+    ctx.font = '12px Courier New';
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'left'; // Align text to the left
+    ctx.textBaseline = 'top'; // Align text to the top
+    ctx.fillText('Score: ' + score, 4, 4);
+}
+
 // Creates the game area
 function draw() {
     // Clears the canvas
@@ -57,6 +67,8 @@ function draw() {
     characterSprite.drawImage(ctx, characterPos.x, characterPos.y);
     // Potential TODO: create a hero offset that puts the hero into a specific square in the grid
     // ^Assumes we are doing grid snapping
+
+    drawScoreboard();
 }
 
 // Starts the drawing
