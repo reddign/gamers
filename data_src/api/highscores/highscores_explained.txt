@@ -24,7 +24,8 @@ Functionality:
 Local deployment:
     1) Run SQL statements to create table
     2) Go on website to see the UI/functionality of read.php 
-    3) Use unittest.php to test create.php or scoreSend.js
+    3) For JS files you need to add <script src="scoreSend.js"></script>        [Also that file path in src is correct]
+    4) Use unittest.php to test create.php or scoreSend.js                      [Also that file path in src is correct]
 
 
 User interface:
@@ -41,7 +42,6 @@ Future goals:
         C) by date
         D) Multiple Games in Multiple Tables (same page)
         E) Cumulative High Score per User (aggregated score)
-
 
 
 ----------------------------------------------------------------------------------------------------
@@ -69,5 +69,5 @@ Create.php:
     4) $timeplayed
     5) $username
 
-
-function sendScores(userID, game, score, timeplayed, username)
+scoreSend.js:
+    function sendScores(userID, game, score, timeplayed, username)
