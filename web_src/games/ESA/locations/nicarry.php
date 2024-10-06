@@ -36,5 +36,8 @@
 </head>
 <body>
     <h2>Welcome to Nicarry!</h2>
+
+    <p data-file="nicarry" style="display:none;">Nicarry Hall hosts classes for Sociology, Criminal Justice, Education, and Gender Studies majors. It has two floors, with most classrooms and faculty offices on the second floor.
+    The first floor houses the ITS department, the Study Abroad Program, and the Center for Global Understanding and Peacemaking (CGUP).</p>
 </body>
 </html>

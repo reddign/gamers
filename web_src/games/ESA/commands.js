@@ -30,7 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function look(){
         //Describes current surroundings
-        console.log(description);
+        const fileName = window.location.pathname.split('/').pop().replace('.php', '');
+        const description = document.querySelector(`p[data-file="${fileName}"]`);
+
+        if (description){
+            console.log(description.textContent);
+        }
+        
 
     }
 

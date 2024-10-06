@@ -35,5 +35,9 @@
 </head>
 <body>
     <h2>Welcome to the Marketplace!</h2>
+
+    <p data-file="marketplace" style="display:none;">Located on the second floor of the BSC, the Marketplace is the main dining hall on campus, offering all-you-can-eat options for students, faculty, staff, and visitors. You’ll find a variety of food stations, 
+including a salad bar, omelette station, pasta bar, grill and deli, pizza corner, and dessert station. Cereal, ice cream, coffee, tea, and soda are also available. It has two sitting areas: the larger sitting 
+area for big groups and a smaller area for smaller groups.</p>
 </body>
 </html>

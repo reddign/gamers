@@ -35,5 +35,8 @@
 </head>
 <body>
     <h2>Weclome to Founder's Hall</h2>
+
+    <p data-file="founders_room" style="display:none;">Founders is where most first-year students live. The hall has four co-ed towers: A, B, C, and D. Each room comes with two beds, two desks, and two chairs, making it a perfect space for you
+    and your roommate to settle in. The lobby which contains some games like ping pong and some relaxation area is between towers B and C.</p>
 </body>
 </html>

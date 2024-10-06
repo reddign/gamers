@@ -36,5 +36,9 @@
 </head>
 <body>
     <h2>Welcome to Esbenshade Hall</h2>
+
+    <p data-file="esbenshade" style="display:none;">Esbenshade is part of the Masters Center for Sciences, Mathematics, and Engineering. It houses classrooms for Engineering, Computer Science, Mathematics, and Occupational Therapy. 
+    The building has three floors: the first floor is home to the Engineering department, the second floor hosts the Computer Science and Psychology departments, and the third floor is where 
+    you'll find Mathematics and Occupational Therapy. It also features the Fabrication Lab, Networking Lab, and Robotics Lab.</p>
 </body>
 </html>

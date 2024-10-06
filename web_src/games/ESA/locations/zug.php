@@ -29,5 +29,8 @@
         // Read cookies when the page loads
         window.onload = readCookiesOnLoad; // Ensure this function exists in actions.js
     </script>
+    <p data-file="zug" style="display:none;">Zug Hall is home to music majors and several administrative offices, including Financial Aid, the Business Office, and Registration and Records. The lower level is where you’ll find classrooms and music practice rooms
+    where students can practice playing their instruments without any interruption. The second floor houses offices as well as the recital room and 
+    a gallery space where student art are often showcased.</p>
 </body>
 </html>

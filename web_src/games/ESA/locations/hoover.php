@@ -35,5 +35,7 @@
 </head>
 <body>
     <h2>Welcome to Hoover!</h2>
+    <p data-file="hoover" style="display:none;">Hoover is primarily the business building, where Business Administration, International Business, Finance, Accounting, and Data Analytics students attend most of their classes. 
+    It has two floors: classrooms are mostly on the second floor, while the first floor is home to the Finance Lab, the High Center for Family Business, and the School of Graduate and Professional Studies.</p>
 </body>
 </html>

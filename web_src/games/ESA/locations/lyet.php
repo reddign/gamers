@@ -35,5 +35,7 @@
 </head>
 <body>
     <h2>Welcome to Lyet</h2>
+    <p data-file="lyet" style="display:none;">Lyet is part of the Masters Center for Science, Mathematics, and Engineering, housing the Biology department. 
+    This is where you'll attend biological sciences classes. It has two floors, and the second floor features the Anatomy Lab and most classrooms while the first floor primarily features offices.</p>
 </body>
 </html>
