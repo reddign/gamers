@@ -36,9 +36,9 @@
 <body>
     <h2>Welcome to the BSC</h2>
 
-    <p data-file="bsc" style="display:none;">The Baugher Student Center, or BSC, is a central spot where you’re likely to stop by every day.
-    The first floor offers the Jays Nest for grab-and-go food as well as other convenience items, mail services for all your package needs, 
-    Blue Bean where you can get Starbuck, and the college store. The KAV is also located here, hosting various campus events. On the second floor, 
+    <p data-file="bsc" style="display:none;">The Baugher Student Center, or BSC, is a central spot where you're likely to stop by every day.
+    The first floor offers the Jays Nest for made-to-order food as well as other convenience items, mail services for all your package needs, 
+    Blue Bean where you can get Starbucks, and the college store. The KAV is also located here. This is where various campus events are hosted. On the second floor, 
     you'll find the Marketplace (the main dining hall) and several offices like the Center for Student Success, Counseling Services, and Career Services.</p>
 </body>
 </html>

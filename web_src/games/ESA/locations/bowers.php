@@ -37,8 +37,8 @@
 <body>
     <h2>Welcome to Bowers!</h2>
 
-    <p data-file="bowers" style="display:none;">Welcome to the Bowers Center! This is your campus hub for relaxation and self-care, whether you’re focusing on physical fitness or emotional and mental well-being.
-    The Bowers Center features two floors. On the first floor, you'll find the Fresh Nest for smoothies and ramen, the Fieldhouse which has an inddor track, 
+    <p data-file="bowers" style="display:none;">Welcome to the Bowers Center! This is your campus hub for relaxation and self-care, whether you're focusing on physical fitness or emotional and mental well-being.
+    The Bowers Center features two floors. On the first floor, you'll find the Fresh Nest for smoothies and ramen, the Fieldhouse which has an indoor track, 
     and the Demo Kitchen where students can make some healthy recipies. The second floor is home to the fitness area (gym), group fitness rooms, relaxation rooms, and more.
     The second floor also houses the well which has sleep pods for relaxation!</p>
     
