@@ -12,13 +12,13 @@ if($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
+// Button to Return to Menu
 echo '<div>';
-$Url = "../../../web_src/games/menu.php";
-echo "<a href='$Url'><button id='menu_button'>Return to Menu</button></a>";
+    $Url = "../../../web_src/games/menu.php";
+    echo "<a href='$Url'><button id='menu_button'>Return to Menu</button></a>";
 
-// Call the dropdown function to display it next to the button
-dropdown($connection);
-echo '</div>'; // Close the flex container
+    dropdown($connection);
+echo '</div>';
 
 function dropdown($conn) {
     // SQL Query
@@ -75,8 +75,8 @@ function displayScores($connection, $game) {
         echo "No scores available for the selected game.";
     }
 
-    $stmt->close(); // Close the statement
+    $stmt->close();
 }
 
-$connection->close(); // Close the database connection
+$connection->close();
 ?>
