@@ -3,7 +3,7 @@
 require_once '../../../data_src/api/wordsearch/read.php';
 require_once '../../../data_src/api/wordsearch/word.php';
 
-generateMap(15); //added for testing purposes
+//generateMap(15); //added for testing purposes
 function generateMap($size = -1, $num_words = -1, $categories = []){
     //default value validation, making sure parameters are correct
     if($size <= 0) $size = 15;
