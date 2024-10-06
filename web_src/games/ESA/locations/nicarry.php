@@ -31,7 +31,7 @@
             padding: 5px; /* Add padding for better look */
         }
         </style>
-            <input type="text" id="Text_Input" placeholder="Where would you like to go?">
+            <input type="text" id="Text_Input" placeholder="Type a command">
             <button id ="Button2">Action</button>
 </head>
 <body>
