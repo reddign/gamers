@@ -12,11 +12,6 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <script>
-        const items = ["books", "laptop", "pencil"]
-        const defaultCookies = <?php echo json_encode(['score' => 0, 'inventory' => items, 'happiness' => 100]); ?>;
-
-    </script>
     <nav class="navbar navbar-expand-lg navbar bg-blue">
         <a class="navbar-brand" href="index.php">
             <img id="logo" src="../../includes/images/logo.png" alt="Logo">

@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             goto(command[1]);
         }
     });
+    
 
     function help(){
         //Displays all commands
