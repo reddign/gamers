@@ -1,3 +1,11 @@
+/*
+    File Title: GameLoop.js
+    Description: Renders the game objects
+                 Used in rpg.js to continually redraw the board and sprites
+    
+    Status: Complete and tested
+*/
+
 export class GameLoop {
     constructor(update, render) {
         this.lastFrameTime = 0;

@@ -1,3 +1,13 @@
+/*
+    File Title: hiddenCupcake.js
+    Description: Spawns cupcakes in a random location on the map
+    
+    Future Features: Maybe create sectors for the cupcakes to spawn in
+                     Then use these sectors to give hints to the player on where the cupcake may be
+    
+    Status: Untested
+*/
+
 // const rows = board.length;
 // const cols = board[0].length;
 // let cupcakes = 0;

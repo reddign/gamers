@@ -1,3 +1,10 @@
+/*
+    File Title: sprite.js
+    Description: Class containing all the information on the sprites
+    
+    Status: Complete and tested
+*/
+
 import { Vector2 } from "./Vector2.js";
 
 export class Sprite {

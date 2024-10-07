@@ -1,3 +1,10 @@
+/*
+    File Title: animation.js
+    Description: Controls sprite animation
+    
+    Status: Unfinished
+*/
+
 // // export class Student{
 // //     constructor(resource, frameSize, frameWidth, frameHeight, total, scale, position){
 // //         this.resource = resource;

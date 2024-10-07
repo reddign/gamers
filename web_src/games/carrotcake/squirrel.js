@@ -1,4 +1,10 @@
-//code for controlling the squirrel enemies
+/*
+    File Title: squirrel.js
+    Description: Contains the code for the enemy squirrel AI
+                 Uses the player direction and movement to attempt to cut off, flank, and directly attack the player
+    
+    Status: Incomplete
+*/
 
 class Squirrel {
 

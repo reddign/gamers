@@ -1,3 +1,11 @@
+/*
+    File Title: Input.js
+    Description: Handles keyboard input to control player movement
+                 Currently blocks screen scrolling as well
+    
+    Future Features: May be able to use this to control enemy movement as well
+*/
+
 export const LEFT = "LEFT";
 export const RIGHT = "RIGHT";
 export const UP = "UP";

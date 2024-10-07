@@ -1,3 +1,12 @@
+/*
+    File Title: rpg.js
+    Description: Main JavaScript file for the game
+                 Draws assets to the canvas
+                 Brings all the other files together
+    
+    Future Features: Finish collision and score reporting
+*/
+
 import { resources } from './resources.js';
 import { Sprite } from './sprite.js';
 import { Vector2 } from './Vector2.js';
