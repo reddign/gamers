@@ -1,4 +1,9 @@
 <?php
+/*
+    File Title: carrotcake.php
+    Description: Main php file that contains the full game
+                 Also displays the navbar, title, canvas, and footer
+*/
     $pageName = "Carrot Cake Collection";
     require "../../includes/functions.php";
     require "../../includes/head.php";

@@ -1,3 +1,11 @@
+/*
+    File Title: resources.js
+    Description: Loads all the sprites for the game
+    Instructions: To add a new sprite, place it in the "this.toLoad" with a name and relative file path
+    
+    Status: Complete and tested
+*/
+
 class Resources {
     constructor() {
         // Everything we plan to download
