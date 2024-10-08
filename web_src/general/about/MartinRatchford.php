@@ -12,13 +12,12 @@ require "../../includes/head.php";
     <div class="buttons">
         <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
-        
+        something random
     <main>
         <section id="Martin Ratchford's Bio">
             <div class="bio-title">Martin Ratchford</div>
             <br>
-            <div id="bio"> Martin Ratchford is a computer science major at Etown and plans to graduate in 2026.
-                        Alex edited this.
+            <div id="bio"> Martin Ratchford is a computer science major at Etown and plans to graduate in 2026. ----------------
         </section>
     </main>
 </body>

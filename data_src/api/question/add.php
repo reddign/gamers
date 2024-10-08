@@ -1,12 +1,6 @@
 <?php
-require_once "../includes/db_config.php";
+require_once "../includes/db_connect.php"; // Follow the lines
 
-// Create database connection
-$connection = new mysqli($host, $dbUsername, $dbPassword, $database);
-
-if ($connection->connect_error) {
-    die("Connection failed: ".$connection->connect_error);
-}
 
 if (isset($_POST["question"]) && !empty($_POST["question"])) {
     $question = $_POST["question"];

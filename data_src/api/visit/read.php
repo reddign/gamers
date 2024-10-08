@@ -1,7 +1,6 @@
 <?php
 require_once "../includes/db_connect.php"; // Follow the lines
-
-
+// Starts session
 $sql = "SELECT firstname, email, date FROM user WHERE date >= date_add(NOW(), INTERVAL -3 MONTH) ORDER BY userID DESC;";
 
 $result = $connection->query($sql);

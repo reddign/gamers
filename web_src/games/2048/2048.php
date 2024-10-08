@@ -1,5 +1,16 @@
 <?php
-session_start();
+
+    session_start();
+
+    if (!isset($_SESSION['twozerofoureight'])) $_SESSION['twozerofoureight'] = 1;
+    else $_SESSION['twozerofoureight']++;
+
+    if (!isset($_SESSION['twozerofoureightTotal'])) $_SESSION['twozerofoureightTotal'] = 1;
+    else $_SESSION['twozerofoureightTotal']++;
+
+    echo $_SESSION['twozerofoureight'];
+    echo "<br>Total: ".$_SESSION['twozerofoureightTotal'];
+
 ?>
 
 <!DOCTYPE html>
