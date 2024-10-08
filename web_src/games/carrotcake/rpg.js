@@ -52,6 +52,14 @@ const characterSprite = new Sprite({
     frame: 1
 })
 
+const squirrelSprite = new Sprite({
+    resource: resources.images.squirrel,
+    frameSize: new Vector2(16, 16),
+    hFrames: 3,
+    vFrames: 3,
+    frame: 0
+})
+
 // Function to draw the scoreboard
 function drawScoreboard() {
     // Set font and color for the scoreboard

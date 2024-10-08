@@ -3,7 +3,7 @@
     Description: Contains the code for the enemy squirrel AI
                  Uses the player direction and movement to attempt to cut off, flank, and directly attack the player
     
-    Status: Incomplete
+    Status: Incomplete (Needs to be tested)
 */
 
 class Squirrel {
