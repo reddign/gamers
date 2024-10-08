@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     //Variables
-    let current_location;
 
     // Initial test for text commands
     var command_input = document.getElementById("Text_Input");
     const button = document.getElementById("Button2");
 
+    
     button.addEventListener("click", function () {
         var command = command_input.value.split(' ');
         if(command[0] == "help"){
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function help(){
         //Displays all commands
-        console.log("help: Shows Commands\nlook: Describes Surroundings\nitems: Show Inventory\nuse: Uses selected item\ngoto: Travel to selected location\ngrab: Pick up item in area\ntalk: Talks to person in area\n");
+        alert("help: Shows Commands\nlook: Describes Surroundings\nitems: Show Inventory\nuse: Uses selected item\ngoto: Travel to selected location\ngrab: Pick up item in area\ntalk: Talks to person in area\n");
 
     }
 
@@ -33,18 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const description = document.querySelector(`p[data-file="${fileName}"]`);
 
         if (description){
-            console.log(description.textContent.replace(/\n   /g,""));
+            alert(description.textContent.replace(/\n   /g,""));
         }
         
 
     }
 
     function items(){
-        //Displays current inventory of held items
-
-        const items = [""];
-
-        console.log(items);
+        //TODO Add items function which displays the items the user has.
         
     }
 
@@ -57,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function use(){
+        //TODO Add use function which takes an item parameter.
+
         //Requires input after command (Use (insert item here)) to function
         //Syntax example:   Use Key
         //Interact with or use specified item
@@ -74,7 +72,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function talk(){
+        //TODO Add talk function which works if a person is in the current area.
+
         //Interacts with / talks to nearby person (if available)    
+
 
     }
 
