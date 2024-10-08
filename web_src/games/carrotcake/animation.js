@@ -98,7 +98,7 @@ if(e.code == "ArrowRight"||e.code == "KeyD"){
 }
        
        
-    get direction(){
+    function direction(){
         return this.heldDirections[0]; //this gets the first held direction or this is undefined.
     }
 
