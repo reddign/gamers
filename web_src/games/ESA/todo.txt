@@ -1,8 +1,0 @@
-Add a scoring method.
-Create fail scenarios.
-Create item checks / inventory 
-Make other commands like items, grab, and talk functional
-
-
-
- 

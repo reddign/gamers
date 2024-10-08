@@ -1,3 +1,3 @@
-This is a placeholder for Etown Student Adventure
-
-Remove once folder is filled with files
+Add a scoring method.
+Create fail scenarios.
+Create item checks / inventory 
