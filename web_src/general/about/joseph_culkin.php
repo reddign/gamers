@@ -7,6 +7,15 @@ require "../../includes/head.php";
 <body>
 <?php
      require "../../includes/navbar.php";
+    $x=0;
+     while($x<10){
+        $x++;
+     }
+     echo $x;
+     $ExtraVar=0;
+     $Expendable=3.14595;
+     $Product=$ExtraVar+$Expendable*4;
+     
 ?>
    
     <div class="buttons">

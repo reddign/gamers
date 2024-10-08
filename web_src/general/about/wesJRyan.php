@@ -21,6 +21,8 @@ require "../../includes/head.php";
                 Wes J. Ryan is a fifth year student at Elizabethtown College, who is majoring in computer
                 science and minoring in digital media production. They intend to graduate in Spring of 
                 2025. They have a passion for game design and narratives. 
+
+                Nothing bad will ever happen to this page, or my person! I'm sure of that!
         </section>
     </main>
 </body>

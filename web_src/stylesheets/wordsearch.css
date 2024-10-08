@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DAD9D9 !important;
+}
+
+#logo {
+    height: 80px;
+    width: 150px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+    display:inline-block;
+}
+
+main {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#timer {
+    /* css for the timer element*/
+    font-size: xxx-large;
+    padding-right: 10px;
+    font-family: "Orbitron",sans-serif;
+}
+
+#score, #scoreLbl{
+    font-size: large;
+    font-family: "Orbitron",sans-serif;
+}
+
+#Difficulty{
+    /* this hides the difficulty form*/
+    display:none;
+}
+
+#timerBox{
+    /* this is the box for the timer*/
+    color:white;
+    float:right;
+    position:absolute;
+    top:140px;
+    right:0px;
+    height: 140px;
+    width: 150px;
+    background-color: #004B98;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#wordbank{
+    /* css for the wordbank*/
+    position:absolute;
+    top:300px;
+    right:0px;
+    list-style-type: none;
+    background-color: #004B98;
+    color:white;
+    padding:10px;
+}
+
+#rand{
+    /* this hides the random button*/
+    display:none;
+}
+
+#rand:hover{
+    /* css for the defunct random button*/
+    background-color: red;
+    border-color: red;
+}
+
+#start:hover{
+    /* css for the start button*/
+    background-color: green;
+    border-color: green;
+}
+
+.Box{
+    height:100px;
+    width:300px;
+    margin: auto;
+}
+
+.container label{
+    color:rgb(3, 70, 128);
+}
+
+.container input:checked ~ label{
+    /* this is css for the radio*/
+    color:rgb(0, 163, 188);
+}
+
+.activeButton{
+    background-color: grey;
+    color:white;
+}
+
+.found{
+    /* this is for finding the words*/
+    text-decoration: line-through;
+}
+
+.foundWord{
+    /* found button color*/
+    background-color: #0A2240;
+    color:white;
+}
+/* 
+these are for the color slide at the end of the game
+*/
+
+.orange{
+    background-color: orange;
+    color: white;
+}
+
+.yellow{
+    background-color: yellow;
+    color: white;
+}
+
+.yellowgreen{
+    background-color: yellowgreen;
+    color:white;
+}
+
+.green{
+    background-color: green;
+    color:white;
+}
+
+.teal{
+    background-color: teal;
+    color:white;
+}
+.blue{
+    background-color: #004B98;
+    color:white;
+}
+
+.letterButton{
+    height:30px;
+    width:30px;
+}

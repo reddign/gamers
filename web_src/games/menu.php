@@ -100,6 +100,7 @@ session_start();
             <option value="flappybird">Flappy Jay</option>
             <option value="2048">2048 - Etown Edition</option>
             <option value="jayrunner">JayRunner</option>
+            <option value="wordsearch">Jay to Z</option>
             <option value="carrotcake">Carrot Cake Collection</option>
         </select>
     </div>
