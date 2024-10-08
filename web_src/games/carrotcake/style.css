@@ -1,0 +1,15 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    /* overflow: hidden; */
+    image-rendering: pixelated;
+}
+
+canvas {
+    width: 100%;
+    background: blue;
+}
+
+h1 {
+    text-align: center;
+}

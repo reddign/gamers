@@ -105,6 +105,7 @@ if (!isset($_SESSION['id'])) {
                                 <a href="triviaSettings.php">Trivia Settings </a>
                                 <a href="hangmanSettings.php">Hangman Settings </a>
                                 <a href="userUpdate.php">User Info </a>
+                                <a href="visitStats/visits.php">Visit Stats </a>
                             </div>
                         </div>
                         </a>

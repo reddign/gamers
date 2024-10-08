@@ -28,16 +28,12 @@ require "../../includes/head.php";
                 <area shape="circle" coords="800,153,10" href="kevin_barbieri.php">
                 <area shape="circle" coords="610,139,10" href="James_Hutchins.php">
                 <area shape="circle" coords="157,112,10" href="leif_hoffman.php">
-                <area shape="circle" coords="500,200,10" href="cameron_hollabaugh.php">
                 <area shape="circle" coords="490,150,10" href="cameron_hollabaugh.php">
-                
                 <area shape="circle" coords="542,155,10" href="Asher_Wayde.php">
                 <area shape="circle" coords="873,154,10" href="matthew_smith.php">
                 <area shape="circle" coords="188,138,10" href="Joshua_Stoner.php">
                 <area shape="circle" coords="700,145,10" href="Brian_Duva.php">
-                <area shape="circle" coords="430,133,10" href="Joshua_Schmitt.php">
-                
-                
+                <area shape="circle" coords="430,133,10" href="Joshua_Schmitt.php">      
                 <area shape="circle" coords="750,160,20" href='wesJRyan.php'>
                 <area shape="circle" coords="74,141,10" href='MildredNwachukwu.php'>
                 <area shape="circle" coords="325,147,20" href="ParkerEngle.php">
@@ -54,11 +50,7 @@ require "../../includes/head.php";
                 <area shape="circle" coords="288,138,10" href="owen_yang.php">
                 <area shape="circle" coords="950,154,10" href="Ian_Skeete.php">
                 <area shape="circle" coords="105,83,20" href="prof_reddig.php">
-                
-
-
-                
-
+                <area shape="circle" coords="163,114,97" href="camila_torres.php">
             </map>    
         </div>
 

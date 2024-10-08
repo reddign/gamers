@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Visits</title>
+    <!-- Load Google Charts library -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Link JS file -->
+    <script src="../monthly_visits/monthlyVisits.js"></script>  
+    <!-- Load in style sheet -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+
+<body>
+    <h1>Monthly Visits Statistics</h1>
+    
+    <!-- table that displays visit data -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Month</th>
+                <th>Number of Visitors</th>
+            </tr>
+        </thead>
+        <tbody id="visitTableBody">
+            <!-- data to be inserted here by JS -->
+        </tbody>
+    </table>
+
+    <!-- graph to be inserted-->
+    <div id="chartContainer" style="height: 370px; width: 80%;"></div>
+
+    
+</body>
+</html>
+
