@@ -1,3 +1,5 @@
+import { insertScore } from '/gamers/web_src/games/high_scores_functions.js';
+
 document.addEventListener('DOMContentLoaded', function () {
     const bird = document.getElementById('bird');
     const pipeTop1 = document.getElementById('pipeTop1');
@@ -89,4 +91,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('keydown', jump);
     gameLoop();
+    insertScore(999, "flappy_bird", score, Date.now(), "FlappyTestName")
 });

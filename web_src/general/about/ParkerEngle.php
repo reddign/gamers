@@ -15,7 +15,7 @@ require "../../includes/head.php";
         
     <main>
         <section id="Parker Engles's Bio">
-            <div class="bio-title">Parker Engle</div>
+            <div class="bio-title">Jane Doe</div>
             <br>
             <div id="bio"> Parker Engle is a student in this class. They are majoring in Computer Science,
                 and intends to graduate in 2027.

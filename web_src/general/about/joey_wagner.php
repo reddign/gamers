@@ -10,7 +10,7 @@ require "../../includes/head.php";
 ?>
    
     <div class="buttons">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button class="button button2">Go Back!</button></a> 
+        <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
     </div>
         
     <main>
