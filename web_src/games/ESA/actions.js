@@ -1,6 +1,12 @@
 //testing
 console.log("actions.js loaded");
 
+// This file was used to transfer cookies between pages in hopes of saving variables across rooms
+
+// TODO
+// Find a way to have a score system that would save to a JS file
+
+
 // Wait until the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Function to set a cookie
