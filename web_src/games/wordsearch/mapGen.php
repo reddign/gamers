@@ -6,8 +6,9 @@ require_once '../../../data_src/api/wordsearch/word.php';
 //generateMap(15); //added for testing purposes
 function generateMap($size = -1, $num_words = -1, $categories = []){
     //default value validation, making sure parameters are correct
+    //TODO: Make it so that if there are not enough words in the categories selected that it only returns the most words it can.
     if($size <= 0) $size = 15;
-    if($num_words <=0 ) $num_words = intval($size / 2 + .5); 
+    if($num_words <=0 ) $num_words = intval($size / 2 + .5); //returns a default value of 8 is $size is 15. 
     if ($categories == []) $categories = ["DORMS","EXPERTISE","TOOLS","LANGUAGES"];
     $words = Get_WordBank($num_words, $categories); // return a number of words from any of the categories 
     $map = [];
@@ -114,7 +115,7 @@ function generateMap($size = -1, $num_words = -1, $categories = []){
                 $word->end = [$col+($i*$ymod), $row+($i*$xmod)];
             } 
         }
-    }
+    } //end of foreach($words as $word)
     //fill the remaining spaces to random letters
     for ($i = 0; $i < $size; $i++) {
         $innerList = $map[$i];

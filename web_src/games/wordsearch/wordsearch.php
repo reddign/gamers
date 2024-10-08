@@ -71,10 +71,10 @@ session_start();
     <main>
         <h1>Welcome to Jay to Z!</h1>
         <p>Please select Categories before starting</p>
-    <form action="pagegen.php" method="post">
+    <form action="pagegen.php" method="post"> <!-- Calls pagegen.php when form is submitted. -->
     
     <!-- TODO: Implement Difficulties -->
-    <div class="container" id="Difficulty">
+    <div class="container" id="Difficulty"> <!-- Created to implement different difficulties, currently hidden-->
         <h3 class="formHeader">Difficulty</h3>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="Diff" id="easyDiff" value="easy">
