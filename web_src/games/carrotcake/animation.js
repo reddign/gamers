@@ -96,13 +96,7 @@ if(e.code == "ArrowLeft" || e.code == "KeyA"){
 if(e.code == "ArrowRight"||e.code == "KeyD"){
     this.onArrowPressed(RIGHT);
 }
-
-
-
-
-
-           
-           
+       
        
     get direction(){
         return this.heldDirections[0]; //this gets the first held direction or this is undefined.
