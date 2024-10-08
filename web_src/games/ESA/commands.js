@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var command_input = document.getElementById("Text_Input");
     const button = document.getElementById("Button2");
 
-    
+
     button.addEventListener("click", function () {
         var command = command_input.value.split(' ');
         if(command[0] == "help"){
@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function grab(item){
+        //TODO Add grab function with item parameter if the item exists in the current location.
+
         //Requires input after command (Grab (item)) to function
         //Syntax example: Grab Key
         //Grabs chosen item and places it into the players inventory
