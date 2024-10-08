@@ -6,6 +6,7 @@ require "../../includes/head.php";
 ?>
 <body>
 <?php
+//This is a comment
      require "../../includes/navbar.php";
 ?>
    
@@ -17,9 +18,8 @@ require "../../includes/head.php";
         <section id="Laney's Bio">
             <div class="bio-title">Laney Humble</div>
             <br>
-            <div id="bio"> Laney Humble is a Junior at Elizabethtown College. She is a Graphic Design and 
-                           Computer Science(Concentration in Web and Application Design) dual major who is 
-                           planing on graduating in 2026
+            <div id="bio"> Laney Humble is a Junior at Elizabethtown College. She is a Graphic Design and Computer Science 
+                            (Concentration in Web and Application Design) dual major who is planning on graduating in May, 2026.
         </section>
     </main>
 </body>
