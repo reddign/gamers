@@ -1,5 +1,6 @@
 use triviagames;
 
+# creating tables used for the wordsearch
 create table if not exists WordSearch_Category(
 category_id INT primary key auto_increment,
 Name varchar(45) not null
@@ -14,6 +15,7 @@ foreign key (category_id)
 references WordSearch_Category (category_id)
 );
 
+# inserting categories
 insert into WordSearch_Category(Name)
 VALUES
 ("DORMS"),
@@ -22,6 +24,7 @@ VALUES
 ("LANGUAGES")
 ;
 
+# inserting values into DORMS
 insert into WordSearch_WordBank(word,category_id)
 VALUES
 ("SCHLOSSER",1),
@@ -33,6 +36,7 @@ VALUES
 ("MYER",1)
 ;
 
+# inserting values into EXPERTISE
 insert into WordSearch_WordBank(word,category_id)
 VALUES
 ("DATASCIENCE",2),
@@ -43,6 +47,7 @@ VALUES
 ("JAVA",2)
 ;
 
+# inserting values into TOOLS
 insert into WordSearch_WordBank(word,category_id)
 VALUES
 ("ECLIPSE",3),
@@ -54,6 +59,7 @@ VALUES
 ("GNU",3)
 ;
 
+# inserting values into LANGUAGES
 insert into WordSearch_WordBank(word,category_id)
 VALUES
 ("JAVA",4),

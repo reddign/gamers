@@ -73,6 +73,7 @@ session_start();
         <p>Please select Categories before starting</p>
     <form action="pagegen.php" method="post">
     
+    <!-- TODO: Implement Difficulties -->
     <div class="container" id="Difficulty">
         <h3 class="formHeader">Difficulty</h3>
         <div class="form-check form-check-inline">
@@ -126,6 +127,9 @@ session_start();
     <input class="btn btn-primary btn-lg" type="submit" id="start" value="Start">
     </form>
     <br>
+    <!--
+    TODO: Add functionallity to the random button, which is now hidden
+                    -->
     <input type="button" class="btn btn-secondary btn-lg" id="rand" onclick="location.href='pagegen.php';" value="Random">
     
     </main>

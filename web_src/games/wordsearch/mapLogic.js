@@ -1,10 +1,23 @@
 "use strict"
 
+/*
+* Author:Asher Wayde around line 200
+* Desc:
+* This file runs the logic of the board generated on pagegen.php
+*
+*
+*/
+
+
+
 window.addEventListener('load',init);
 let buttonPressed=null;
 let wordBank=[];
 let buttons2D=[];
 
+/*
+This function initializes all of the buttons
+*/
 function init(){
     let letterButtons=document.getElementsByClassName("letterButton");
     let rows= document.getElementsByClassName("row");
@@ -22,14 +35,18 @@ function init(){
         wordBank[i]=bankObj[i].innerText;
     }
 }
-
+/*
+This function is kind of a catch all for everything that happenes when you press a button
+Win checking, word finding, and everything else
+*/
 function pressButton(){
-    
+    // this checks to see if any of the buttons are active
     if(buttonPressed==null | buttonPressed==this){
         this.classList.add("activeButton");
         buttonPressed=this;
     }
     else{
+        // this checks if the buttons selected trigger a finished word
         if(this.value==buttonPressed.value & wordBank.includes(this.value)){
             document.getElementById(this.value).classList.add("found");
             updateScore();
@@ -46,6 +63,7 @@ function pressButton(){
                 startButton=this;
             }
                 
+            // this logic is finding the angle, and highlighting the whole word
             let posX=parseInt(startButton.getAttribute("posX"));
             let posY=parseInt(startButton.getAttribute("posY"));
             let xmod;
@@ -92,9 +110,10 @@ function pressButton(){
             }
             
         }
-        
+        // this removes the current active button
         buttonPressed.classList.remove("activeButton");
         buttonPressed=null;
+        // this logic checks for a win
         let win=1;
             for(let i=0;i<wordBank.length;i++){
                 let wBank=document.getElementsByClassName("wordBank");
@@ -102,6 +121,7 @@ function pressButton(){
                     win=0
                 }
             }
+            // this one will remove all action listeners when a win is detected
             if(win){
                 for(let i=0;i<buttons2D.length;i++){
                     for(let j=0;j<buttons2D[i].length;j++){
@@ -109,6 +129,8 @@ function pressButton(){
                         buttons2D[i][j].removeEventListener("dblclick",removePress);
                     }
                 }
+                // This one handles win effects
+                // TODO: Make more cool things happen when the game finishes
                 document.getElementById("title").innerHTML="You Win";
                 document.getElementById('timer').value="stop";
                 rainbowBoard();
@@ -116,14 +138,18 @@ function pressButton(){
     }
 
 }
-
+/*
+This removes the button press on a double click
+*/
 function removePress(){
     if(this.classList.contains("activeButton")){
         this.classList.remove("activeButton");
         buttonPressed=null;
     }
 }
-
+/*
+This function makes the board change colors on a win
+*/
 async function rainbowBoard(){
     let timeMilis=1;
     for(let i=0;i<buttons2D.length;i++){

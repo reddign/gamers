@@ -12,10 +12,12 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- get function -->
     <?php
+    // this grabs the form variables from POST
     $formVars=array();
         foreach ($_POST as $key => $value) {
             $formVars[]=$value;
         }
+        // this gets the map with the formVars
         $results=generateMap(15,8,$formVars);
     //print_r($results[1]); //added for testing purposes
     ?>
@@ -100,8 +102,12 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
         
         <table style="margin:auto;display:inline-block;">
         <?php
+        /*
+                        BIG TODO:
+                        Sometimes this game just times out in xampp, and kills MySQL.
+        */
         $board=$results[0];
-        // Stuff for testing, Not final Product
+        // This generates the board with all of the buttons on it.
         for($i=0;$i<sizeof($board);$i++){
             echo "<tr class='row'>";
             for($j=0;$j<sizeof($board[$i]);$j++){
@@ -110,12 +116,13 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
                 $posX="";
                 $posY="";
                 for($iter=0;$iter<sizeof($results[1]);$iter++){
+                    // this is for adding values to the button that starts a word
                     if(($results[1][$iter]->start[0]==$i & $results[1][$iter]->start[1]==$j)){
                         $value= $results[1][$iter]->name;
                         $angle= $results[1][$iter]->angle;
                         $posX=  $results[1][$iter]->start[0];
                         $posY=  $results[1][$iter]->start[1];
-                    }
+                    }// this is the same, but for the end of the word
                     else if(($results[1][$iter]->end[0]==$i & $results[1][$iter]->end[1]==$j)){
                         $value= $results[1][$iter]->name;
                         $posX=  $results[1][$iter]->end[0];
@@ -131,7 +138,7 @@ require_once "../../../web_src/games/wordsearch/mapGen.php";
         </table>
         <ul id="wordbank">
             <?php
-                // Wordbank Testing
+                // This Generates the word bank
                 for($i=0;$i<sizeof($results[1]);$i++)
                     echo "<li class='wordBank' id='".$results[1][$i]->name."'>".$results[1][$i]->name."</li>";
                     

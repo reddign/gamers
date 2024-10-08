@@ -4,18 +4,23 @@
 let interval=null;
 window.addEventListener('load',init);
 
+/*
+This sets up the interval
+*/
 async function init(){
     const delay = ms => new Promise(res => setTimeout(res, ms));
     await delay(5000);
     interval=window.setInterval(updateTimer,1000);
 
 }
-
+/*
+This Function takes the time, and reduces it by 1 unless the time is 0
+*/
 function updateTimer(){
+    
     let timer=document.getElementById("timer");
     if(timer.value=="stop"){
         window.clearInterval(interval);
-        console.log("Bruh");
     }
     let time=timer.innerHTML;
     let timeArr=time.split(":");
@@ -39,10 +44,6 @@ function updateTimer(){
     else{
         timer.innerHTML=(Math.floor(totalSecs/60))+":"+(totalSecs%60);
     }
-}
-
-function stopTimer(){
-    window.clearInterval(interval);
 }
 
 

@@ -1,15 +1,8 @@
 /*
- * Creation Date: 9/15/24
- * Author: Wes J. Ryan
- * Last Edited: 10/2/24 (12:48 am (Commenting out and rewriting header))
- * Last Edited by: Wes J. Ryan
+ * This File is included in it's entirety in mapLogic.js
+ * At like line 200
+ * TODO: Delete this file
  *
- * Program Summary:
- * The first three functions help constitute the function to be called whenever a word is found, so as to update the player's score.
- * To do this we must get the current time from the timer with callTimer(), then use that information to set both the base score for
- * finding the word with wordScore() and the multiplier that will be applied with setMulti(). Lastly, when called, the program will
- * add to the player's score, and update its record of time, to allow the next word found to be scored accurately.
- * CALL ONLY updateScore() in the game logic!!!
  */
 
 function callTimer() {

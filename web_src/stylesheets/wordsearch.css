@@ -34,6 +34,7 @@ main {
 }
 
 #timer {
+    /* css for the timer element*/
     font-size: xxx-large;
     padding-right: 10px;
     font-family: "Orbitron",sans-serif;
@@ -45,10 +46,12 @@ main {
 }
 
 #Difficulty{
+    /* this hides the difficulty form*/
     display:none;
 }
 
 #timerBox{
+    /* this is the box for the timer*/
     color:white;
     float:right;
     position:absolute;
@@ -62,6 +65,7 @@ main {
 }
 
 #wordbank{
+    /* css for the wordbank*/
     position:absolute;
     top:300px;
     right:0px;
@@ -72,15 +76,18 @@ main {
 }
 
 #rand{
+    /* this hides the random button*/
     display:none;
 }
 
 #rand:hover{
+    /* css for the defunct random button*/
     background-color: red;
     border-color: red;
 }
 
 #start:hover{
+    /* css for the start button*/
     background-color: green;
     border-color: green;
 }
@@ -96,6 +103,7 @@ main {
 }
 
 .container input:checked ~ label{
+    /* this is css for the radio*/
     color:rgb(0, 163, 188);
 }
 
@@ -105,13 +113,18 @@ main {
 }
 
 .found{
+    /* this is for finding the words*/
     text-decoration: line-through;
 }
 
 .foundWord{
+    /* found button color*/
     background-color: #0A2240;
     color:white;
 }
+/* 
+these are for the color slide at the end of the game
+*/
 
 .orange{
     background-color: orange;
