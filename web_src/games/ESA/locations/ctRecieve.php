@@ -1,3 +1,5 @@
+#A sample file which recieves cookies.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

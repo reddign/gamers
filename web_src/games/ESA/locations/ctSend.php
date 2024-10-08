@@ -1,3 +1,5 @@
+#A sample php file which sends cookies.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
