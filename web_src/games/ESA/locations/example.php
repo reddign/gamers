@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>/*Title goes here*/</title>
+    <title>Title goes here</title>
     <style>
         body {
-            /* image directory: ".." in front takes it back a folder:
+            /* image directory: ".." in front takes it back a folder:*/
             background-image: url('../pictures/{image name}');
             background-size: cover;  /*This makes sure the image covers the entire page */
-            background-position: center 5%; /* percentage is vertical adjustment
+            background-position: center 50px; /*  vertical adjustment in pixels */
             background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
         }
     </style>
 </head>
 <body>
-    <h1>/*Caption shown on page</h1>
+    <h1>Caption shown on page</h1>
 </body>
 </html>
