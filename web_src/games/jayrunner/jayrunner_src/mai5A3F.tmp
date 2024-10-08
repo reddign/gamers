@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://ww8gc8sot4lh"]
+
+[sub_resource type="GDScript" id="GDScript_y27dl"]
+resource_name = "Jay"
+script/source = "extends Area2D
+
+const GRAVITY = 10
+const JUMP_HEIGHT = 100
+
+var grounded = true
+var vspeed = 0
+
+func _process(delta):
+	if position.y > 584:
+		position.y = 584
+		grounded = true
+	
+	if grounded == true && Input.is_action_just_pressed(\"ui_up\"):
+		vspeed += JUMP_HEIGHT
+		grounded = false
+		print(\"JUMPING NOW\")
+	
+	if grounded != true:
+		vspeed -= GRAVITY
+	
+	
+	position
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eokgw"]
+size = Vector2(10, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g81ho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjn3n"]
+size = Vector2(255.839, 10.6369)
+
+[sub_resource type="Gradient" id="Gradient_e4r16"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c2uvd"]
+gradient = SubResource("Gradient_e4r16")
+
+[node name="Main" type="Node2D"]
+
+[node name="Jay" type="Area2D" parent="."]
+position = Vector2(248, 584)
+script = SubResource("GDScript_y27dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jay"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_eokgw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Jay"]
+position = Vector2(-1, -0.125)
+scale = Vector2(9.99999, 19.75)
+texture = SubResource("PlaceholderTexture2D_g81ho")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(572, 598)
+scale = Vector2(4.71, 4.71)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.106155, 4.68153)
+shape = SubResource("RectangleShape2D_qjn3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = SubResource("GradientTexture1D_c2uvd")

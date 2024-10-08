@@ -19,6 +19,7 @@ require "../../includes/head.php";
             <div class="bio-title">Owen Wertzberger</div>
             <br>
             <div id="bio"> Owen Wertzberger is majoring in Computer Engineering and plans to graduate by 2026.</div>
+            <div id="edu"> He is currently enrolled in EGR 330 with Dr. Wunderlich </div>
         </section>
     </main>
 </body>
