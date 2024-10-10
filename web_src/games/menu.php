@@ -102,6 +102,7 @@ session_start();
             <option value="jayrunner">JayRunner</option>
             <option value="wordsearch">Jay to Z</option>
             <option value="carrotcake">Carrot Cake Collection</option>
+            <option value="Etown Student Adventure">Etown Student Adventure</option>
         </select>
     </div>
     <br><br><br><br><br><br><br>

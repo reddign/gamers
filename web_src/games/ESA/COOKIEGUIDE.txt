@@ -1,0 +1,67 @@
+Guide for how to set up cookie transfers
+    Full code in is ctSend and ctRecieve
+    js functions are in actions
+
+// section for adding a new cookie
+<form id="cookieForm" action="ctRecieve.php" method="POST">
+    <label for="cookieValues">Enter Cookie Values (comma-separated):</label>
+    <input type="text" id="cookieValues" name="cookieValues" required style = "width:100px"> 
+    <button type="submit" id="submitBtn">Send Cookies</button>
+</form>
+
+// update the action
+<form id="cookieForm" action="yourNewPage.php" method="POST">
+
+// reading previously created cookies
+<script>
+    // Read cookies when the page loads
+    window.onload = readCookiesOnLoad; // Ensure this function exists in actions.js
+</script>
+
+// Predefined list of cookies
+    JAVASCRIPT
+const cookieList = [
+    { name: "cookie1", value: "value1", days: 1 },
+    { name: "cookie2", value: "value2", days: 2 },
+    { name: "cookie3", value: "value3", days: 3 },
+    etc
+];
+PHP
+const defaultCookies = <?php echo json_encode(['default1', 'default2', 'default3']); ?>;
+
+
+-------------------------------------EXAMPLE----------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Cookie Input Page</title>
+    <link href="link" rel="stylesheet">
+    <link rel="stylesheet" href="../../../stylesheets/ESA.css">
+    <style>
+        body {
+            background-image: url('image');
+            background-size: cover;  
+            background-position: center 60px; 
+            background-repeat: no-repeat; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter values to store in cookies (comma-separated)</h2>
+
+    <form id="cookieForm" action="yourNewPage.php" method="POST">
+        <label for="cookieValues">Enter Cookie Values (comma-separated):</label>
+        <input type="text" id="cookieValues" name="cookieValues" required class="large-input">
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <script src="../actions.js"></script>
+    <script>
+        // Read cookies when the page loads
+        window.onload = readCookiesOnLoad; // Ensure this function exists in actions.js
+    </script>
+</body>
+</html>
