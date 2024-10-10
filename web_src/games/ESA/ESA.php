@@ -118,4 +118,4 @@ session_start();
 </body>
 </html>
 
-#TODO Send variables between locations (currently using cookies).
+#TODO Send variables between locations (currently using cookies)
