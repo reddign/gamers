@@ -17,10 +17,8 @@ require "../../includes/head.php";
         <section id="Mildred's Bio">
             <div class="bio-title">Mildred</div>
             <br>
-            <div id="bio"> Mildred is a Computer Science Major with a concentration in Data Science and a minors in Data Analytics.
-                 Mildred intends to graduate in 2026. On her free time, Mildred likes to watch adventure movies and play card games.
-
-                 Laney edited this!!
+            <div id="bio"> Mildred is a Computer Science major with a concentration in Data Science.  
+            Mildred also has a minor in Data Analytics and intends to graduate in 2026. 
         </section>
     </main>
 </body>
