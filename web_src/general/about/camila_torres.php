@@ -19,7 +19,6 @@ require "../../includes/head.php";
             <br>
             <div id="bio"> Camila Torres is a student in this class. She is a Data Science major. She intends to graduate 2025. 
                 Camila also loves to read and watch movies, particulary horror movies.
-    
         </section>
     </main>
 </body>

@@ -26,5 +26,3 @@ require "../../includes/head.php";
 <?php
      require "../../includes/footer.php";
 ?>
-
-// Designed a RC car with a team that drove 40,000 miles

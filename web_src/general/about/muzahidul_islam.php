@@ -20,7 +20,7 @@ require "../../includes/head.php";
             <div id="bio"> Muzahidul Islam is a student at Elizabethtown College studying Information Systems and Data Analytics
 
             <!--- Matt Smith for Muz --->
-            Muz also has an amazing twitch page! 
+            Muz also has an amazing twitch page!
         </section>
     </main>
 </body>
