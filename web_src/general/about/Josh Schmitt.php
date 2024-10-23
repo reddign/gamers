@@ -17,7 +17,7 @@ require "../../includes/head.php";
         <section id="Josh Schmitt's Bio">
             <div class="bio-title">Josh Schmitt</div>
             <br>
-            <div id="bio"> I am a engineering major with a concentration in computers and I intend to graduate in May of 2025. 
+            <div id="bio"> Computer Engineering Major, Graduating Spring of 2025. Fan of Dr. Leap. Switching to Business Major
         </section>
     </main>
 </body>
