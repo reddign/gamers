@@ -1,18 +1,15 @@
 <body>
 <?php
-
     $pageName = "John McGovern's Webpage";
     require "../../includes/functions.php";
     require "../../includes/head.php";
     require "../../includes/navbar.php";
-
 ?>
-
 <div class="buttons">
     <a href="SEteam2024.php"><button class="button button2">Go Back!</button></a> 
 </div>
 <main>
-    
+
     <section id="John McGovern's Bio">
         <div class="bio-title">John McGovern</div>
         <br>
@@ -20,7 +17,7 @@
         <canvas style="background-color: #000000;" height="600" width="800">
         </canvas>
         <script>
-            
+
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 
@@ -72,9 +69,6 @@ window.setInterval(animate,1000/FPS);
     </section>
 </main>
 </body>
-
 <?php
-
     require "../../includes/footer.php";
-
 ?>

@@ -76,7 +76,6 @@ CREATE TABLE IF NOT EXISTS admin (
     username varchar(50) NOT NULL,
     password varchar(250) NOT NULL,
     PRIMARY KEY (adminID)
-
 );
 
 INSERT INTO admin (username, password) VALUES ("jays", "ninja");

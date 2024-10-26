@@ -1,0 +1,73 @@
+Functionality:
+
+    create.php:
+        Writes new scores to the highscores table in the triviagames database.
+
+    read.php:
+        Retrieves scores from the highscores table in the triviagames database.
+        Shows the table for the top 10 scores.
+
+    unittest.php:
+        A simple page for testing that emulates the login and game completion process
+        to manually enter data into the highscores table.
+        Can submit directly via create.php or via scoreSend.js
+
+    scoreSend.js
+        Writes new scores to the highscores table in the triviagames database.
+        (Helpful because uses JS function)
+
+    high_scores.SQL
+        Creates high scores table within triviagames database.
+        Also has examples of dummy players and scores for testing purposes
+
+
+Local deployment:
+    1) Run SQL statements to create table
+    2) Go on website to see the UI/functionality of read.php 
+    3) For JS files you need to add <script src="scoreSend.js"></script>        [Also that file path in src is correct]
+    4) Use unittest.php to test create.php or scoreSend.js                      [Also that file path in src is correct]
+
+
+User interface:
+
+    Users can view the highscores at http://localhost/gamers/web_src/games/menu.php
+using the "View Highscores" button. This can be accessed from the games page or after
+completing the trivia game. This calls read.php which is located in this folder.
+
+Future goals:
+    1) Have a high score table show up after a game is finished.
+    2) More filtering and accessibility of data. Be able to query/change what the table shows
+        A) per user (each result)
+        B) amount of top scores shown
+        C) by date
+        D) Multiple Games in Multiple Tables (same page)
+        E) Cumulative High Score per User (aggregated score)
+
+
+----------------------------------------------------------------------------------------------------
+                                            Variable Names
+SQL Table:
+    1) user_id
+    2) game_played
+    3) score
+    4) time_played
+    5) username
+
+Create.php:
+
+    $_POST:
+    1) userID
+    2) game
+    3) score
+    4) timeplayed
+    5) username
+
+    Storing Posted Data
+    1) $userID
+    2) $game
+    3) $score
+    4) $timeplayed
+    5) $username
+
+scoreSend.js:
+    function sendScores(userID, game, score, timeplayed, username)
