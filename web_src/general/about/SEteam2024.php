@@ -1,5 +1,5 @@
 <?php
-$pageName = "Jane Doe's Webpage";
+$pageName = "SE 2024 Webpage";
 require "../../includes/functions.php";
 require "../../includes/head.php";
 
