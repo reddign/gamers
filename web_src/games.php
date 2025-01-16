@@ -4,6 +4,7 @@ require_once 'classes/Page.php';
 require_once 'classes/Footer.php';
 require_once 'classes/NavBar.php';
 require_once 'classes/PageFactory.php';
+require_once 'classes/MainPageContent.php';
 
 $navLinks = [
     "Home" => ["url" => "/gamers/web_src", "icon" => "fas fa-home"],
@@ -14,10 +15,21 @@ $navLinks = [
 ];
 
 $title = "Welcome to My Website";
-$content = "<h1>Hello, World!</h1><p>This is the main content of the page.</p>";
 $footerText = "&copy; Powered by Etown CS 341";
 
+$whichGame = isset($_GET["whichGame"])?$_GET["whichGame"]:"";
+switch($whichGame){
+    case "JayHunt":
+        $content = "This is the JayHunt content";
+        break;
+    case "JtoZ":
+        $content = "This is the J to Z content";
+        break;
+    default:
+        $content = "Do not know that Game?  This might be the games menu.";
+        break;
 
 
-$page = PageFactory::createPage($title, $content, $footerText, $navLinks);
+}
+$page = PageFactory::createPage($title, $content, $footerText, $navLinks,["js/file1.js",'js/file3.js']);
 echo $page->render();
