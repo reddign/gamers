@@ -2,9 +2,20 @@
 
 class NavBar {
     private $links = [];
-
+    private static $defaultNavLinks = [
+        "Home" => ["url" => "/gamers/web_src/index.php", "icon" => "fas fa-home"],
+        "About" => ["url" => "/gamers/web_src/general/about.php", "icon" => "fas fa-info-circle"],
+        
+        "Games" => ["url" => "/gamers/web_src/games.php", "icon" => "fas fa-gamepad"],
+        "Login" => ["url" => "/gamers/web_src/login", "icon" => "fas fa-key"]
+    ];
     public function __construct($links = []) {
-        $this->links = $links;
+        if(count($links)==0){
+            $this->links = self::$defaultNavLinks;
+        }else{
+             $this->links = $links;
+        }
+       
     }
 
     public function render() {

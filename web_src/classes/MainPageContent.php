@@ -13,6 +13,13 @@ class MainPageContent{
                 and if answered correctly, Etown themed games will be accessible
                 to play.
             </div>
+            <div style="float:left;margin-left:10%;margin-top:30px;">
+                <a href="games.php?whichGame=chess"><img src="includes/images/chess.jpg"></a>
+            </div>
+            <div style="float:right;margin-right:10%;margin-top:30px;">
+                <a href="games.php"><img src="includes/images/triviaGames.jpg"></a>
+            </div>
+
         </section>';
     }
 

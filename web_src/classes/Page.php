@@ -43,10 +43,12 @@ class Page {
     function makeJsFileLinks(){
         $linksString = "";
         //TODO:
-        //Loop of $this->jsFileArray
+        //Loop over $this->jsFileArray
         //making proper html for each file and adding it
         //to the $linksString
-        
+        foreach($this->jsFileArray as $file){
+            $linksString .= "<script src=\"{$file}\"></script>";
+        }
         return $linksString;
 
     }

@@ -4,19 +4,16 @@ require_once 'classes/Page.php';
 require_once 'classes/Footer.php';
 require_once 'classes/NavBar.php';
 require_once 'classes/PageFactory.php';
-require_once 'classes/MainPageContent.php';
+require_once 'classes/TriviaGamesMenu.php';
+require_once 'classes/ChessLobbyPageContent.php';
 
-$navLinks = [
-    "Home" => ["url" => "/gamers/web_src", "icon" => "fas fa-home"],
-    "About" => ["url" => "/about", "icon" => "fas fa-info-circle"],
-    
-    "Games" => ["url" => "/gamers/web_src/games", "icon" => "fas fa-gamepad"],
-    "Login" => ["url" => "/login", "icon" => "fas fa-key"]
-];
+
 
 $title = "Welcome to My Website";
-$footerText = "&copy; Powered by Etown CS 341";
+$navLinks=[];
 
+$footerText = "&copy; Powered by Etown CS 341";
+$jsFilesNeeded = ["js/core.js"];
 $whichGame = isset($_GET["whichGame"])?$_GET["whichGame"]:"";
 switch($whichGame){
     case "JayHunt":
@@ -25,11 +22,15 @@ switch($whichGame){
     case "JtoZ":
         $content = "This is the J to Z content";
         break;
+    case "chess":
+        $content = ChessLobbyPageContent::render();
+        break;
     default:
-        $content = "Do not know that Game?  This might be the games menu.";
+        $content = TriviaGamesMenu::render();
+
         break;
 
 
 }
-$page = PageFactory::createPage($title, $content, $footerText, $navLinks,["js/file1.js",'js/file3.js']);
+$page = PageFactory::createPage($title, $content, $footerText, $navLinks,$jsFilesNeeded);
 echo $page->render();

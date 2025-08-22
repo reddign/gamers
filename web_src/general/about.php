@@ -97,7 +97,9 @@ session_start()
                 <br>
                 <div id="welcome-text-2">Founding Team</div>
                 <br>
-                    <div id="welcome-subtext-2">Our team, composed of five key members, came together during Professor Reddig's Software Engineering in Fall 2023. 
+                    <div id="welcome-subtext-2">The founding team was composed of five members from Software Engineering class of Fall 2023. 
+                        This group built the trivia game concept and then added games after trivia as prizes.  Those games were Flight of the Jay (Hangman), 2048 Etown Version, and Flight of the Jay (Flappy Bird).
+                        There was a Professor Pursuit (PacMan) that was never completed and has been removed in later years.
             
                     <br><br>
                     Want to know more about the founding team?  
@@ -117,11 +119,34 @@ session_start()
                 <br>
                 <div id="welcome-text-2">2024 Software Engineering Team</div>
                 <br>
-                    <div id="welcome-subtext-2">Our team is comprised of the students in Professor Reddig's 2024 Software Engineering class.
+                    <div id="welcome-subtext-2">This team is comprised of the students in Professor Reddig's 2024 Software Engineering class.
+                        They added to the games available by creating JayRunner, JayHunt, Jay to Z, Carrot Cake Collection, and the Etown Adventure Game.
             
                     <br><br>
                     Want to know more about the 2024 software engineering team?  
-                    <a href="about/SEteam2024.php"> <br> Click Here ...</a>
+                    <a href="about2024/SEteam2024.php"> <br> Click Here ...</a>
+                    </div>
+                <br>
+            </div>
+        </div>
+        </section>
+        
+        <section id="break">
+        <br>
+        </section>
+        
+        <section id="foundingTeam">
+            <div class="foundingTeam-textContainer">
+                <br>
+                <div id="welcome-text-2">2025 Software Engineering Team</div>
+                <br>
+                    <div id="welcome-subtext-2">Our team is comprised of the students in Professor Reddig's 2025 Software Engineering class.
+                    This year's team will focus on doing one multi-player game: Chess!  
+                    We hope to learn a great deal about teamwork and coding together in Git through this game.
+            
+                    <br><br>
+                    Want to know more about the 2025 software engineering team?  
+                    <a href="about2025/SEteam2025.php"> <br> Click Here ...</a>
                     </div>
                 <br>
             </div>
